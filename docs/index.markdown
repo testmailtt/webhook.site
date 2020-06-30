@@ -36,6 +36,4 @@ There are two versions of Webhook.site:
 * WebhookScript based on [Primi](https://github.com/smuuf/primi) Copyright (c) Přemysl Karbula. 
 * The WebhookScript editor is using the [Ace](https://ace.c9.io). 
 * JSONPath extraction provided by [FlowCommunications](https://github.com/FlowCommunications/JSONPath). 
-* This documentation site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-
-test
+* This documentation site uses MkDocs with the [Material](https://squidfunk.github.io/mkdocs-material/) theme.
