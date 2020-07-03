@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 3 July 2020
+
+* Webhook.site was down for about 30 minutes starting 07:20 UTC downtime due to a memory upgrade.
+
 ## 23 June 2020
 
 * Added new Dropbox Custom Actions: Create Folder, Download, Upload, Delete, Get Link. 
