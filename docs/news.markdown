@@ -25,6 +25,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 ## 3 July 2020
 
 * Webhook.site was down for about 30 minutes starting 07:20 UTC due to a memory upgrade.
+* Max request size has been increased to 10 MB from 2 MB.
 
 ## 23 June 2020
 
