@@ -9,7 +9,7 @@ With Custom Actions, it is possible to string together a set of actions that are
 
 With this, you can connect APIs that aren't compatible, convert a request to an email, and much more.
 
-![Custom actions screenshot](/images/custom-actions.png)
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9Cbuf5T6Tqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ## About Variables
 
