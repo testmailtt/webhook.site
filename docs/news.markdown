@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 5 July 2020
+
+* New "Resize Image" action added for resizing images from either a file upload, email attachment or other Action. 
+* Better handling of downloaded files: they won't be shown in the debug overlay
+* Fixed a bug in the Dropbox provider returning creating an empty variable when downloading large files.
+
 ## 3 July 2020
 
 * Webhook.site was down for about 30 minutes starting 07:20 UTC due to a memory upgrade.

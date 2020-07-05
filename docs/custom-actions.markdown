@@ -60,7 +60,9 @@ These variables are automatically available for each request or email. Different
 
 Executes custom scripts using a scripting language that's very similar to JavaScript and PHP. [More information here](/webhookscript.html)
 
-## Extract JSONPath
+## Text Extraction
+
+### Extract JSONPath
 
 This action runs a JSONPath query on the contents of a request. With it, you can extract any data from a JSON document and store it in a variable, which can then be used in a downstream action.
 
@@ -104,13 +106,13 @@ For more details on what's possible with JSONPath, [take a look at the docs](htt
 
 As you start entering a JSONPath, the results are validated and shown next to the input field.
 
-## Extract Regex
+### Extract Regex
 
 This action runs a Regex (regular expression) query on the contents of a request. With it, you can extract any data from a text document and store it in a variable, which can then be used in a downstream action.
 
 As you start entering a Regex, the results are validated and shown next to the input field.
 
-## Extract XPath
+### Extract XPath
 
 Similar to the Extract JSONPath Custom Action, Extract XPath lets you extract values from an XML or HTML document and save the result as a variable.
 
@@ -141,7 +143,9 @@ Example XPath                                     | Notes                       
 
 For more examples, see [W3CSchools](https://www.w3schools.com/xml/xml_xpath.asp) or [XPath Cheatsheet](https://devhints.io/xpath)
 
-## Send Request
+## Network
+
+### Send Request
 
 This will send a request with variable contents from the Webhook.site cloud. Per default, the request contents will be identical to what was sent to the URL originally.
 
@@ -154,15 +158,17 @@ The response of the request is stored in a series of variable names prefixed wit
 * `$your_prefix.headers$` - response headers
 * `$your_prefix.url$` - the URL the request was sent to
 
-## Send Email
+### Send Email
 
 This will send a email with variable contents from the Webhook.site cloud. Variables extracted previously can be used.
 
-## Modify Response
+## Logic
+
+### Modify Response
 
 This action can be used to modify the response of the Webhook.site URL based on the input.
 
-## Condition
+### Condition
 
 !["Condition" Custom Action screenshot](/images/condition-action.png)
 
@@ -186,6 +192,16 @@ The following "operators" are available:
 * is less than or equal to
 
 The "result" of the condition will be logged below the request details, so you can see what happened.
+
+## Image Handling
+
+### Resize Image
+
+Takes an image from either a URL or raw image data from e.g. a file upload, email attachment, request response or another action such as Dropbox.
+
+You can enter both width and height to contrain the image in both dimensions, or enter a single dimension.
+
+Check "Keep Aspect Ratio" so that the image keeps the aspect ratio, but doesn't exceed the height and width constraints.
 
 ## Google Sheets (Beta)
 
