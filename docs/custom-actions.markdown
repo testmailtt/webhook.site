@@ -129,7 +129,7 @@ The following examples are based on this XML document:
 ```
 
 Example XPath                                     | Notes                                                       | Result
---------------------------------------------------|------------------------------------------------------------------------------
+--------------------------------------------------|-------------------------------------------------------------|----------------
 `/organization`                                   | Finds all content within the organization element           | Jack<br>Ann
 `//employee[@id != 1]`                            | `//` traverses all `<employee>` elements in document, the @id query selects all except those with `id`=1 | Jack
 `/organization/@name`                             | `@name` to get the "name" property of the element           | ExampleCo

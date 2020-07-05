@@ -44,7 +44,15 @@ respond(
 );
 ```
 
-## Editor
+## Variables in WebhookScript
+
+[Custom Action Variables](/custom-actions.html#about-variables) in WebhookScript behave a little differently than other action types: in the code, they will *not* be replaced automatically like in other action types.
+
+Instead, to interface with Custom Action Variables (created in previous actions, or default variables provided for each request or email), the function [var()](/webhookscript/functions.html#varstring-variable_name-mixed) can be used.
+
+In addition, [set()](/webhookscript/functions.html#setstring-variable_name-string-variable_value) can be used to export a variable from your script to further downstream actions.  [store()](/webhookscript/functions.html#storestring-global_variable_name-any-value-any) is used to permanently set a Global Variable.
+
+## About the Editor
 
 !["WebhookScript" Custom Action screenshot](/images/webhookscript-action.png)
 

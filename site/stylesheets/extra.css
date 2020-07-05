@@ -32,3 +32,7 @@ body {
 .md-typeset code {
   color: rgb(205, 0, 103);
 }
+
+.md-typeset pre > code {
+  color: black;
+}

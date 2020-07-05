@@ -304,11 +304,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editor" class="md-nav__link">
-    Editor
+  <a href="#variables-in-webhookscript" class="md-nav__link">
+    Variables in WebhookScript
   </a>
   
-    <nav class="md-nav" aria-label="Editor">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-editor" class="md-nav__link">
+    About the Editor
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Editor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -418,11 +425,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editor" class="md-nav__link">
-    Editor
+  <a href="#variables-in-webhookscript" class="md-nav__link">
+    Variables in WebhookScript
   </a>
   
-    <nav class="md-nav" aria-label="Editor">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-editor" class="md-nav__link">
+    About the Editor
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Editor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -500,7 +514,11 @@
 </code></pre></div>
 
 
-<h2 id="editor">Editor</h2>
+<h2 id="variables-in-webhookscript">Variables in WebhookScript</h2>
+<p><a href="/custom-actions.html#about-variables">Custom Action Variables</a> in WebhookScript behave a little differently than other action types: in the code, they will <em>not</em> be replaced automatically like in other action types.</p>
+<p>Instead, to interface with Custom Action Variables (created in previous actions, or default variables provided for each request or email), the function <a href="/webhookscript/functions.html#varstring-variable_name-mixed">var()</a> can be used.</p>
+<p>In addition, <a href="/webhookscript/functions.html#setstring-variable_name-string-variable_value">set()</a> can be used to export a variable from your script to further downstream actions.  <a href="/webhookscript/functions.html#storestring-global_variable_name-any-value-any">store()</a> is used to permanently set a Global Variable.</p>
+<h2 id="about-the-editor">About the Editor</h2>
 <p><img alt="&quot;WebhookScript&quot; Custom Action screenshot" src="/images/webhookscript-action.png" /></p>
 <h3 id="shortcuts">Shortcuts</h3>
 <p>The shortcuts are available when the editor is focused.</p>

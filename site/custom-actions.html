@@ -782,8 +782,7 @@
                 <h1 id="custom-actions">Custom Actions</h1>
 <p>With Custom Actions, it is possible to string together a set of actions that are executed whenever a Webhook.site URL receives a request or email. The actions can extract data from the request and use it to send another request as well as modify the response. </p>
 <p>With this, you can connect APIs that aren't compatible, convert a request to an email, and much more.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9Cbuf5T6Tqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<p><center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9Cbuf5T6Tqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
 <h2 id="about-variables">About Variables</h2>
 <p>Variables are an important part of Custom Actions, and are characterized by a name surrounded by two dollar signs: <code>$example$</code>. Variables can be used in any field that has a ⓥ icon in the editor. They act as placeholders that are replaced by dynamic content as the request or email is received.</p>
 <p>Each request or email has a set of base variables that contain information like the request IP, method, headers, query string values, form values and the request content. To see a list of variables, click the Variables button in the editor. Clicking on a variable copies it to the clipboard.</p>
@@ -1049,16 +1048,57 @@
 </code></pre></div>
 
 
-<p>Example XPath                                     | Notes                                                       | Result
---------------------------------------------------|------------------------------------------------------------------------------
-<code>/organization</code>                                   | Finds all content within the organization element           | Jack<br>Ann
-<code>//employee[@id != 1]</code>                            | <code>//</code> traverses all <code>&lt;employee&gt;</code> elements in document, the @id query selects all except those with <code>id</code>=1 | Jack
-<code>/organization/@name</code>                             | <code>@name</code> to get the "name" property of the element           | ExampleCo
-<code>/organization/employees/employee[2]</code>             | <code>[2]</code> specifies 2nd element                                 | Ann
-<code>/organization/employees/employee[2]/@id</code>         | Get the "id" property of second employee element            | 2
-<code>/organization/employees/employee[@id=1]</code>         | Employee element with id property equal to "1"              | Jack
-<code>/organization/employees/employee[last()]</code>        | Last employee element                                       | Ann
-<code>//employee[contains(@id, "2")]</code>                  | Employee within any parent element where id contains "2"    | Ann</p>
+<table>
+<thead>
+<tr>
+<th>Example XPath</th>
+<th>Notes</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/organization</code></td>
+<td>Finds all content within the organization element</td>
+<td>Jack<br>Ann</td>
+</tr>
+<tr>
+<td><code>//employee[@id != 1]</code></td>
+<td><code>//</code> traverses all <code>&lt;employee&gt;</code> elements in document, the @id query selects all except those with <code>id</code>=1</td>
+<td>Jack</td>
+</tr>
+<tr>
+<td><code>/organization/@name</code></td>
+<td><code>@name</code> to get the "name" property of the element</td>
+<td>ExampleCo</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[2]</code></td>
+<td><code>[2]</code> specifies 2nd element</td>
+<td>Ann</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[2]/@id</code></td>
+<td>Get the "id" property of second employee element</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[@id=1]</code></td>
+<td>Employee element with id property equal to "1"</td>
+<td>Jack</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[last()]</code></td>
+<td>Last employee element</td>
+<td>Ann</td>
+</tr>
+<tr>
+<td><code>//employee[contains(@id, "2")]</code></td>
+<td>Employee within any parent element where id contains "2"</td>
+<td>Ann</td>
+</tr>
+</tbody>
+</table>
 <p>For more examples, see <a href="https://www.w3schools.com/xml/xml_xpath.asp">W3CSchools</a> or <a href="https://devhints.io/xpath">XPath Cheatsheet</a></p>
 <h2 id="send-request">Send Request</h2>
 <p>This will send a request with variable contents from the Webhook.site cloud. Per default, the request contents will be identical to what was sent to the URL originally.</p>
