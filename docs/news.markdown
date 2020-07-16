@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 16 July 2020
+
+* Better file handling for emails: attached files are now also extracted as variables
+* New file management functions for WebhookScript: `files()` retrieves a an array of all files, `file_content(fileId)` returns the content of a specific file.
+
 ## 5 July 2020
 
 * New "Resize Image" action added for resizing images from either a file upload, email attachment or other Action. 

@@ -98,6 +98,42 @@ A variable (not a function) containing an associative array with all available W
 user_agent = variables['request.header.user-agent']
 ```
 
+## Files
+
+When you send an email, or send a multipart/form-data request, files are extracted as the `file.*.*` variables, but you can also loop over files using WebhookScript.
+
+### files(***string*** name) : array
+
+Returns an array of files, with the following keys:
+
+* id - unique file ID
+* filename - original filename
+* size - size of the file in bytes
+* content-type - mime content type of the file
+
+```javascript
+dump(files())
+
+// [
+//   0: [
+//     "id": "76b7274a-e806-4f72-ba49-85ad05926ef0", 
+//     "filename": "Screen Shot 2020-06-05 at 2.15.29 PM.png", 
+//     "size": 1203671, 
+//     "content_type": "image/png"¨
+//   ]
+// ]
+
+for (file in files()) {
+    dump(file['76b7274a-e806-4f72-ba49-85ad05926ef0'])
+}
+
+// "Screen Shot 2020-06-05 at 2.15.29 PM.png"
+```
+
+### file_contents(***string*** fileId) : string
+
+Returns the content of a specific file, using the `id` key from the `files()` function above.
+
 ## HTTP
 
 ### query(***array*** form_values) : string
