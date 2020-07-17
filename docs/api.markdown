@@ -16,29 +16,29 @@ Base URL: `https://webhook.site`.
 
 We recommend that you set the Accept header to `application/json`.
 
-### About Tokens
+## About Tokens
 
 A **token** is a container for incoming requests and emails, and corresponds to a Webhook.site URL or Email. A **token ID** is a 36 character UUID consisting of hexadecimal characters and dashes.
 
 Simply, the token ID is the part after `https://webhook.site/` in the URL, or before `@email.webhook.site` in the email address.
 
-### Authentication
+## Authentication
 
 While most functions in the API work without any authentication whatsoever, some endpoints do require authentication, or will return a `401 Unauthorized` status code.
 
-##### API Key
+### API Key
 
 An API Key can be generated in the Control Panel, and provides access to Tokens that are either a) password protected or b) require login.
 
 To specify an API Key in a request, use a HTTP header: `Api-Key: [your API Key]`
 
-##### Password
+### Password
 
 If you have enabled password authentication on a Webhook.site URL/Token, to access the resource, either a) use the `?password=[your password]` query string b) set the password using HTTP Basic Auth.
 
-# Tokens
+## Tokens
 
-## Create token
+### Create token
 
 **POST** `/token`
 
@@ -49,7 +49,7 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
 * `expiry` set to true will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Premium user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
 * `cors` set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
 
-##### Request
+#### Request
 
 ```json
 {
@@ -62,7 +62,7 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
 }
 ```
 
-##### Response
+#### Response
 
 `200 OK`
 
@@ -86,21 +86,21 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
 
 Note about expiry: If there's no incoming requests for about a week, and the token is not upgraded to premium, the token is automatically deleted along with any other data.
 
-## Update token
+### Update token
 
 * Can require authentication.
 
 **PUT** `/token/:token_id`
 
-##### Request
+#### Request
 
 [*See **POST** `/token`*](#11-create-token)
 
-##### Response
+#### Response
 
 [*See **POST** `/token`*](#11-create-token)
 
-## Set password (Premium)
+### Set password (Premium)
 
 * Can require authentication.
 * Requires user with Premium upgrade.
@@ -109,17 +109,17 @@ Note about expiry: If there's no incoming requests for about a week, and the tok
 
 Sets a password to view the requests of a token.
 
-##### Request
+#### Request
 
 ```json
 {"password": "hunter2", "old_password": "hunter1"}
 ```
 
-##### Response
+#### Response
 
 [*See **POST** `/token`*](#11-create-token)
 
-## Set alias (Premium)
+### Set alias (Premium)
 
 * Can require authentication.
 * Requires user with Premium upgrade.
@@ -128,51 +128,51 @@ Sets a password to view the requests of a token.
 
 Sets the alias for the token. (Can be used when creating requests.)
 
-##### Request
+#### Request
 
 ```json
 {"alias": "my-webhook"}
 ```
 
-##### Response
+#### Response
 
 [*See **POST** `/token`*](#11-create-token)
 
-## Toggle CORS
+### Toggle CORS
 
 Attaches CORS headers to the response of the Token, allowing browsers to request it from all domains.
 
 **PUT** `/token/:token_id/cors/toggle`
 
-##### Response
+#### Response
 
 ```json
 { "enabled": true}
 ```
 
-## Get token
+### Get token
 
 * Can require authentication.
 
 **GET** `/token/:token_id`
 
-##### Response
+#### Response
 
 [*See **POST** `/token`*](#11-create-token)
 
-## Delete token 
+### Delete token 
 
 * Can require authentication.
 
 **DELETE** `/token/:token_id`
 
-##### Response
+#### Response
 
 `204 No Content`
 
-# Requests
+## Requests
 
-## Create request
+### Create request
 
 ***(any method)*** `/:tokenId` <br>
 ***(any method)*** `/:tokenId/:statusCode` <br>
@@ -182,15 +182,15 @@ If `statusCode` is valid, that HTTP status will be used in the response (instead
 
 Instead of `tokenId`, an alias can also be supplied.
 
-##### Request
+#### Request
 
 *(Anything.)*
 
-##### Response
+#### Response
 
 *(The default response of the Token.)*
 
-## Get requests
+### Get requests
 
 * Can require authentication.
 
@@ -198,7 +198,13 @@ Instead of `tokenId`, an alias can also be supplied.
 
 Lists all request sent to a token. 
 
-##### Response
+#### Query string parameters
+
+* `sorting` - either `newest` or `oldest` (default)
+* `per_page` - amount of requests returned, defaults to 50 (max 100)
+* `page` -  page number to retrieve (default 1)
+
+#### Response
 
 ```json
 {
@@ -236,7 +242,7 @@ Lists all request sent to a token.
 }
 ```
 
-## Get single request
+### Get single request
 
 * Can require authentication.
 
@@ -244,7 +250,7 @@ Lists all request sent to a token.
 
 **GET** `/token/:token_id/request/latest` - retrieves the latest request sent to the URL
 
-##### Response
+#### Response
 
 ```json
 {
@@ -272,7 +278,7 @@ Lists all request sent to a token.
 }
 ```
 
-## Get raw request content
+### Get raw request content
 
 * Can require authentication.
 
@@ -282,7 +288,7 @@ Lists all request sent to a token.
 
 Returns the request as a response (body, content-type.)
 
-## Delete request
+### Delete request
 
 * Can require authentication.
 
@@ -292,6 +298,6 @@ Deletes a request.
 
 If no ID, all requests related to the token will be deleted.
 
-##### Response
+#### Response
 
 `204 No Content`
