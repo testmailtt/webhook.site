@@ -130,9 +130,14 @@ for (file in files()) {
 // "Screen Shot 2020-06-05 at 2.15.29 PM.png"
 ```
 
-### file_contents(***string*** fileId) : string
+### file_content(***string*** fileId) : string
 
 Returns the content of a specific file, using the `id` key from the `files()` function above.
+
+```javascript
+firstFile = array_get(files(), 0)
+fileContent = file_contents(firstFile['id']);
+```
 
 ## HTTP
 
