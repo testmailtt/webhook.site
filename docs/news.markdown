@@ -3,7 +3,7 @@ title: News & Changelog
 nav_order: 50
 ---
 
-# News & Changelog
+# News
 
 Subscribe below to receive updates about improvements and new features on Webhook.site. Expect a newsletter every month at the most.
 
@@ -21,6 +21,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
     </div>
 </form>
 </div>
+
+## 25 July 2020
+
+* New WebhookScript function: `action(action_type, parameters)`, to run Custom Actions inside a WebhookScript. [More info here.](/webhookscript/functions.html#actionstring-action_type-array-parameters-array)
+* It's now possible to download email attachments or uploaded files directly from the Webhook.site app.
+* When sending a request using either the Send Request Custom Action or the request() function, the response is now truncated if the response content is over 20KiB. This means the whole contents is not visible in the app, but is still available to Actions.
 
 ## 16 July 2020
 

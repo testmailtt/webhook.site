@@ -188,6 +188,80 @@ url_encode('here\'s a value') // here%27s+a+value
 
 ## Flow Control and Responses
 
+
+### action(***string*** action_type, ***array*** parameters) : ***array***
+
+Runs Custom Actions in WebhookScript. Can be used to loop over items in a way that not possible using the visual Custom Actions editor.
+
+The function returns an array of runtime variables which can be used to fetch the result of an action that sets a variable, like `google_sheets_get_values`.
+
+The `action_type` can be one of the following:
+
+* google_sheets_add_row
+* google_sheets_update_row
+* google_sheets_get_values
+* aws_s3_create_bucket
+* aws_s3_put_object
+* aws_s3_delete_object
+* aws_s3_get_object
+* aws_cf_invalidate
+* discord_send_message
+* slack_send_message
+* dropbox_create_folder
+* dropbox_delete
+* dropbox_download_file
+* dropbox_get_link
+* dropbox_upload_file
+* image_resize
+
+The following action extracts a list of files from an array of objects in a JSON array and uploads each file to Dropbox using the `dropbox_upload_file` action.
+
+**Example**
+
+In this example, we assume that the request content sent to the Webhook.site URL contains the following:
+
+```json
+{
+  "files": [
+    {
+      "url": "https://example.com/path/980e683e-9bd7-4512-bc0e-acfd6e022a81",
+      "name": "example_1.png"
+    },
+    {
+      "url": "https://example.com/path/c8e1282f-46a7-45ab-9699-0472ff9ab96c",
+      "name": "example_2.png"
+    }
+  ]
+}
+```
+
+In the script, the request contents are JSON decoded and looped over. For each item, the file's URL is downloaded and a Dropbox Upload File action is executed.
+
+```javascript
+files = json_path(var('request.content'), '.files.*')
+
+for (file_info in files) {
+  
+  // Download file from URL
+  file_download = request(file_info['url'])
+  
+  // Generate a destination path for the Dropbox file
+  destination_path = '/Example Files/%s'.format(file_info['name'])
+
+  // Execute Dropbox Upload File action
+  action(
+    'dropbox_upload_file',
+    [
+      'path': destination_path,
+      'body': file_download['content'],
+      'mode': 'update',
+      'provider_id': providerId
+    ]
+  )
+    
+}
+```
+
 ### delay(***int*** seconds, ***string*** code)
 
 Executes code in the future. Any output will be stored on the request and will show with a "Was delayed" label. 
