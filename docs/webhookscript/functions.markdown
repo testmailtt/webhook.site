@@ -119,15 +119,18 @@ dump(files())
 //     "id": "76b7274a-e806-4f72-ba49-85ad05926ef0", 
 //     "filename": "Screen Shot 2020-06-05 at 2.15.29 PM.png", 
 //     "size": 1203671, 
-//     "content_type": "image/png"¨
+//     "content_type": "image/png"
 //   ]
 // ]
 
+// Filtering files by type
 for (file in files()) {
-    dump(file['76b7274a-e806-4f72-ba49-85ad05926ef0'])
+    if (r'.*\.png'.match(file['filename'])) {
+        dump(file['filename'] + ' is png.')
+    }
 }
 
-// "Screen Shot 2020-06-05 at 2.15.29 PM.png"
+// "Screen Shot 2020-06-05 at 2.15.29 PM.png is png."
 ```
 
 ### file_content(***string*** fileId) : string
