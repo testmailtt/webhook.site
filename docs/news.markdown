@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 July 2020
+
+* New WebhookScript function: `trim(string)`, which removes space, newline and tab characters from the beginning and end of a string, similar to PHP's own trim() function.
+* New Schedule intervals: weekly (every monday), monthly (every 1st day of month)
+
 ## 25 July 2020
 
 * New WebhookScript function: `action(action_type, parameters)`, to run Custom Actions inside a WebhookScript. [More info here.](/webhookscript/functions.html#actionstring-action_type-array-parameters-array)

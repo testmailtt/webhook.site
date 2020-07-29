@@ -503,6 +503,10 @@ Converts a regex string to a regex type
 
 Returns ***value*** as string 
 
+### trim(***string*** string): string
+
+Returns `string` with space, tab and newline characters removed from the beginning and end of the string.
+
 ### xpath(***string*** xpath, ***string*** input): string/null
 
 Returns the first result of an XPath query on XML document `input`.
