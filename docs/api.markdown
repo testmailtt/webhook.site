@@ -10,8 +10,6 @@ The Webhook.site API is public, free to use, doesn't require authentication and 
 !!! note
     Please note that fair use guidelines and other limitations apply as described by the [Terms of Service](https://webhook.site/terms).
 
-At its core, Webhook.site takes your data (HTTP requests) and returns it back to you, and also letting you execute various actions based on the contents with [Custom Actions](/custom-actions.html).
-
 Base URL: `https://webhook.site`.
 
 We recommend that you set the Accept header to `application/json`.

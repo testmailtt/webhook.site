@@ -5,9 +5,13 @@ nav_order: 400
 
 # Custom Actions
 
-With Custom Actions, it is possible to string together a set of actions that are executed whenever a Webhook.site URL receives a request or email. The actions can extract data from the request and use it to send another request as well as modify the response. 
+With Custom Actions, it is possible to create a workflow out of a set of actions that are executed whenever a Webhook.site URL receives a request or email.
 
-With this, you can connect APIs that aren't compatible, convert a request to an email, and much more.
+Using this functionality, you can connect APIs that aren't compatible, convert a HTTP request to an email or vice versa, build workflows that would otherwise require a developer, and much, much more.
+
+## Demo
+
+In the following demo, webshop order details are received in a webhook. We then use Extract JSONPath and Google Sheets actions to insert their name in a Google Sheet. It also shows how variables interact with downstream actions.
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9Cbuf5T6Tqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
