@@ -11,7 +11,7 @@ With Webhook.site Premium, you get more features that allows you to do more with
 
 ## Feature List
 
-### Custom Actions 
+### Custom Actions
 Run scripts, send emails, HTTP requests and more on each request, and use native integrations like Google Sheets, Dropbox, Slack and others. [Read more...](/custom-actions.html)
 
 ### Schedules
