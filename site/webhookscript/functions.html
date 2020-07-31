@@ -10,7 +10,7 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
@@ -435,6 +435,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filesstring-name-array" class="md-nav__link">
+    files(string name) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file_contentstring-fileid-string" class="md-nav__link">
+    file_content(string fileId) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#http" class="md-nav__link">
     HTTP
   </a>
@@ -482,6 +509,13 @@
   
     <nav class="md-nav" aria-label="Flow Control and Responses">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actionstring-action_type-array-parameters-array" class="md-nav__link">
+    action(string action_type, array parameters) : array
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#delayint-seconds-string-code" class="md-nav__link">
@@ -723,6 +757,13 @@
           <li class="md-nav__item">
   <a href="#to_stringstringnumberbool-value-string" class="md-nav__link">
     to_string(string/number/bool value) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimstring-string-string" class="md-nav__link">
+    trim(string string): string
   </a>
   
 </li>
@@ -1245,6 +1286,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filesstring-name-array" class="md-nav__link">
+    files(string name) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file_contentstring-fileid-string" class="md-nav__link">
+    file_content(string fileId) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#http" class="md-nav__link">
     HTTP
   </a>
@@ -1292,6 +1360,13 @@
   
     <nav class="md-nav" aria-label="Flow Control and Responses">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actionstring-action_type-array-parameters-array" class="md-nav__link">
+    action(string action_type, array parameters) : array
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#delayint-seconds-string-code" class="md-nav__link">
@@ -1533,6 +1608,13 @@
           <li class="md-nav__item">
   <a href="#to_stringstringnumberbool-value-string" class="md-nav__link">
     to_string(string/number/bool value) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimstring-string-string" class="md-nav__link">
+    trim(string string): string
   </a>
   
 </li>
@@ -1931,10 +2013,10 @@
                   
                 
                 
-                <h1 id="global-functions">Global Functions</h1>
-<h2 id="about-functions">About Functions</h2>
+                <h1 id="global-functions">Global Functions<a class="headerlink" href="#global-functions" title="Permanent link">&para;</a></h1>
+<h2 id="about-functions">About Functions<a class="headerlink" href="#about-functions" title="Permanent link">&para;</a></h2>
 <p>These are the functions that can be used in your script, and includes various utility functions and functions to interact with your Webhook.site URL.</p>
-<h3 id="chaining">Chaining</h3>
+<h3 id="chaining">Chaining<a class="headerlink" href="#chaining" title="Permanent link">&para;</a></h3>
 <p>Functions can be chained directly to a primitive (strings, numbers, arrays).</p>
 <p>These two statements are equivalent:</p>
 <div class="codehilite"><pre><span></span><code><span class="s1">&#39;Hello World&#39;</span><span class="p">.</span><span class="nx">echo</span><span class="p">()</span>
@@ -1958,7 +2040,7 @@
 
 
 <p>Read more about functions in the <a href="/webhookscript/reference.html#functions">reference</a>.</p>
-<h3 id="custom-functions">Custom functions</h3>
+<h3 id="custom-functions">Custom functions<a class="headerlink" href="#custom-functions" title="Permanent link">&para;</a></h3>
 <p>Define your own functions like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">sub</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
@@ -1967,41 +2049,80 @@
 
 
 <p>Read more about functions in the <a href="/webhookscript/reference.html#functions">reference</a>.</p>
-<h2 id="debugging-and-output">Debugging and output</h2>
-<h3 id="echostring-string">echo(<strong><em>string</em></strong> string)</h3>
+<h2 id="debugging-and-output">Debugging and output<a class="headerlink" href="#debugging-and-output" title="Permanent link">&para;</a></h2>
+<h3 id="echostring-string">echo(<strong><em>string</em></strong> string)<a class="headerlink" href="#echostring-string" title="Permanent link">&para;</a></h3>
 <p>Adds <code>string</code> to script debug output.</p>
-<h3 id="ddany-value">dd(<strong><em>any</em></strong> value)</h3>
+<h3 id="ddany-value">dd(<strong><em>any</em></strong> value)<a class="headerlink" href="#ddany-value" title="Permanent link">&para;</a></h3>
 <p>Stops Custom Action execution and adds <code>value</code> to script debug output.</p>
-<h3 id="dumpany-value">dump(<strong><em>any</em></strong> value)</h3>
+<h3 id="dumpany-value">dump(<strong><em>any</em></strong> value)<a class="headerlink" href="#dumpany-value" title="Permanent link">&para;</a></h3>
 <p>Adds <code>value</code> as a decoded string to script debug output.</p>
-<h2 id="custom-action-variables">Custom Action Variables</h2>
+<h2 id="custom-action-variables">Custom Action Variables<a class="headerlink" href="#custom-action-variables" title="Permanent link">&para;</a></h2>
 <p>These functions lets you interface with other Custom Actions by getting and setting variables from them. These functions are also how you retrieve Global Variables defined in the Control Panel.</p>
-<h3 id="varstring-variable_name-mixed">var(<strong><em>string</em></strong> variable_name) : mixed</h3>
+<h3 id="varstring-variable_name-mixed">var(<strong><em>string</em></strong> variable_name) : mixed<a class="headerlink" href="#varstring-variable_name-mixed" title="Permanent link">&para;</a></h3>
 <p>Retrieves the value of a Variable or Global Variable (defined in the Control Panel). The surrounding dollar signs are not mandatory.</p>
 <p>Returns <code>null</code> if the variable does not exist.</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.header.x-request-verification&#39;</span><span class="p">)</span> <span class="c1">// returns value of the `x-request-verification` header</span>
 </code></pre></div>
 
 
-<h3 id="setstring-variable_name-string-variable_value">set(<strong><em>string</em></strong> variable_name, <strong><em>string</em></strong> variable_value)</h3>
+<h3 id="setstring-variable_name-string-variable_value">set(<strong><em>string</em></strong> variable_name, <strong><em>string</em></strong> variable_value)<a class="headerlink" href="#setstring-variable_name-string-variable_value" title="Permanent link">&para;</a></h3>
 <p>Sets a Variable for usage in current action execution. The Variable is available to downstream actions, but not stored permanently.</p>
-<h3 id="storestring-global_variable_name-any-value-any">store(<strong><em>string</em></strong> global_variable_name, <strong><em>any</em></strong> value): <strong><em>any</em></strong></h3>
+<h3 id="storestring-global_variable_name-any-value-any">store(<strong><em>string</em></strong> global_variable_name, <strong><em>any</em></strong> value): <strong><em>any</em></strong><a class="headerlink" href="#storestring-global_variable_name-any-value-any" title="Permanent link">&para;</a></h3>
 <p>Permanently creates or updates a Global Variable (as defined in Control Panel.)</p>
 <p>The value can be retrieved with the <code>var()</code> function in subsequent action executions.</p>
-<h3 id="variables-array">variables : array</h3>
+<h3 id="variables-array">variables : array<a class="headerlink" href="#variables-array" title="Permanent link">&para;</a></h3>
 <p>A variable (not a function) containing an associative array with all available Webhook.site variables.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">user_agent</span> <span class="o">=</span> <span class="nx">variables</span><span class="p">[</span><span class="s1">&#39;request.header.user-agent&#39;</span><span class="p">]</span>
 </code></pre></div>
 
 
-<h2 id="http">HTTP</h2>
-<h3 id="queryarray-form_values-string">query(<strong><em>array</em></strong> form_values) : string</h3>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<p>When you send an email, or send a multipart/form-data request, files are extracted as the <code>file.*.*</code> variables, but you can also loop over files using WebhookScript.</p>
+<h3 id="filesstring-name-array">files(<strong><em>string</em></strong> name) : array<a class="headerlink" href="#filesstring-name-array" title="Permanent link">&para;</a></h3>
+<p>Returns an array of files, with the following keys:</p>
+<ul>
+<li>id - unique file ID</li>
+<li>filename - original filename</li>
+<li>size - size of the file in bytes</li>
+<li>content-type - mime content type of the file</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nx">dump</span><span class="p">(</span><span class="nx">files</span><span class="p">())</span>
+
+<span class="c1">// [</span>
+<span class="c1">//   0: [</span>
+<span class="c1">//     &quot;id&quot;: &quot;76b7274a-e806-4f72-ba49-85ad05926ef0&quot;, </span>
+<span class="c1">//     &quot;filename&quot;: &quot;Screen Shot 2020-06-05 at 2.15.29 PM.png&quot;, </span>
+<span class="c1">//     &quot;size&quot;: 1203671, </span>
+<span class="c1">//     &quot;content_type&quot;: &quot;image/png&quot;</span>
+<span class="c1">//   ]</span>
+<span class="c1">// ]</span>
+
+<span class="c1">// Filtering files by type</span>
+<span class="k">for</span> <span class="p">(</span><span class="nx">file</span> <span class="k">in</span> <span class="nx">files</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">r</span><span class="s1">&#39;.*\.png&#39;</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">file</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nx">dump</span><span class="p">(</span><span class="nx">file</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; is png.&#39;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// &quot;Screen Shot 2020-06-05 at 2.15.29 PM.png is png.&quot;</span>
+</code></pre></div>
+
+
+<h3 id="file_contentstring-fileid-string">file_content(<strong><em>string</em></strong> fileId) : string<a class="headerlink" href="#file_contentstring-fileid-string" title="Permanent link">&para;</a></h3>
+<p>Returns the content of a specific file, using the <code>id</code> key from the <code>files()</code> function above.</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">firstFile</span> <span class="o">=</span> <span class="nx">array_get</span><span class="p">(</span><span class="nx">files</span><span class="p">(),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nx">fileContent</span> <span class="o">=</span> <span class="nx">file_contents</span><span class="p">(</span><span class="nx">firstFile</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]);</span>
+</code></pre></div>
+
+
+<h2 id="http">HTTP<a class="headerlink" href="#http" title="Permanent link">&para;</a></h2>
+<h3 id="queryarray-form_values-string">query(<strong><em>array</em></strong> form_values) : string<a class="headerlink" href="#queryarray-form_values-string" title="Permanent link">&para;</a></h3>
 <p>Converts an associative array into a form-style string, used for e.g. <code>application/x-www-form-urlencoded</code> requests or HTTP query strings.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">query</span><span class="p">([</span><span class="s1">&#39;country&#39;</span><span class="o">:</span> <span class="s1">&#39;Curaçao&#39;</span><span class="p">,</span> <span class="s1">&#39;population&#39;</span><span class="o">:</span> <span class="mi">158665</span><span class="p">])</span> <span class="c1">// country=Cura%C3%A7ao&amp;population=158665</span>
 </code></pre></div>
 
 
-<h3 id="requeststring-url-string-content-string-method-get-array-headers-array">request(<strong><em>string</em></strong> url, <strong><em>string</em></strong> content = '', <strong><em>string</em></strong> method = 'GET', <strong><em>array</em></strong> headers = []) : array</h3>
+<h3 id="requeststring-url-string-content-string-method-get-array-headers-array">request(<strong><em>string</em></strong> url, <strong><em>string</em></strong> content = '', <strong><em>string</em></strong> method = 'GET', <strong><em>array</em></strong> headers = []) : array<a class="headerlink" href="#requeststring-url-string-content-string-method-get-array-headers-array" title="Permanent link">&para;</a></h3>
 <p>Sends a HTTP request and returns an array with the following keys containing response data:</p>
 <ul>
 <li><code>content</code></li>
@@ -2020,16 +2141,82 @@
 </code></pre></div>
 
 
-<h3 id="url_decodestring-value-string">url_decode(<strong><em>string</em></strong> value) : string</h3>
+<h3 id="url_decodestring-value-string">url_decode(<strong><em>string</em></strong> value) : string<a class="headerlink" href="#url_decodestring-value-string" title="Permanent link">&para;</a></h3>
 <p>Returns an URL-decoded version of <em>value</em>.</p>
-<h3 id="url_encodestring-value-string">url_encode(<strong><em>string</em></strong> value) : string</h3>
+<h3 id="url_encodestring-value-string">url_encode(<strong><em>string</em></strong> value) : string<a class="headerlink" href="#url_encodestring-value-string" title="Permanent link">&para;</a></h3>
 <p>Returns an URL-encoded version of <em>value</em>.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">url_encode</span><span class="p">(</span><span class="s1">&#39;here\&#39;s a value&#39;</span><span class="p">)</span> <span class="c1">// here%27s+a+value</span>
 </code></pre></div>
 
 
-<h2 id="flow-control-and-responses">Flow Control and Responses</h2>
-<h3 id="delayint-seconds-string-code">delay(<strong><em>int</em></strong> seconds, <strong><em>string</em></strong> code)</h3>
+<h2 id="flow-control-and-responses">Flow Control and Responses<a class="headerlink" href="#flow-control-and-responses" title="Permanent link">&para;</a></h2>
+<h3 id="actionstring-action_type-array-parameters-array">action(<strong><em>string</em></strong> action_type, <strong><em>array</em></strong> parameters) : <strong><em>array</em></strong><a class="headerlink" href="#actionstring-action_type-array-parameters-array" title="Permanent link">&para;</a></h3>
+<p>Runs Custom Actions in WebhookScript. Can be used to loop over items in a way that not possible using the visual Custom Actions editor.</p>
+<p>The function returns an array of runtime variables which can be used to fetch the result of an action that sets a variable, like <code>google_sheets_get_values</code>.</p>
+<p>The <code>action_type</code> can be one of the following:</p>
+<ul>
+<li>google_sheets_add_row</li>
+<li>google_sheets_update_row</li>
+<li>google_sheets_get_values</li>
+<li>aws_s3_create_bucket</li>
+<li>aws_s3_put_object</li>
+<li>aws_s3_delete_object</li>
+<li>aws_s3_get_object</li>
+<li>aws_cf_invalidate</li>
+<li>discord_send_message</li>
+<li>slack_send_message</li>
+<li>dropbox_create_folder</li>
+<li>dropbox_delete</li>
+<li>dropbox_download_file</li>
+<li>dropbox_get_link</li>
+<li>dropbox_upload_file</li>
+<li>image_resize</li>
+</ul>
+<p>The following action extracts a list of files from an array of objects in a JSON array and uploads each file to Dropbox using the <code>dropbox_upload_file</code> action.</p>
+<p><strong>Example</strong></p>
+<p>In this example, we assume that the request content sent to the Webhook.site URL contains the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/path/980e683e-9bd7-4512-bc0e-acfd6e022a81&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example_1.png&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/path/c8e1282f-46a7-45ab-9699-0472ff9ab96c&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example_2.png&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>In the script, the request contents are JSON decoded and looped over. For each item, the file's URL is downloaded and a Dropbox Upload File action is executed.</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">files</span> <span class="o">=</span> <span class="nx">json_path</span><span class="p">(</span><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.content&#39;</span><span class="p">),</span> <span class="s1">&#39;.files.*&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="nx">file_info</span> <span class="k">in</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// Download file from URL</span>
+  <span class="nx">file_download</span> <span class="o">=</span> <span class="nx">request</span><span class="p">(</span><span class="nx">file_info</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
+
+  <span class="c1">// Generate a destination path for the Dropbox file</span>
+  <span class="nx">destination_path</span> <span class="o">=</span> <span class="s1">&#39;/Example Files/%s&#39;</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">file_info</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+
+  <span class="c1">// Execute Dropbox Upload File action</span>
+  <span class="nx">action</span><span class="p">(</span>
+    <span class="s1">&#39;dropbox_upload_file&#39;</span><span class="p">,</span>
+    <span class="p">[</span>
+      <span class="s1">&#39;path&#39;</span><span class="o">:</span> <span class="nx">destination_path</span><span class="p">,</span>
+      <span class="s1">&#39;body&#39;</span><span class="o">:</span> <span class="nx">file_download</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;mode&#39;</span><span class="o">:</span> <span class="s1">&#39;update&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;provider_id&#39;</span><span class="o">:</span> <span class="nx">providerId</span>
+    <span class="p">]</span>
+  <span class="p">)</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+
+<h3 id="delayint-seconds-string-code">delay(<strong><em>int</em></strong> seconds, <strong><em>string</em></strong> code)<a class="headerlink" href="#delayint-seconds-string-code" title="Permanent link">&para;</a></h3>
 <p>Executes code in the future. Any output will be stored on the request and will show with a "Was delayed" label. </p>
 <p>The code will not inherit the execution scope.</p>
 <p>In this example, the <code>format</code> function is used to prepare the code string with a URL, causing <code>{}</code> to be replaced with with <code>https://example.com</code>.</p>
@@ -2048,9 +2235,9 @@
 
 
 <p>The maximum amount of seconds allowed is 604800 (7 days).</p>
-<h3 id="execstring-code-any">exec(<strong><em>string</em></strong> code) : <strong><em>any</em></strong></h3>
+<h3 id="execstring-code-any">exec(<strong><em>string</em></strong> code) : <strong><em>any</em></strong><a class="headerlink" href="#execstring-code-any" title="Permanent link">&para;</a></h3>
 <p>Executes code in <code>code</code> and returns the result. The code will inherit the execution scope.</p>
-<h3 id="importstring-url-any">import(<strong><em>string</em></strong> url) : <strong><em>any</em></strong></h3>
+<h3 id="importstring-url-any">import(<strong><em>string</em></strong> url) : <strong><em>any</em></strong><a class="headerlink" href="#importstring-url-any" title="Permanent link">&para;</a></h3>
 <p>Downloads code located at <code>url</code> and returns the result. The code will inherit the execution scope. </p>
 <p>As an example, this can be used if you want to re-use code. Just upload it to a server or e.g. Github and use it in different WebhookScript actions.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">result</span> <span class="o">=</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/fredsted/webhookscripts/ec22946a83ea85f607fcc6bff83f9d81ed2fe4ed/hello_world.ws&#39;</span><span class="p">)</span>
@@ -2058,25 +2245,25 @@
 </code></pre></div>
 
 
-<h3 id="respondstring-content-int-status-array-headers">respond(<strong><em>string</em></strong> content, <strong><em>int</em></strong> status, <strong><em>array</em></strong> headers)</h3>
+<h3 id="respondstring-content-int-status-array-headers">respond(<strong><em>string</em></strong> content, <strong><em>int</em></strong> status, <strong><em>array</em></strong> headers)<a class="headerlink" href="#respondstring-content-int-status-array-headers" title="Permanent link">&para;</a></h3>
 <p>Stops Custom Action execution and returns a response.</p>
-<h3 id="stop">stop()</h3>
+<h3 id="stop">stop()<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h3>
 <p>Stops Custom Action execution.</p>
-<h3 id="set_contentstring-content">set_content(<strong><em>string</em></strong> content)</h3>
+<h3 id="set_contentstring-content">set_content(<strong><em>string</em></strong> content)<a class="headerlink" href="#set_contentstring-content" title="Permanent link">&para;</a></h3>
 <p>Sets or overwrites the response content of the URL. Script execution continues.</p>
-<h3 id="set_headerstring-header_name-string-header_value">set_header(<strong><em>string</em></strong> header_name, <strong><em>string</em></strong> header_value)</h3>
+<h3 id="set_headerstring-header_name-string-header_value">set_header(<strong><em>string</em></strong> header_name, <strong><em>string</em></strong> header_value)<a class="headerlink" href="#set_headerstring-header_name-string-header_value" title="Permanent link">&para;</a></h3>
 <p>Sets or overwrites a response header of the URL. Script execution continues.</p>
-<h3 id="set_responsestring-content-int-status-array-headers">set_response(<strong><em>string</em></strong> content, <strong><em>int</em></strong> status, <strong><em>array</em></strong> headers)</h3>
+<h3 id="set_responsestring-content-int-status-array-headers">set_response(<strong><em>string</em></strong> content, <strong><em>int</em></strong> status, <strong><em>array</em></strong> headers)<a class="headerlink" href="#set_responsestring-content-int-status-array-headers" title="Permanent link">&para;</a></h3>
 <p>Sets or overwrites response content, status and headers in single function.  Script execution continues.</p>
 <p><code>headers</code> should be an array of strings e.g. <code>["X-Example: Value", "X-Foo: Bar"]</code>.</p>
-<h3 id="set_statusnumber-status">set_status(<strong><em>number</em></strong> status)</h3>
+<h3 id="set_statusnumber-status">set_status(<strong><em>number</em></strong> status)<a class="headerlink" href="#set_statusnumber-status" title="Permanent link">&para;</a></h3>
 <p>Sets or overwrites the HTTP response status of the current URL.  Script execution continues.</p>
-<h2 id="string">String</h2>
-<h3 id="base64_decodestring-string-string">base64_decode(<strong><em>string</em></strong> string) : string</h3>
+<h2 id="string">String<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<h3 id="base64_decodestring-string-string">base64_decode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#base64_decodestring-string-string" title="Permanent link">&para;</a></h3>
 <p>Returns a base64-encoded string.</p>
-<h3 id="base64_encodestring-string-string">base64_encode(<strong><em>string</em></strong> string) : string</h3>
+<h3 id="base64_encodestring-string-string">base64_encode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#base64_encodestring-string-string" title="Permanent link">&para;</a></h3>
 <p>Returns decoded base64 string.</p>
-<h3 id="csv_to_arraystring-csvstring-string-delimiter-int-headeroffset-string-enclosure-string-escape-array">csv_to_array(<strong><em>string</em></strong> csvString, <strong><em>string</em></strong> delimiter, <strong><em>int</em></strong> headerOffset, <strong><em>string</em></strong> enclosure, <strong><em>string</em></strong> escape) : array</h3>
+<h3 id="csv_to_arraystring-csvstring-string-delimiter-int-headeroffset-string-enclosure-string-escape-array">csv_to_array(<strong><em>string</em></strong> csvString, <strong><em>string</em></strong> delimiter, <strong><em>int</em></strong> headerOffset, <strong><em>string</em></strong> enclosure, <strong><em>string</em></strong> escape) : array<a class="headerlink" href="#csv_to_arraystring-csvstring-string-delimiter-int-headeroffset-string-enclosure-string-escape-array" title="Permanent link">&para;</a></h3>
 <p>Takes a CSV string and outputs to an array, with each row being an item in the array. Optionally, if <code>headerOffset</code> is </p>
 <ul>
 <li><code>delimiter</code> will explicitly set the CSV delimiter the parser will attempt to use (e.g. <code>;</code>). Must be a single character. Defaults to <code>,</code> (comma.)</li>
@@ -2107,7 +2294,7 @@
 </code></pre></div>
 
 
-<h3 id="hashstringnumber-value-string-algo-string">hash(<strong><em>string/number</em></strong> value, <strong><em>string</em></strong> algo) : string</h3>
+<h3 id="hashstringnumber-value-string-algo-string">hash(<strong><em>string/number</em></strong> value, <strong><em>string</em></strong> algo) : string<a class="headerlink" href="#hashstringnumber-value-string-algo-string" title="Permanent link">&para;</a></h3>
 <p>Returns a hashed version of <code>value</code> using the <code>algo</code> algorithm.</p>
 <div class="codehilite"><pre><span></span><code><span class="err">hash(&#39;md5&#39;, &#39;hello world&#39;)  // 5eb63bbbe01eeed093cb22bb8f5acdc3</span>
 </code></pre></div>
@@ -2115,11 +2302,11 @@
 
 <p><br></p>
 <p>The following built-in algorithms are available: <code>md2</code>, <code>md4</code>, <code>md5</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512/224</code>, <code>sha512/256</code>, <code>sha512</code>, <code>sha3-224</code>, <code>sha3-256</code>, <code>sha3-384</code>, <code>sha3-512</code>, <code>ripemd128</code>, <code>ripemd160</code>, <code>ripemd256</code>, <code>ripemd320</code>, <code>whirlpool</code>, <code>tiger128,3</code>, <code>tiger160,3</code>, <code>tiger192,3</code>, <code>tiger128,4</code>, <code>tiger160,4</code>, <code>tiger192,4</code>, <code>snefru</code>, <code>snefru256</code>, <code>gost</code>, <code>gost-crypto</code>, <code>adler32</code>, <code>crc32</code>, <code>crc32b</code>, <code>fnv132</code>, <code>fnv1a32</code>, <code>fnv164</code>, <code>fnv1a64</code>, <code>joaat</code>, <code>haval128,3</code>, <code>haval160,3</code>, <code>haval192,3</code>, <code>haval224,3</code>, <code>haval256,3</code>, <code>haval128,4</code>, <code>haval160,4</code>, <code>haval192,4</code>, <code>haval224,4</code>, <code>haval256,4</code>, <code>haval128,5</code>, <code>haval160,5</code>, <code>haval192,5</code>, <code>haval224,5</code>, <code>haval256,5</code>.</p>
-<h3 id="json_decodestring-json-array">json_decode(<strong><em>string</em></strong> json) : array</h3>
+<h3 id="json_decodestring-json-array">json_decode(<strong><em>string</em></strong> json) : array<a class="headerlink" href="#json_decodestring-json-array" title="Permanent link">&para;</a></h3>
 <p>Decodes <code>json</code> and returns an array</p>
-<h3 id="json_encodearray-array-string">json_encode(<strong><em>array</em></strong> array) : string</h3>
+<h3 id="json_encodearray-array-string">json_encode(<strong><em>array</em></strong> array) : string<a class="headerlink" href="#json_encodearray-array-string" title="Permanent link">&para;</a></h3>
 <p>Takes an array and encodes it as a JSON string</p>
-<h3 id="json_pathstring-json-string-jsonpath-bool-return_first-true-string">json_path(<strong><em>string</em></strong> json, <strong><em>string</em></strong> jsonpath, <strong><em>bool</em></strong> return_first = true) : string</h3>
+<h3 id="json_pathstring-json-string-jsonpath-bool-return_first-true-string">json_path(<strong><em>string</em></strong> json, <strong><em>string</em></strong> jsonpath, <strong><em>bool</em></strong> return_first = true) : string<a class="headerlink" href="#json_pathstring-json-string-jsonpath-bool-return_first-true-string" title="Permanent link">&para;</a></h3>
 <p>Returns the result of a <code>json</code> string parsed using the <a href="/custom-actions.html#extract-jsonpath">JSONPath</a> functionality.</p>
 <p>Per default, if there's just one match (e.g. if matching on a property value that's a string), this value is returned. To always return an array, set <code>return_first</code> to false. </p>
 <div class="codehilite"><pre><span></span><code><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: []}&#39;</span><span class="p">,</span> <span class="s1">&#39;v[*]&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">))</span>
@@ -2139,7 +2326,7 @@
 </code></pre></div>
 
 
-<h3 id="regex_extractregex-regex-string-subject-arrayfalse">regex_extract(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : array/false</h3>
+<h3 id="regex_extractregex-regex-string-subject-arrayfalse">regex_extract(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : array/false<a class="headerlink" href="#regex_extractregex-regex-string-subject-arrayfalse" title="Permanent link">&para;</a></h3>
 <p>Returns the matching string and all match groups as an array, and <code>false</code> on failure.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">input</span> <span class="o">=</span> <span class="s2">&quot;You&#39;re a good bot&quot;</span>
 
@@ -2149,7 +2336,7 @@
 </code></pre></div>
 
 
-<h3 id="regex_extract_firstregex-regex-string-subject-stringfalse">regex_extract_first(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : string/false</h3>
+<h3 id="regex_extract_firstregex-regex-string-subject-stringfalse">regex_extract_first(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : string/false<a class="headerlink" href="#regex_extract_firstregex-regex-string-subject-stringfalse" title="Permanent link">&para;</a></h3>
 <p>Returns the first match group of a regex, and <code>false</code> on failure.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">input</span> <span class="o">=</span> <span class="s2">&quot;You&#39;re a good bot&quot;</span>
 
@@ -2159,7 +2346,7 @@
 </code></pre></div>
 
 
-<h3 id="regex_matchregex-regex-string-subject-stringfalse">regex_match(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : string/false</h3>
+<h3 id="regex_matchregex-regex-string-subject-stringfalse">regex_match(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : string/false<a class="headerlink" href="#regex_matchregex-regex-string-subject-stringfalse" title="Permanent link">&para;</a></h3>
 <p>Returns the first matching string, otherwise false.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">input</span> <span class="o">=</span> <span class="s2">&quot;You&#39;re a good bot&quot;</span>
 
@@ -2169,35 +2356,37 @@
 </code></pre></div>
 
 
-<h3 id="regex_to_stringregex-regex-string">regex_to_string(<strong><em>regex</em></strong> regex) : string</h3>
+<h3 id="regex_to_stringregex-regex-string">regex_to_string(<strong><em>regex</em></strong> regex) : string<a class="headerlink" href="#regex_to_stringregex-regex-string" title="Permanent link">&para;</a></h3>
 <p>Returns the regex converted to a string</p>
-<h3 id="string_containsstring-subject-numberstringregex-value-bool">string_contains(<strong><em>string</em></strong> subject, <strong><em>number/string/regex</em></strong> value) : bool</h3>
+<h3 id="string_containsstring-subject-numberstringregex-value-bool">string_contains(<strong><em>string</em></strong> subject, <strong><em>number/string/regex</em></strong> value) : bool<a class="headerlink" href="#string_containsstring-subject-numberstringregex-value-bool" title="Permanent link">&para;</a></h3>
 <p>Returns boolean if <strong><em>subject</em></strong> contains <strong><em>value</em></strong></p>
-<h3 id="string_find_firststring-subject-numberstring-value-number">string_find_first(<strong><em>string</em></strong> subject, <strong><em>number/string</em></strong> value) : number</h3>
+<h3 id="string_find_firststring-subject-numberstring-value-number">string_find_first(<strong><em>string</em></strong> subject, <strong><em>number/string</em></strong> value) : number<a class="headerlink" href="#string_find_firststring-subject-numberstring-value-number" title="Permanent link">&para;</a></h3>
 <p>Returns position of <strong><em>value</em></strong> in <strong><em>subject</em></strong>, or false if not found</p>
-<h3 id="string_find_laststring-subject-numberstring-value-number">string_find_last(<strong><em>string</em></strong> subject, <strong><em>number/string</em></strong> value) : number</h3>
+<h3 id="string_find_laststring-subject-numberstring-value-number">string_find_last(<strong><em>string</em></strong> subject, <strong><em>number/string</em></strong> value) : number<a class="headerlink" href="#string_find_laststring-subject-numberstring-value-number" title="Permanent link">&para;</a></h3>
 <p>Returns position of <strong><em>value</em></strong> in <strong><em>subject</em></strong>, or false if not found</p>
-<h3 id="string_formatstring-formatstring-any-items-string">string_format(<strong><em>string</em></strong> formatString, ...<strong><em>any</em></strong> items) : string</h3>
+<h3 id="string_formatstring-formatstring-any-items-string">string_format(<strong><em>string</em></strong> formatString, ...<strong><em>any</em></strong> items) : string<a class="headerlink" href="#string_formatstring-formatstring-any-items-string" title="Permanent link">&para;</a></h3>
 <p>Sprintf-like formatting of formatString with <strong><em>items</em></strong>, see PHP sprintf docs.</p>
-<h3 id="string_joinstring-subject-array-items-numberstringboolarray-string">string_join(<strong><em>string</em></strong> subject, <strong><em>array</em></strong> items (number/string/bool/array)) : string</h3>
+<h3 id="string_joinstring-subject-array-items-numberstringboolarray-string">string_join(<strong><em>string</em></strong> subject, <strong><em>array</em></strong> items (number/string/bool/array)) : string<a class="headerlink" href="#string_joinstring-subject-array-items-numberstringboolarray-string" title="Permanent link">&para;</a></h3>
 <p>Joins items with string <strong><em>subject</em></strong></p>
-<h3 id="string_lengthstring-string-number">string_length(<strong><em>string</em></strong> string) : number</h3>
+<h3 id="string_lengthstring-string-number">string_length(<strong><em>string</em></strong> string) : number<a class="headerlink" href="#string_lengthstring-string-number" title="Permanent link">&para;</a></h3>
 <p>Returns length of string (multibyte-aware)</p>
-<h3 id="string_number_ofstring-string-number">string_number_of(<strong><em>string</em></strong> string) : number</h3>
+<h3 id="string_number_ofstring-string-number">string_number_of(<strong><em>string</em></strong> string) : number<a class="headerlink" href="#string_number_ofstring-string-number" title="Permanent link">&para;</a></h3>
 <p>Returns number value of <strong><em>string</em></strong></p>
-<h3 id="string_replacestring-subject-string-search-string-replace-string">string_replace(<strong><em>string</em></strong> subject, <strong><em>string</em></strong> search, <strong><em>string</em></strong> replace) : string</h3>
+<h3 id="string_replacestring-subject-string-search-string-replace-string">string_replace(<strong><em>string</em></strong> subject, <strong><em>string</em></strong> search, <strong><em>string</em></strong> replace) : string<a class="headerlink" href="#string_replacestring-subject-string-search-string-replace-string" title="Permanent link">&para;</a></h3>
 <p>Replaces string <strong><em>search</em></strong> with <strong><em>replace</em></strong> found in <strong><em>subject</em></strong>.</p>
-<h3 id="string_reversestring-subject-string">string_reverse(<strong><em>string</em></strong> subject) : string</h3>
+<h3 id="string_reversestring-subject-string">string_reverse(<strong><em>string</em></strong> subject) : string<a class="headerlink" href="#string_reversestring-subject-string" title="Permanent link">&para;</a></h3>
 <p>Reverses string <strong><em>subject</em></strong> </p>
-<h3 id="string_shufflestring-string-string">string_shuffle(<strong><em>string</em></strong> string) : string</h3>
+<h3 id="string_shufflestring-string-string">string_shuffle(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#string_shufflestring-string-string" title="Permanent link">&para;</a></h3>
 <p>Returns string where the individual characters has been shuffled.</p>
-<h3 id="string_splitstring-subject-stringregex-delimiter-array">string_split(<strong><em>string</em></strong> subject, <strong><em>string/regex</em></strong> delimiter) : array</h3>
+<h3 id="string_splitstring-subject-stringregex-delimiter-array">string_split(<strong><em>string</em></strong> subject, <strong><em>string/regex</em></strong> delimiter) : array<a class="headerlink" href="#string_splitstring-subject-stringregex-delimiter-array" title="Permanent link">&para;</a></h3>
 <p>Returns array of split string <strong><em>subject</em></strong> with <strong><em>delimiter</em></strong> </p>
-<h3 id="to_regexstring-regex-regex">to_regex(<strong><em>string</em></strong> regex) : regex</h3>
+<h3 id="to_regexstring-regex-regex">to_regex(<strong><em>string</em></strong> regex) : regex<a class="headerlink" href="#to_regexstring-regex-regex" title="Permanent link">&para;</a></h3>
 <p>Converts a regex string to a regex type</p>
-<h3 id="to_stringstringnumberbool-value-string">to_string(<strong><em>string/number/bool</em></strong> value) : string</h3>
+<h3 id="to_stringstringnumberbool-value-string">to_string(<strong><em>string/number/bool</em></strong> value) : string<a class="headerlink" href="#to_stringstringnumberbool-value-string" title="Permanent link">&para;</a></h3>
 <p>Returns <strong><em>value</em></strong> as string </p>
-<h3 id="xpathstring-xpath-string-input-stringnull">xpath(<strong><em>string</em></strong> xpath, <strong><em>string</em></strong> input): string/null</h3>
+<h3 id="trimstring-string-string">trim(<strong><em>string</em></strong> string): string<a class="headerlink" href="#trimstring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns <code>string</code> with space, tab and newline characters removed from the beginning and end of the string.</p>
+<h3 id="xpathstring-xpath-string-input-stringnull">xpath(<strong><em>string</em></strong> xpath, <strong><em>string</em></strong> input): string/null<a class="headerlink" href="#xpathstring-xpath-string-input-stringnull" title="Permanent link">&para;</a></h3>
 <p>Returns the first result of an XPath query on XML document <code>input</code>.</p>
 <p>Given a request with the following content:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
@@ -2215,7 +2404,7 @@
 <li><code>var('$request.content$').xpath('//employee[1]') // returns "Jack"</code></li>
 </ul>
 <p><a href="/custom-actions.html#extract-xpath">More information and examples regarding XPath</a>.</p>
-<h3 id="xpath_allstring-xpath-string-input-stringnull">xpath_all(<strong><em>string</em></strong> xpath, <strong><em>string</em></strong> input): string/null</h3>
+<h3 id="xpath_allstring-xpath-string-input-stringnull">xpath_all(<strong><em>string</em></strong> xpath, <strong><em>string</em></strong> input): string/null<a class="headerlink" href="#xpath_allstring-xpath-string-input-stringnull" title="Permanent link">&para;</a></h3>
 <p>Returns the results of an XPath query on XML document <code>input</code> as an array.</p>
 <p>Given a request with the following content:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
@@ -2233,9 +2422,9 @@
 <li><code>var('$request.content$').xpath('//employee') // returns [0: "Jack", 1: "Ann"]</code></li>
 </ul>
 <p><a href="/custom-actions.html#extract-xpath">More information and examples regarding XPath</a>.</p>
-<h2 id="date-manipulation">Date Manipulation</h2>
+<h2 id="date-manipulation">Date Manipulation<a class="headerlink" href="#date-manipulation" title="Permanent link">&para;</a></h2>
 <p>In WebhookScript, dates are not a specific type, and ar expressed in strings instead, which WebhookScript will attempt to parse. If possible, we recommend using a specific date format like ISO-8601 which leaves little doubt for misunderstanding.</p>
-<h3 id="date-format-characters">Date format characters</h3>
+<h3 id="date-format-characters">Date format characters<a class="headerlink" href="#date-format-characters" title="Permanent link">&para;</a></h3>
 <p>WebhookScript uses the ISO format for converting and formatting dates, and the format is compatible with the <a href="https://momentjs.com/docs/#/parsing/string-format/">Moment.js format method</a>.</p>
 <p>The following examples are based on the date <code>2017-01-05 17:04:05.084512</code>.</p>
 <table>
@@ -2620,9 +2809,9 @@
 </tbody>
 </table>
 <p>Source: <a href="https://carbon.nesbot.com/docs/#api-localization">Carbon Docs</a></p>
-<h3 id="date-locales-available">Date locales available</h3>
+<h3 id="date-locales-available">Date locales available<a class="headerlink" href="#date-locales-available" title="Permanent link">&para;</a></h3>
 <p><a href="/webhookscript/date-locales.html">Click here for a list of possible locales/translations available for date display functions.</a></p>
-<h3 id="to_datestring-date-string-format-string">to_date(<strong><em>string</em></strong> date, <strong><em>?string</em></strong> format): <strong><em>string</em></strong></h3>
+<h3 id="to_datestring-date-string-format-string">to_date(<strong><em>string</em></strong> date, <strong><em>?string</em></strong> format): <strong><em>string</em></strong><a class="headerlink" href="#to_datestring-date-string-format-string" title="Permanent link">&para;</a></h3>
 <p>Will attempt to parse a string to a ISO-8601 formatted date string. </p>
 <p>If specified, <code>format</code> is used to parse the date without having to guess the format (see the <a href="#date-format-characters">Date Format Characters</a> above.)</p>
 <p>Many formats are supported, like relative dates and various specified date formats.</p>
@@ -2645,7 +2834,7 @@
 </code></pre></div>
 
 
-<h3 id="date_formatstring-date-string-format-string-locale-string">date_format(<strong><em>string</em></strong> date, <strong><em>?string</em></strong> format, <strong><em>?string</em></strong> locale): <strong><em>string</em></strong></h3>
+<h3 id="date_formatstring-date-string-format-string-locale-string">date_format(<strong><em>string</em></strong> date, <strong><em>?string</em></strong> format, <strong><em>?string</em></strong> locale): <strong><em>string</em></strong><a class="headerlink" href="#date_formatstring-date-string-format-string-locale-string" title="Permanent link">&para;</a></h3>
 <p>Returns a date parsed to the format specified in <code>format</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">date_format</span><span class="p">(</span><span class="s1">&#39;2008-07-05T18:26:25.000000Z&#39;</span><span class="p">,</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">)</span> <span class="c1">// 2008-07-05</span>
 
@@ -2656,7 +2845,7 @@
 </code></pre></div>
 
 
-<h3 id="date_to_arraystring-array">date_to_array(<strong><em>string</em></strong>): <strong><em>array</em></strong></h3>
+<h3 id="date_to_arraystring-array">date_to_array(<strong><em>string</em></strong>): <strong><em>array</em></strong><a class="headerlink" href="#date_to_arraystring-array" title="Permanent link">&para;</a></h3>
 <p>Returns an array containing all the components of a given date.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">dump</span><span class="p">(</span><span class="nx">date_to_array</span><span class="p">(</span><span class="s1">&#39;2008-07-05T18:26:25.324542Z&#39;</span><span class="p">))</span>
 
@@ -2677,7 +2866,7 @@
 </code></pre></div>
 
 
-<h3 id="date_intervalstring-date1-string-date2-string-format-stringint">date_interval(<strong><em>string</em></strong> date1, <strong><em>string</em></strong> date2, <strong><em>?string</em></strong> format): <strong><em>string/int</em></strong></h3>
+<h3 id="date_intervalstring-date1-string-date2-string-format-stringint">date_interval(<strong><em>string</em></strong> date1, <strong><em>string</em></strong> date2, <strong><em>?string</em></strong> format): <strong><em>string/int</em></strong><a class="headerlink" href="#date_intervalstring-date1-string-date2-string-format-stringint" title="Permanent link">&para;</a></h3>
 <p>Calculates the interval between <code>date1</code> and <code>date2</code>.</p>
 <p>If no format string is specified, the interval is returned as the number of seconds between the dates, with the number being negative if <code>date2</code> is before <code>date1</code>.</p>
 <p>Note that for the format string, this function does not use the ISO format, but rather the uses the <a href="https://www.php.net/manual/en/dateinterval.format.php">PHP <code>DateInterval</code> format specification</a>.</p>
@@ -2692,7 +2881,7 @@
 </code></pre></div>
 
 
-<h3 id="date_interval_humanstring-date1-string-date2-string-locale-stringint">date_interval_human(<strong><em>string</em></strong> date1, <strong><em>string</em></strong> date2, <strong><em>?string</em></strong> locale): <strong><em>string/int</em></strong></h3>
+<h3 id="date_interval_humanstring-date1-string-date2-string-locale-stringint">date_interval_human(<strong><em>string</em></strong> date1, <strong><em>string</em></strong> date2, <strong><em>?string</em></strong> locale): <strong><em>string/int</em></strong><a class="headerlink" href="#date_interval_humanstring-date1-string-date2-string-locale-stringint" title="Permanent link">&para;</a></h3>
 <p>Formats the difference between 2 dates in a way that's easy to read for humans.</p>
 <p>If no locale is specified, English is used.</p>
 <div class="codehilite"><pre><span></span><code><span class="nx">date_interval_human</span><span class="p">(</span>
@@ -2710,62 +2899,62 @@
 </code></pre></div>
 
 
-<h2 id="math-and-numbers">Math and Numbers</h2>
-<h3 id="absnumber-number-number">abs(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="atannumber-number-number">atan(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="ceilnumber-number-number">ceil(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="cosnumber-number-number">cos(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="floornumber-number-number">floor(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="maxarray-numbers-number">max(<strong><em>array</em></strong> numbers) : number</h3>
-<h3 id="minarray-numbers-number">min(<strong><em>array</em></strong> numbers) : number</h3>
-<h3 id="modnumber-number-number-divisor-number">mod(<strong><em>number</em></strong> number, <strong><em>number</em></strong> divisor) : number</h3>
+<h2 id="math-and-numbers">Math and Numbers<a class="headerlink" href="#math-and-numbers" title="Permanent link">&para;</a></h2>
+<h3 id="absnumber-number-number">abs(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#absnumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="atannumber-number-number">atan(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#atannumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="ceilnumber-number-number">ceil(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#ceilnumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="cosnumber-number-number">cos(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#cosnumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="floornumber-number-number">floor(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#floornumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="maxarray-numbers-number">max(<strong><em>array</em></strong> numbers) : number<a class="headerlink" href="#maxarray-numbers-number" title="Permanent link">&para;</a></h3>
+<h3 id="minarray-numbers-number">min(<strong><em>array</em></strong> numbers) : number<a class="headerlink" href="#minarray-numbers-number" title="Permanent link">&para;</a></h3>
+<h3 id="modnumber-number-number-divisor-number">mod(<strong><em>number</em></strong> number, <strong><em>number</em></strong> divisor) : number<a class="headerlink" href="#modnumber-number-number-divisor-number" title="Permanent link">&para;</a></h3>
 <p>Returns the remainder after number is divided by <code>divisor</code>.</p>
-<h3 id="number_lengthnumber-number-number">number_length(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="pi-number">pi() : number</h3>
+<h3 id="number_lengthnumber-number-number">number_length(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#number_lengthnumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="pi-number">pi() : number<a class="headerlink" href="#pi-number" title="Permanent link">&para;</a></h3>
 <p>Returns the value of Pi.</p>
-<h3 id="pownumber-number-number-power-number">pow(<strong><em>number</em></strong> number, <strong><em>number</em></strong> power) : number</h3>
-<h3 id="randnumber-min-number-max-number">rand(<strong><em>number</em></strong> min, <strong><em>number</em></strong> max) : number</h3>
+<h3 id="pownumber-number-number-power-number">pow(<strong><em>number</em></strong> number, <strong><em>number</em></strong> power) : number<a class="headerlink" href="#pownumber-number-number-power-number" title="Permanent link">&para;</a></h3>
+<h3 id="randnumber-min-number-max-number">rand(<strong><em>number</em></strong> min, <strong><em>number</em></strong> max) : number<a class="headerlink" href="#randnumber-min-number-max-number" title="Permanent link">&para;</a></h3>
 <p>Returns a random number between <code>min</code> and <code>max</code>.</p>
-<h3 id="roundnumber-number-number-precision-number">round(<strong><em>number</em></strong> number, <strong><em>number</em></strong> precision) : number</h3>
-<h3 id="sinnumber-number-number">sin(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="sqrtnumber-number-number">sqrt(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="tannumber-number-number">tan(<strong><em>number</em></strong> number) : number</h3>
-<h3 id="to_numberany-value-number">to_number(<strong><em>any</em></strong> value) : number</h3>
-<h2 id="arrays">Arrays</h2>
-<h3 id="array_containsarray-array-stringnumber-needle-bool">array_contains(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> needle) : bool</h3>
+<h3 id="roundnumber-number-number-precision-number">round(<strong><em>number</em></strong> number, <strong><em>number</em></strong> precision) : number<a class="headerlink" href="#roundnumber-number-number-precision-number" title="Permanent link">&para;</a></h3>
+<h3 id="sinnumber-number-number">sin(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#sinnumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="sqrtnumber-number-number">sqrt(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#sqrtnumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="tannumber-number-number">tan(<strong><em>number</em></strong> number) : number<a class="headerlink" href="#tannumber-number-number" title="Permanent link">&para;</a></h3>
+<h3 id="to_numberany-value-number">to_number(<strong><em>any</em></strong> value) : number<a class="headerlink" href="#to_numberany-value-number" title="Permanent link">&para;</a></h3>
+<h2 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h2>
+<h3 id="array_containsarray-array-stringnumber-needle-bool">array_contains(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> needle) : bool<a class="headerlink" href="#array_containsarray-array-stringnumber-needle-bool" title="Permanent link">&para;</a></h3>
 <p>Returns true or false depending on whether <strong><em>array</em></strong> contains <strong><em>needle</em></strong> </p>
-<h3 id="array_copyarray-array-array">array_copy(<strong><em>array</em></strong> array) : array</h3>
+<h3 id="array_copyarray-array-array">array_copy(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_copyarray-array-array" title="Permanent link">&para;</a></h3>
 <p>Returns a copy of <strong><em>array</em></strong></p>
-<h3 id="array_diffarray-array1-array-array2-array">array_diff(<strong><em>array</em></strong> array1, <strong><em>array</em></strong> array2) : array</h3>
+<h3 id="array_diffarray-array1-array-array2-array">array_diff(<strong><em>array</em></strong> array1, <strong><em>array</em></strong> array2) : array<a class="headerlink" href="#array_diffarray-array1-array-array2-array" title="Permanent link">&para;</a></h3>
 <p>Returns the items of array1 that are not present in array2 while keeping the array indices.</p>
-<h3 id="array_getarray-array-stringnumber-index-any-default-any">array_get(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> index, <strong><em>any</em></strong> default) : any</h3>
-<h3 id="array_hasarray-array-stringnumber-key-bool">array_has(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> key) : bool</h3>
-<h3 id="array_lengtharray-array-number">array_length(<strong><em>array</em></strong> array) : number`</h3>
-<h3 id="array_maparray-array-func-function">array_map(<strong><em>array</em></strong> array, <strong><em>func</em></strong> function)</h3>
+<h3 id="array_getarray-array-stringnumber-index-any-default-any">array_get(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> index, <strong><em>any</em></strong> default) : any<a class="headerlink" href="#array_getarray-array-stringnumber-index-any-default-any" title="Permanent link">&para;</a></h3>
+<h3 id="array_hasarray-array-stringnumber-key-bool">array_has(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> key) : bool<a class="headerlink" href="#array_hasarray-array-stringnumber-key-bool" title="Permanent link">&para;</a></h3>
+<h3 id="array_lengtharray-array-number">array_length(<strong><em>array</em></strong> array) : number`<a class="headerlink" href="#array_lengtharray-array-number" title="Permanent link">&para;</a></h3>
+<h3 id="array_maparray-array-func-function">array_map(<strong><em>array</em></strong> array, <strong><em>func</em></strong> function)<a class="headerlink" href="#array_maparray-array-func-function" title="Permanent link">&para;</a></h3>
 <p>Runs function with each array value, and returns array with key as result</p>
-<h3 id="array_number_ofarray-stringnumber-value-number">array_number_of(<strong><em>array</em></strong>, <strong><em>string/number</em></strong> value) : number</h3>
+<h3 id="array_number_ofarray-stringnumber-value-number">array_number_of(<strong><em>array</em></strong>, <strong><em>string/number</em></strong> value) : number<a class="headerlink" href="#array_number_ofarray-stringnumber-value-number" title="Permanent link">&para;</a></h3>
 <p>Returns amount of <strong><em>value</em></strong></p>
-<h3 id="array_poparray-array-any">array_pop(<strong><em>array</em></strong> array) : any</h3>
+<h3 id="array_poparray-array-any">array_pop(<strong><em>array</em></strong> array) : any<a class="headerlink" href="#array_poparray-array-any" title="Permanent link">&para;</a></h3>
 <p>Pop element off end of array</p>
-<h3 id="array_pusharray-array-any-value-any">array_push(<strong><em>array</em></strong> array, <strong><em>any</em></strong> value) : any</h3>
+<h3 id="array_pusharray-array-any-value-any">array_push(<strong><em>array</em></strong> array, <strong><em>any</em></strong> value) : any<a class="headerlink" href="#array_pusharray-array-any-value-any" title="Permanent link">&para;</a></h3>
 <p>Adds <strong><em>value</em></strong> to end of <strong><em>array</em></strong> and returns <strong><em>value</em></strong></p>
-<h3 id="array_randomarray-array-any">array_random(<strong><em>array</em></strong> array) : any</h3>
+<h3 id="array_randomarray-array-any">array_random(<strong><em>array</em></strong> array) : any<a class="headerlink" href="#array_randomarray-array-any" title="Permanent link">&para;</a></h3>
 <p>Returns random value of <strong><em>array</em></strong> </p>
-<h3 id="array_reversearray-array-array">array_reverse(<strong><em>array</em></strong> array) : array</h3>
+<h3 id="array_reversearray-array-array">array_reverse(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_reversearray-array-array" title="Permanent link">&para;</a></h3>
 <p>Returns <strong><em>array</em></strong> in reverse order</p>
-<h3 id="array_shufflearray-array-array">array_shuffle(<strong><em>array</em></strong> array) : array</h3>
+<h3 id="array_shufflearray-array-array">array_shuffle(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_shufflearray-array-array" title="Permanent link">&para;</a></h3>
 <p>Returns shuffled version of <strong><em>array</em></strong></p>
-<h3 id="to_arrayarray-array-array">to_array(<strong><em>array</em></strong> array) : array</h3>
+<h3 id="to_arrayarray-array-array">to_array(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#to_arrayarray-array-array" title="Permanent link">&para;</a></h3>
 <p>Returns <strong><em>array</em></strong>.</p>
-<h2 id="booleans">Booleans</h2>
-<h3 id="bool_andbool-value1-bool-value2-bool">bool_and(<strong><em>bool</em></strong> value1, <strong><em>bool</em></strong> value2): <strong><em>bool</em></strong></h3>
+<h2 id="booleans">Booleans<a class="headerlink" href="#booleans" title="Permanent link">&para;</a></h2>
+<h3 id="bool_andbool-value1-bool-value2-bool">bool_and(<strong><em>bool</em></strong> value1, <strong><em>bool</em></strong> value2): <strong><em>bool</em></strong><a class="headerlink" href="#bool_andbool-value1-bool-value2-bool" title="Permanent link">&para;</a></h3>
 <p>Returns `value1 &amp;&amp; value2</p>
-<h3 id="bool_notbool-value-bool">bool_not(<strong><em>bool</em></strong> value) : <strong><em>bool</em></strong></h3>
+<h3 id="bool_notbool-value-bool">bool_not(<strong><em>bool</em></strong> value) : <strong><em>bool</em></strong><a class="headerlink" href="#bool_notbool-value-bool" title="Permanent link">&para;</a></h3>
 <p>Returns `!value</p>
-<h3 id="to_boolstringnumberarraybool-value-bool">to_bool(<strong><em>string/number/array/bool</em></strong> value) : <strong><em>bool</em></strong></h3>
+<h3 id="to_boolstringnumberarraybool-value-bool">to_bool(<strong><em>string/number/array/bool</em></strong> value) : <strong><em>bool</em></strong><a class="headerlink" href="#to_boolstringnumberarraybool-value-bool" title="Permanent link">&para;</a></h3>
 <p>Casts <code>value</code> to a bool.</p>
-<h2 id="types">Types</h2>
-<h3 id="typeany-value-string">type(<strong><em>any</em></strong> value) : <strong><em>string</em></strong></h3>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
+<h3 id="typeany-value-string">type(<strong><em>any</em></strong> value) : <strong><em>string</em></strong><a class="headerlink" href="#typeany-value-string" title="Permanent link">&para;</a></h3>
 <p>Returns the type name of a value, e.g. <code>"string"</code>.</p>
                 
                   
@@ -2815,6 +3004,28 @@
         </a>
       </div>
       
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/fredsted/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/fredsted" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
     </div>
   </div>
 </footer>

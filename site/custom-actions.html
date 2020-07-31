@@ -10,7 +10,7 @@
       
       
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
@@ -258,6 +258,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about-variables" class="md-nav__link">
     About Variables
   </a>
@@ -266,8 +273,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-request-variables" class="md-nav__link">
-    Default request variables
+  <a href="#base-variables" class="md-nav__link">
+    Base Variables
   </a>
   
 </li>
@@ -625,6 +632,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about-variables" class="md-nav__link">
     About Variables
   </a>
@@ -633,8 +647,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-request-variables" class="md-nav__link">
-    Default request variables
+  <a href="#base-variables" class="md-nav__link">
+    Base Variables
   </a>
   
 </li>
@@ -897,18 +911,20 @@
                   
                 
                 
-                <h1 id="custom-actions">Custom Actions</h1>
-<p>With Custom Actions, it is possible to string together a set of actions that are executed whenever a Webhook.site URL receives a request or email. The actions can extract data from the request and use it to send another request as well as modify the response. </p>
-<p>With this, you can connect APIs that aren't compatible, convert a request to an email, and much more.</p>
+                <h1 id="custom-actions">Custom Actions<a class="headerlink" href="#custom-actions" title="Permanent link">&para;</a></h1>
+<p>With Custom Actions, it is possible to create a workflow out of a set of actions that are executed whenever a Webhook.site URL receives a request or email.</p>
+<p>Using this functionality, you can connect APIs that aren't compatible, convert a HTTP request to an email or vice versa, build workflows that would otherwise require a developer, and much, much more.</p>
+<h2 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h2>
+<p>In the following demo, webshop order details are received in a webhook. We then use Extract JSONPath and Google Sheets actions to insert their name in a Google Sheet. It also shows how variables interact with downstream actions.</p>
 <p><center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9Cbuf5T6Tqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></p>
-<h2 id="about-variables">About Variables</h2>
+<h2 id="about-variables">About Variables<a class="headerlink" href="#about-variables" title="Permanent link">&para;</a></h2>
 <p>Variables are an important part of Custom Actions, and are characterized by a name surrounded by two dollar signs: <code>$example$</code>. Variables can be used in any field that has a ⓥ icon in the editor. They act as placeholders that are replaced by dynamic content as the request or email is received.</p>
-<p>Each request or email has a set of base variables that contain information like the request IP, method, headers, query string values, form values and the request content. To see a list of variables, click the Variables button in the editor. Clicking on a variable copies it to the clipboard.</p>
+<p>Each request or email has a set of Base Variables (see below) that contain information like the request IP, method, headers, query string values, form values and the request content. To see a list of variables, click the Variables button in the editor. Clicking on a variable copies it to the clipboard.</p>
 <p><img alt="Variables Menu" src="/images/variables.png" /></p>
-<p>Almost all of the available Custom Actions can register a variable during the runtime of the actions, so for example you can register the result of a JSONPath query and use it in a "Modify Response" action to make the response dynamic, or even use it to send a request to another HTTP address, and then use the response of that.</p>
+<p>Many of the the available Custom Actions can register a variable during the runtime of the actions, so for example you can register the result of a JSONPath query and use it in a "Modify Response" action to make the response dynamic, or even use it to send a request to another HTTP address, and then use the response of that. Files can referred to and be used through Variables.</p>
 <p>This works since Custom Actions are executed synchronously in a chain, sharing data as they're being executed.</p>
 <p>The format of variables are dollar signs surrounded by a word, for example: <code>$example$</code>. </p>
-<h3 id="default-request-variables">Default request variables</h3>
+<h3 id="base-variables">Base Variables<a class="headerlink" href="#base-variables" title="Permanent link">&para;</a></h3>
 <p>These variables are automatically available for each request or email. Different variables are available depending on the type.</p>
 <table>
 <thead>
@@ -960,6 +976,26 @@
 <td>Request type (<code>email</code> or <code>web</code>)</td>
 </tr>
 <tr>
+<td>request.file.[name].filename</td>
+<td>All</td>
+<td>Created for each file upload, with <code>name</code> being the input name property. Contains the client file name</td>
+</tr>
+<tr>
+<td>request.file.[name].size</td>
+<td>All</td>
+<td>Contains the file size in bytes</td>
+</tr>
+<tr>
+<td>request.file.[name].content</td>
+<td>All</td>
+<td>Contains the file content</td>
+</tr>
+<tr>
+<td>request.file.[name].content_type</td>
+<td>All</td>
+<td>Contains the file content type (e.g. image/png)</td>
+</tr>
+<tr>
 <td>request.query.[name]</td>
 <td>Web</td>
 <td>Created for each query string (e.g. ?name=value)</td>
@@ -968,21 +1004,6 @@
 <td>request.form.[name]</td>
 <td>Web</td>
 <td>Created for each form field</td>
-</tr>
-<tr>
-<td>request.file.[name].filenamee</td>
-<td>Web</td>
-<td>Created for each file upload, with <code>name</code> being the input name property. Contains the client file name</td>
-</tr>
-<tr>
-<td>request.file.[name].size</td>
-<td>Web</td>
-<td>Contains the file size in bytes</td>
-</tr>
-<tr>
-<td>request.file.[name].content</td>
-<td>Web</td>
-<td>Contains the file content</td>
 </tr>
 <tr>
 <td>request.ip</td>
@@ -1031,14 +1052,14 @@
 </tr>
 </tbody>
 </table>
-<h2 id="webhookscript">WebhookScript</h2>
+<h2 id="webhookscript">WebhookScript<a class="headerlink" href="#webhookscript" title="Permanent link">&para;</a></h2>
 <p><img alt="&quot;WebhookScript&quot; Custom Action screenshot" src="/images/webhookscript-in-action.png" /></p>
 <p>Executes custom scripts using a scripting language that's very similar to JavaScript and PHP. <a href="/webhookscript.html">More information here</a></p>
-<h2 id="text-extraction">Text Extraction</h2>
-<h3 id="extract-jsonpath">Extract JSONPath</h3>
+<h2 id="text-extraction">Text Extraction<a class="headerlink" href="#text-extraction" title="Permanent link">&para;</a></h2>
+<h3 id="extract-jsonpath">Extract JSONPath<a class="headerlink" href="#extract-jsonpath" title="Permanent link">&para;</a></h3>
 <p>This action runs a JSONPath query on the contents of a request. With it, you can extract any data from a JSON document and store it in a variable, which can then be used in a downstream action.</p>
 <p>JSONPath is very similar to the <code>jq</code> commandline utility.</p>
-<h5 id="jsonpath-examples">JSONPath Examples</h5>
+<h5 id="jsonpath-examples">JSONPath Examples<a class="headerlink" href="#jsonpath-examples" title="Permanent link">&para;</a></h5>
 <table>
 <thead>
 <tr>
@@ -1101,7 +1122,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="jsonpath-syntax">JSONPath Syntax</h5>
+<h5 id="jsonpath-syntax">JSONPath Syntax<a class="headerlink" href="#jsonpath-syntax" title="Permanent link">&para;</a></h5>
 <table>
 <thead>
 <tr>
@@ -1150,12 +1171,12 @@
 </table>
 <p>For more details on what's possible with JSONPath, <a href="https://github.com/FlowCommunications/JSONPath#jsonpath-examples">take a look at the docs</a>.</p>
 <p>As you start entering a JSONPath, the results are validated and shown next to the input field.</p>
-<h3 id="extract-regex">Extract Regex</h3>
+<h3 id="extract-regex">Extract Regex<a class="headerlink" href="#extract-regex" title="Permanent link">&para;</a></h3>
 <p>This action runs a Regex (regular expression) query on the contents of a request. With it, you can extract any data from a text document and store it in a variable, which can then be used in a downstream action.</p>
 <p>As you start entering a Regex, the results are validated and shown next to the input field.</p>
-<h3 id="extract-xpath">Extract XPath</h3>
+<h3 id="extract-xpath">Extract XPath<a class="headerlink" href="#extract-xpath" title="Permanent link">&para;</a></h3>
 <p>Similar to the Extract JSONPath Custom Action, Extract XPath lets you extract values from an XML or HTML document and save the result as a variable.</p>
-<h5 id="xpath-examples">XPath Examples</h5>
+<h5 id="xpath-examples">XPath Examples<a class="headerlink" href="#xpath-examples" title="Permanent link">&para;</a></h5>
 <p>The following examples are based on this XML document:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;organization</span> <span class="na">name=</span><span class="s">&quot;ExampleCo&quot;</span><span class="nt">&gt;</span>
@@ -1219,8 +1240,8 @@
 </tbody>
 </table>
 <p>For more examples, see <a href="https://www.w3schools.com/xml/xml_xpath.asp">W3CSchools</a> or <a href="https://devhints.io/xpath">XPath Cheatsheet</a></p>
-<h2 id="network">Network</h2>
-<h3 id="send-request">Send Request</h3>
+<h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h2>
+<h3 id="send-request">Send Request<a class="headerlink" href="#send-request" title="Permanent link">&para;</a></h3>
 <p>This will send a request with variable contents from the Webhook.site cloud. Per default, the request contents will be identical to what was sent to the URL originally.</p>
 <p>Variables extracted previously can be used.</p>
 <p>The response of the request is stored in a series of variable names prefixed with a value of your choosing. The following variables are set after the request has been fired:</p>
@@ -1230,12 +1251,12 @@
 <li><code>$your_prefix.headers$</code> - response headers</li>
 <li><code>$your_prefix.url$</code> - the URL the request was sent to</li>
 </ul>
-<h3 id="send-email">Send Email</h3>
+<h3 id="send-email">Send Email<a class="headerlink" href="#send-email" title="Permanent link">&para;</a></h3>
 <p>This will send a email with variable contents from the Webhook.site cloud. Variables extracted previously can be used.</p>
-<h2 id="logic">Logic</h2>
-<h3 id="modify-response">Modify Response</h3>
+<h2 id="logic">Logic<a class="headerlink" href="#logic" title="Permanent link">&para;</a></h2>
+<h3 id="modify-response">Modify Response<a class="headerlink" href="#modify-response" title="Permanent link">&para;</a></h3>
 <p>This action can be used to modify the response of the Webhook.site URL based on the input.</p>
-<h3 id="condition">Condition</h3>
+<h3 id="condition">Condition<a class="headerlink" href="#condition" title="Permanent link">&para;</a></h3>
 <p><img alt="&quot;Condition&quot; Custom Action screenshot" src="/images/condition-action.png" /></p>
 <p>Useful if you need to validate that the request does or does not conform to certain criteria, the Condition action will either stop or continue based on a condition.</p>
 <p>In both the <em>input</em> and the <em>value</em> fields, variables will be replaced (including Global Variables from the Control Panel), so you can compare e.g. JSONPath or Regex values - or even values from a previous HTTP request that was sent. </p>
@@ -1254,12 +1275,12 @@
 <li>is less than or equal to</li>
 </ul>
 <p>The "result" of the condition will be logged below the request details, so you can see what happened.</p>
-<h2 id="image-handling">Image Handling</h2>
-<h3 id="resize-image">Resize Image</h3>
+<h2 id="image-handling">Image Handling<a class="headerlink" href="#image-handling" title="Permanent link">&para;</a></h2>
+<h3 id="resize-image">Resize Image<a class="headerlink" href="#resize-image" title="Permanent link">&para;</a></h3>
 <p>Takes an image from either a URL or raw image data from e.g. a file upload, email attachment, request response or another action such as Dropbox.</p>
 <p>You can enter both width and height to contrain the image in both dimensions, or enter a single dimension.</p>
 <p>Check "Keep Aspect Ratio" so that the image keeps the aspect ratio, but doesn't exceed the height and width constraints.</p>
-<h2 id="google-sheets-beta">Google Sheets (Beta)</h2>
+<h2 id="google-sheets-beta">Google Sheets (Beta)<a class="headerlink" href="#google-sheets-beta" title="Permanent link">&para;</a></h2>
 <p>Google Sheets Custom Actions lets you manipulate and retrieve values from a Google Sheet.</p>
 <p>The following Google Sheets Custom Actions are available:</p>
 <ul>
@@ -1269,14 +1290,14 @@
 </ul>
 <p>To start, you need to make sure that you have connected a Google account in the Control Panel, <a href="https://webhook.site/providers">available here</a>.</p>
 <p>After that, you can select the account in the dropdown when creating the Custom Action.</p>
-<h3 id="specifying-the-spreadsheet">Specifying the spreadsheet</h3>
+<h3 id="specifying-the-spreadsheet">Specifying the spreadsheet<a class="headerlink" href="#specifying-the-spreadsheet" title="Permanent link">&para;</a></h3>
 <p>When specifying the spreadsheet, you can either just copy/paste the spreadsheet URL or enter the spreadsheet ID. Variables can be used to specify the spreadsheet.</p>
-<h3 id="ranges">Ranges</h3>
+<h3 id="ranges">Ranges<a class="headerlink" href="#ranges" title="Permanent link">&para;</a></h3>
 <p>All actions must specify a range, which behaves similar in all actions. For the Add Row action, Google Sheets will automatically find a "table" (e.g. a homogenous mass of data) and add the values at the bottom. </p>
 <p>A range is the same query as in Google Sheets, e.g. to select A1-C3 in Worksheet "Example", enter <code>'Example'!A1:C3</code>.</p>
-<h3 id="values">Values</h3>
+<h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
 <p>When inserting or updating values, you can either enter a value in the text field, or supply multiple cells and/or rows using JSON. To insert two rows, the JSON would be <code>["cell 1", "cell 2"]</code>.</p>
-<h3 id="variables">Variables</h3>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>The Get Values Action allows you to define variables based on the output. Since this action can return multiple pieces of data, multiple variables are created.</p>
 <p>For example, if you select two columns and two rows, e.g. <code>A1:B2</code>, four variables would be defined:</p>
 <ol>
@@ -1293,8 +1314,8 @@
 </code></pre></div>
 
 
-<h2 id="amazon-web-services-aws-beta">Amazon Web Services (AWS) (Beta)</h2>
-<h3 id="s3">S3</h3>
+<h2 id="amazon-web-services-aws-beta">Amazon Web Services (AWS) (Beta)<a class="headerlink" href="#amazon-web-services-aws-beta" title="Permanent link">&para;</a></h2>
+<h3 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h3>
 <p>The following actions are available for AWS S3:</p>
 <ul>
 <li>Create Bucket</li>
@@ -1303,14 +1324,14 @@
 <li>Get Object (retrieves object contents to a Variable)</li>
 </ul>
 <p>In addition to the "official" Amazon endpoints, Webhook.site also supports S3-compatible storages like DigitalOcean, MinIO, Wasabi and more. The endpoint can be specified when setting up the account in Control Panel.</p>
-<h3 id="cloudfront">CloudFront</h3>
+<h3 id="cloudfront">CloudFront<a class="headerlink" href="#cloudfront" title="Permanent link">&para;</a></h3>
 <p>The "Create Invalidation" action allows you to dynamically create a CloudFront cache invalidation as a Custom Action. Both the Distribution ID and the paths to be invalidated are replaced with Webhook.site Variables.</p>
-<h2 id="discord-beta">Discord (Beta)</h2>
+<h2 id="discord-beta">Discord (Beta)<a class="headerlink" href="#discord-beta" title="Permanent link">&para;</a></h2>
 <p>With the Discord Custom Action, you can send messages to a specified channel (Each bot account uses a specific channel, so you can connect more accounts to send to different channels or servers.) In addition, you can choose a custom username and avatar image for the bot user.</p>
 <p><img alt="&quot;Discord&quot; Custom Action screenshot" src="/images/discord.png" /></p>
-<h2 id="slack-beta">Slack (Beta)</h2>
+<h2 id="slack-beta">Slack (Beta)<a class="headerlink" href="#slack-beta" title="Permanent link">&para;</a></h2>
 <p>With the Slack Custom Action, you can easily use Slack's Webhook URLs to send messages to a channel.</p>
-<h2 id="dropbox">Dropbox</h2>
+<h2 id="dropbox">Dropbox<a class="headerlink" href="#dropbox" title="Permanent link">&para;</a></h2>
 <p>The Dropbox integration has access to the entire contents of your dropbox, and currently the following actions are available:</p>
 <ul>
 <li>Create Folder</li>
@@ -1382,6 +1403,28 @@
         </a>
       </div>
       
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/fredsted/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/fredsted" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
     </div>
   </div>
 </footer>

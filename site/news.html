@@ -10,7 +10,7 @@
       
       
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="images/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
@@ -51,7 +51,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#news-changelog" class="md-skip">
+        <a href="#news" class="md-skip">
           Skip to content
         </a>
       
@@ -196,6 +196,27 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#29-july-2020" class="md-nav__link">
+    29 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-july-2020" class="md-nav__link">
+    25 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-july-2020" class="md-nav__link">
+    16 July 2020
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#5-july-2020" class="md-nav__link">
@@ -613,6 +634,27 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#29-july-2020" class="md-nav__link">
+    29 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-july-2020" class="md-nav__link">
+    25 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-july-2020" class="md-nav__link">
+    16 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#5-july-2020" class="md-nav__link">
     5 July 2020
   </a>
@@ -873,7 +915,7 @@
                   
                 
                 
-                <h1 id="news-changelog">News &amp; Changelog</h1>
+                <h1 id="news">News<a class="headerlink" href="#news" title="Permanent link">&para;</a></h1>
 <p>Subscribe below to receive updates about improvements and new features on Webhook.site. Expect a newsletter every month at the most.</p>
 <p><link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -889,22 +931,38 @@
     </div>
 </form>
 </div></p>
-<h2 id="5-july-2020">5 July 2020</h2>
+<h2 id="29-july-2020">29 July 2020<a class="headerlink" href="#29-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>trim(string)</code>, which removes space, newline and tab characters from the beginning and end of a string, similar to PHP's own trim() function.</li>
+<li>New Schedule intervals: weekly (every monday), monthly (every 1st day of month)</li>
+</ul>
+<h2 id="25-july-2020">25 July 2020<a class="headerlink" href="#25-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>action(action_type, parameters)</code>, to run Custom Actions inside a WebhookScript. <a href="/webhookscript/functions.html#actionstring-action_type-array-parameters-array">More info here.</a></li>
+<li>It's now possible to download email attachments or uploaded files directly from the Webhook.site app.</li>
+<li>When sending a request using either the Send Request Custom Action or the request() function, the response is now truncated if the response content is over 20KiB. This means the whole contents is not visible in the app, but is still available to Actions.</li>
+</ul>
+<h2 id="16-july-2020">16 July 2020<a class="headerlink" href="#16-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Better file handling for emails: attached files are now also extracted as variables</li>
+<li>New file management functions for WebhookScript: <code>files()</code> retrieves a an array of all files, <code>file_content(fileId)</code> returns the content of a specific file. <a href="/webhookscript/functions.html#files">More info here.</a></li>
+</ul>
+<h2 id="5-july-2020">5 July 2020<a class="headerlink" href="#5-july-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New "Resize Image" action added for resizing images from either a file upload, email attachment or other Action. </li>
-<li>Better handling of downloaded files: they won't be shown in the debug overlay</li>
+<li>Better handling of downloaded files: the contents won't be shown in the debug overlay to prevent very large files from crashing the browser.</li>
 <li>Fixed a bug in the Dropbox provider returning creating an empty variable when downloading large files.</li>
 </ul>
-<h2 id="3-july-2020">3 July 2020</h2>
+<h2 id="3-july-2020">3 July 2020<a class="headerlink" href="#3-july-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Webhook.site was down for about 30 minutes starting 07:20 UTC due to a memory upgrade.</li>
 <li>Max request size has been increased to 10 MB from 2 MB.</li>
 </ul>
-<h2 id="23-june-2020">23 June 2020</h2>
+<h2 id="23-june-2020">23 June 2020<a class="headerlink" href="#23-june-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added new Dropbox Custom Actions: Create Folder, Download, Upload, Delete, Get Link. </li>
 </ul>
-<h2 id="14-june-2020">14 June 2020</h2>
+<h2 id="14-june-2020">14 June 2020<a class="headerlink" href="#14-june-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>WebhookScript editor syntax highlighting improved with regards to multiline strings, escape characters and more</li>
 <li>New WebhookScript editor keyboard shortcut for saving (Mac: Cmd-S, Windows: Ctrl-S.)</li>
@@ -913,132 +971,132 @@
 <li>New WebhookScript function: <code>csv_to_array()</code>, which converts a CSV file from a string to an array that can easily be parsed.</li>
 <li>Added an <a href="/webhookscript/examples#uploading-and-parsing-csv-file">example script</a> demoing file uploads and CSV parsing</li>
 </ul>
-<h2 id="7-june-2020">7 June 2020</h2>
+<h2 id="7-june-2020">7 June 2020<a class="headerlink" href="#7-june-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added new Slack Send Message Custom Action, which lets you send Slack messages via a Slack Webhook URL.</li>
 </ul>
-<h2 id="5-june-2020">5 June 2020</h2>
+<h2 id="5-june-2020">5 June 2020<a class="headerlink" href="#5-june-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added "Formula Mode" checkbox for Add and Update Row Google Sheets actions, which parses values like entered in a cell, and allows inserting formulas.</li>
 </ul>
-<h2 id="4-june-2020">4 June 2020</h2>
+<h2 id="4-june-2020">4 June 2020<a class="headerlink" href="#4-june-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added new endpoints to fetch the content and information about the latest request on a URL. See <a href="/api#get-single-request">here</a> and <a href="/api#get-raw-request-content">here</a>.</li>
 </ul>
-<h2 id="2-june-2020">2 June 2020</h2>
+<h2 id="2-june-2020">2 June 2020<a class="headerlink" href="#2-june-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added Amazon Web Services CloudFront Cache Invalidation Custom Action.</li>
 <li>Added ability to toggle Auto Cleanup, which automatically cleans up requests/emails.</li>
 </ul>
-<h2 id="30-may-2020">30 May 2020</h2>
+<h2 id="30-may-2020">30 May 2020<a class="headerlink" href="#30-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added Discord Custom Action for sending messages. <a href="/custom-actions#discord">Read more in the docs</a></li>
 </ul>
-<h2 id="29-may-2020">29 May 2020</h2>
+<h2 id="29-may-2020">29 May 2020<a class="headerlink" href="#29-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New set of date functions added to WebhookScript, namely: <code>to_date()</code>, <code>date_format()</code>, <code>date_to_array()</code>, <code>date_interval()</code>, <code>date_interval_human()</code>. <a href="webhookscript/functions#date-manipulation">Read more in the docs</a></li>
 </ul>
-<h2 id="25-may-2020">25 May 2020</h2>
+<h2 id="25-may-2020">25 May 2020<a class="headerlink" href="#25-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New set of Amazon Web Services S3 actions: Create Bucket, Put Object, Delete Object and Get Object (which retrieves object contents to a Variable.)</li>
 </ul>
-<h2 id="22-may-2020">22 May 2020</h2>
+<h2 id="22-may-2020">22 May 2020<a class="headerlink" href="#22-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New Schedule intervals: every 1 minute and every 10 minutes, in addition to the already <a href="/schedules">existing ones</a>.</li>
 </ul>
-<h2 id="17-may-2020">17 May 2020</h2>
+<h2 id="17-may-2020">17 May 2020<a class="headerlink" href="#17-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New WebhookScript function: <code>delay()</code>, which lets you delay and execute WebhookScript code a set amount of seconds in the future.</li>
 <li>New WebhookScript function: <code>exec()</code>, which lets you dynamically execute code in a string.</li>
 <li>New WebhookScript function: <code>import()</code>, which downloads and executes code from a URL - great if you want to reuse your code, just put it on Github and import it with the URL!</li>
 </ul>
-<h2 id="16-may-2020">16 May 2020</h2>
+<h2 id="16-may-2020">16 May 2020<a class="headerlink" href="#16-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>It's now possible to set a Token (URL or email address) to expire automatically, even for Premium users. This is useful for creating tokens for automated testing.</li>
 </ul>
-<h2 id="3-may-2020">3 May 2020</h2>
+<h2 id="3-may-2020">3 May 2020<a class="headerlink" href="#3-may-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New Google Sheets Custom Actions (Beta). 3 initial actions are available: Append Row, Update Row and Get Values, which allow you to manipulate or retrieve the values of a Google Sheet without writing any code.</li>
 </ul>
-<h2 id="24-april-2020">24 April 2020</h2>
+<h2 id="24-april-2020">24 April 2020<a class="headerlink" href="#24-april-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New fullscreen mode in WebhookScript editor</li>
 <li>Ability to edit your user profile</li>
 <li>New WebhookScript functions: <code>base64_encode()</code>, <code>base64_decode()</code>.</li>
 </ul>
-<h2 id="21-april-2020">21 April 2020</h2>
+<h2 id="21-april-2020">21 April 2020<a class="headerlink" href="#21-april-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New WebhookScript function: store() - creates or updates an existing Global Variable</li>
 </ul>
-<h2 id="20-april-2020">20 April 2020</h2>
+<h2 id="20-april-2020">20 April 2020<a class="headerlink" href="#20-april-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New Global Variables section in Control Panel.</li>
 </ul>
-<h2 id="19-april-2020">19 April 2020</h2>
+<h2 id="19-april-2020">19 April 2020<a class="headerlink" href="#19-april-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New WebhookScript math functions: max(), min(), mod(), pi(), rand() - for more, see the <a href="/webhookscript/reference">Reference</a></li>
 </ul>
-<h2 id="28-march-2020">28 March 2020</h2>
+<h2 id="28-march-2020">28 March 2020<a class="headerlink" href="#28-march-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New feature: Webhook.site Schedules lets you request any URL – including Webhook.site URLs – automatically on an interval, so you can for example run Custom Actions every 5 minutes, or make a health check for your Web site.</li>
 <li>Send Request action request timeout has been raised from 5 to 10 seconds. Applies to both the Custom Action and the WebhookScript request() function.</li>
 </ul>
-<h2 id="24-march-2020">24 March 2020</h2>
+<h2 id="24-march-2020">24 March 2020<a class="headerlink" href="#24-march-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New feature: API Keys can now be created so you can use the API with URLs that have the "Require Authentication" or "Password" options set.</li>
 <li>Fix: It's now possible to test Send Email actions before creating them. Prior to this, the Test button would not do anything for the Send Email action.</li>
 </ul>
-<h2 id="6-march-2020">6 March 2020</h2>
+<h2 id="6-march-2020">6 March 2020<a class="headerlink" href="#6-march-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New feature: Extract XPath Custom Action with accompanying xpath() WebhookScript function. <a href="/custom-actions#extract-xpath">Read more.</a></li>
 </ul>
-<h2 id="29-feburary-2020">29 Feburary 2020</h2>
+<h2 id="29-feburary-2020">29 Feburary 2020<a class="headerlink" href="#29-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Values are no longer required for Condition actions, so it's possible to compare an empty string or missing value.</li>
 <li>Fixed an issue where a tooltip in the Custom Actions modal would not disappear.</li>
 <li>Removed Beta label from WebhookScript.</li>
 </ul>
-<h2 id="27-feburary-2020">27 Feburary 2020</h2>
+<h2 id="27-feburary-2020">27 Feburary 2020<a class="headerlink" href="#27-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Fixed a bug where slashes at the end of Webhook.site Single Page App URLs didn't work.</li>
 <li>Fixed a bug where Copy To CURL sometimes wouldn't return a valid CURL command.</li>
 </ul>
-<h2 id="26-feburary-2020">26 Feburary 2020</h2>
+<h2 id="26-feburary-2020">26 Feburary 2020<a class="headerlink" href="#26-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>It's no longer a requirement to specify a variable for the Send Request action.</li>
 </ul>
-<h2 id="25-feburary-2020">25 Feburary 2020</h2>
+<h2 id="25-feburary-2020">25 Feburary 2020<a class="headerlink" href="#25-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New feature: It's now possible to receive emails, which are treated like Webhooks – so you can automate emails with Custom Actions on Webhook.site. You can also test email deliverability using DKIM, DMARC and SPF validation.</li>
 <li>JSON formatting is now always enabled per default.</li>
 <li>The requests view is cleared after deleting the last request, and the tutorial text is shown.</li>
 </ul>
-<h2 id="16-feburary-2020">16 Feburary 2020</h2>
+<h2 id="16-feburary-2020">16 Feburary 2020<a class="headerlink" href="#16-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>WebhookScript: Added <code>regex_extract</code> and <code>regex_extract_first</code> functions.</li>
 </ul>
-<h2 id="15-feburary-2020">15 Feburary 2020</h2>
+<h2 id="15-feburary-2020">15 Feburary 2020<a class="headerlink" href="#15-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>WebhookScript: Added <code>hash</code> function.</li>
 </ul>
-<h2 id="14-feburary-2020">14 Feburary 2020</h2>
+<h2 id="14-feburary-2020">14 Feburary 2020<a class="headerlink" href="#14-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New feature: Export to CSV lets you export all requests on a given URL to a CSV file.</li>
 <li>Fixed a bug where duplicate in-app notifications would appear on new requests.</li>
 </ul>
-<h2 id="12-feburary-2020">12 Feburary 2020</h2>
+<h2 id="12-feburary-2020">12 Feburary 2020<a class="headerlink" href="#12-feburary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>WebhookScript: Added <code>url_encode</code>, <code>url_decode</code>, and <code>query</code> functions.</li>
 </ul>
-<h2 id="8-febuary-2020">8 Febuary 2020</h2>
+<h2 id="8-febuary-2020">8 Febuary 2020<a class="headerlink" href="#8-febuary-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New Custom Action type: Condition, which lets you conditionally stop a set of actions based on comparisons.</li>
 </ul>
-<h2 id="28-january-2020">28 January 2020</h2>
+<h2 id="28-january-2020">28 January 2020<a class="headerlink" href="#28-january-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>WebhookScript now supports newline literals (<code>\\n</code>) in strings, escaped by 2 backslashes.</li>
 </ul>
-<h2 id="25-january-2020">25 January 2020</h2>
+<h2 id="25-january-2020">25 January 2020<a class="headerlink" href="#25-january-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Global Variables are now available in the Control Panel, which lets you keep configuration like API keys in a separate place from your Custom Actions and scripts while managing them at a central place.</p>
@@ -1047,11 +1105,11 @@
 <p>Changed the font of the WebhookScript editor, which resulted in uneven selection of text.</p>
 </li>
 </ul>
-<h2 id="23-january-2020">23 January 2020</h2>
+<h2 id="23-january-2020">23 January 2020<a class="headerlink" href="#23-january-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>You can now specify a source variable for JSONPath and Regex actions, so you can extract text from not only the request content.</li>
 </ul>
-<h2 id="12-january-2020">12 January 2020</h2>
+<h2 id="12-january-2020">12 January 2020<a class="headerlink" href="#12-january-2020" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Switched to using Ace as editor for WebhookScript.</li>
 </ul>
@@ -1117,6 +1175,28 @@
         </a>
       </div>
       
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/fredsted/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/fredsted" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
