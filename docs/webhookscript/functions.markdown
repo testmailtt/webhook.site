@@ -793,7 +793,9 @@ Returns a random number between `min` and `max`.
 
 ### array_contains(***array*** array, ***string/number*** needle) : bool
 
-Returns true or false depending on whether ***array*** contains ***needle*** 
+Returns true or false depending on whether ***array*** contains a value equal to ***needle***.
+
+To check whether a key exists, use the `array_has` function.
 
 ### array_copy(***array*** array) : array
 
@@ -806,6 +808,10 @@ Returns the items of array1 that are not present in array2 while keeping the arr
 ### array_get(***array*** array, ***string/number*** index, ***any*** default) : any
 
 ### array_has(***array*** array, ***string/number*** key) : bool
+
+Returns true if `array` contains `key`, and false if it does not.
+
+To check whether a value exists, use the `array_contains` function.
 
 ### array_length(***array*** array) : number` 
 

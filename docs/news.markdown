@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 1 August 2020
+
+* It is now possible to enable email notifications for whenever a Custom Action encountered an error. To enable this, simply check the checkbox in [Notification Settings.](https://webhook.site/notifications).
+
 ## 29 July 2020
 
 * New WebhookScript function: `trim(string)`, which removes space, newline and tab characters from the beginning and end of a string, similar to PHP's own trim() function.
