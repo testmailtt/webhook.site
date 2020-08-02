@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 2 August 2020
+
+* It is now possible to specify a default value in the Extract JSONPath, Extract Regex and Extract XPath actions, so that if the extraction could not find the item, the variable is set to the default value that is defined. This field also takes variables.
+* Request list is now sorted by Newest First per default.
+* Custom Action number and type is now shown next to the output in the request details. If the Action was deleted, the UUID is shown instead.
+
 ## 1 August 2020
 
 * It is now possible to enable email notifications for whenever a Custom Action encountered an error. To enable this, simply check the checkbox in [Notification Settings.](https://webhook.site/notifications).
