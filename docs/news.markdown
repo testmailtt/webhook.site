@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 5 August 2020
+
+* Webhook.site had an unplanned outage starting at 03.30 UTC. The site was down for around an hour.
+
 ## 2 August 2020
 
 * It is now possible to specify a default value in the Extract JSONPath, Extract Regex and Extract XPath actions, so that if the extraction could not find the item, the variable is set to the default value that is defined. This field also takes variables.
