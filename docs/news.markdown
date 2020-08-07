@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 August 2020
+
+* It's now possible to change the name of your Provider accounts to e.g. something that's easier to remember.
+
 ## 5 August 2020
 
 * Webhook.site had an unplanned outage starting at 03.30 UTC. The site was down for around an hour.
