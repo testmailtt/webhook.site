@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 8 August 2020
+
+* You can now specify a custom Cron expression for your Webhook.site Schedule, in addition to the predefined intervals. This lets you decide exactly the hour, day and minute, etc., of when the schedule runs (based on UTC time.)
+* It's now possible to enable email notifications for whenever a Schedule run fails to execute. To enable this, simply check the checkbox in [Notification Settings.](https://webhook.site/notifications).
+
 ## 7 August 2020
 
 * It's now possible to change the name of your Provider accounts to e.g. something that's easier to remember.
