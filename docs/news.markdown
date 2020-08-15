@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 15 August 2020
+
+* It's now possible to set a custom timeout for Schedules, up to 30 seconds.
+
 ## 8 August 2020
 
 * You can now specify a custom Cron expression for your Webhook.site Schedule, in addition to the predefined intervals. This lets you decide exactly the hour, day and minute, etc., of when the schedule runs (based on UTC time.)
