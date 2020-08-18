@@ -11,6 +11,8 @@ Schedules can be used for a variety of purposes, including cache warming, uptime
 
 After creating the Schedule, you can view the logs for the last 100 scheduled requests.
 
+Per default, the timeout for the Schedule requests is 5 seconds, but can range from 1 to 30 seconds. A timeout will trigger an error notification email if enabled in Control Panel.
+
 ![Schedules editor](/images/schedules-editor.png)
 
 ## Schedule Intervals
