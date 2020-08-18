@@ -13,7 +13,7 @@ body {
 
 /* NAV */
 
-.md-nav__title {
+.md-sidebar--primary .md-nav__title {
   display: none;
 }
 
@@ -50,4 +50,9 @@ body {
 
 .md-typeset h4 {
   color: #888;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item:last-of-type {
+  margin-top: 50px;
+  opacity: .6;
 }

@@ -11,15 +11,15 @@
       
       
       <link rel="shortcut icon" href="../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.7">
     
     
       
-        <title>Functions</title>
+        <title>Functions - Webhook.site Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.b8ac9624.min.css">
       
       
     
@@ -1155,6 +1155,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://webhook.site" title="← Back to Webhook.site" class="md-nav__link">
+      ← Back to Webhook.site
+    </a>
   </li>
 
     
@@ -2922,13 +2934,16 @@
 <h3 id="to_numberany-value-number">to_number(<strong><em>any</em></strong> value) : number<a class="headerlink" href="#to_numberany-value-number" title="Permanent link">&para;</a></h3>
 <h2 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h2>
 <h3 id="array_containsarray-array-stringnumber-needle-bool">array_contains(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> needle) : bool<a class="headerlink" href="#array_containsarray-array-stringnumber-needle-bool" title="Permanent link">&para;</a></h3>
-<p>Returns true or false depending on whether <strong><em>array</em></strong> contains <strong><em>needle</em></strong> </p>
+<p>Returns true or false depending on whether <strong><em>array</em></strong> contains a value equal to <strong><em>needle</em></strong>.</p>
+<p>To check whether a key exists, use the <code>array_has</code> function.</p>
 <h3 id="array_copyarray-array-array">array_copy(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_copyarray-array-array" title="Permanent link">&para;</a></h3>
 <p>Returns a copy of <strong><em>array</em></strong></p>
 <h3 id="array_diffarray-array1-array-array2-array">array_diff(<strong><em>array</em></strong> array1, <strong><em>array</em></strong> array2) : array<a class="headerlink" href="#array_diffarray-array1-array-array2-array" title="Permanent link">&para;</a></h3>
 <p>Returns the items of array1 that are not present in array2 while keeping the array indices.</p>
 <h3 id="array_getarray-array-stringnumber-index-any-default-any">array_get(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> index, <strong><em>any</em></strong> default) : any<a class="headerlink" href="#array_getarray-array-stringnumber-index-any-default-any" title="Permanent link">&para;</a></h3>
 <h3 id="array_hasarray-array-stringnumber-key-bool">array_has(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> key) : bool<a class="headerlink" href="#array_hasarray-array-stringnumber-key-bool" title="Permanent link">&para;</a></h3>
+<p>Returns true if <code>array</code> contains <code>key</code>, and false if it does not.</p>
+<p>To check whether a value exists, use the <code>array_contains</code> function.</p>
 <h3 id="array_lengtharray-array-number">array_length(<strong><em>array</em></strong> array) : number`<a class="headerlink" href="#array_lengtharray-array-number" title="Permanent link">&para;</a></h3>
 <h3 id="array_maparray-array-func-function">array_map(<strong><em>array</em></strong> array, <strong><em>func</em></strong> function)<a class="headerlink" href="#array_maparray-array-func-function" title="Permanent link">&para;</a></h3>
 <p>Runs function with each array value, and returns array with key as result</p>
@@ -3032,15 +3047,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
-          features: [],
+          features: ["navigation.expand"],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

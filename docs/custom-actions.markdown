@@ -5,6 +5,8 @@ nav_order: 400
 
 # Custom Actions
 
+![Custom Actions editor screenshot](/images/custom-actions.png)
+
 With Custom Actions, it is possible to create a workflow out of a set of actions that are executed whenever a Webhook.site URL receives a request or email.
 
 Using this functionality, you can connect APIs that aren't compatible, convert a HTTP request to an email or vice versa, build workflows that would otherwise require a developer, and much, much more.

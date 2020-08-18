@@ -4,6 +4,8 @@ theme:
   name: material
   logo: images/icon.png
   favicon: images/favicon.ico
+  features:
+    - navigation.expand
   
 extra:
   social:
@@ -42,5 +44,4 @@ nav:
     - Reference: webhookscript/reference.markdown
     - Examples: webhookscript/examples.markdown
     - Functions: webhookscript/functions.markdown
-  
-
+  - ← Back to Webhook.site: https://webhook.site  
