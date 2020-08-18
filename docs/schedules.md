@@ -15,7 +15,7 @@ After creating the Schedule, you can view the logs for the last 100 scheduled re
 
 ## Schedule Intervals
 
-Schedules can be executed at the following intervals:
+In addition to be able to use a custom Cron-style expression string, Schedules can be executed at the following preset intervals:
 
 * 1 minute
 * 5 minutes
@@ -24,3 +24,5 @@ Schedules can be executed at the following intervals:
 * 24 hours
 * Every week (monday)
 * Every month (1st day)
+
+Schedule intervals are based on UTC time.
