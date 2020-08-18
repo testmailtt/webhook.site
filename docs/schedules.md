@@ -21,8 +21,8 @@ In addition to be able to use a custom Cron-style expression string, Schedules c
 * 5 minutes
 * 10 minutes
 * 1 hour
-* 24 hours
-* Every week (monday)
-* Every month (1st day)
+* 24 hours (at 00:00)
+* Every week (mondays at 00:00)
+* Every month (1st day at 00:00)
 
 Schedule intervals are based on UTC time.
