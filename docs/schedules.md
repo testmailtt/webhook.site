@@ -11,16 +11,20 @@ Schedules can be used for a variety of purposes, including cache warming, uptime
 
 After creating the Schedule, you can view the logs for the last 100 scheduled requests.
 
+Per default, the timeout for the Schedule requests is 5 seconds, but can range from 1 to 30 seconds. A timeout will trigger an error notification email if enabled in Control Panel.
+
 ![Schedules editor](/images/schedules-editor.png)
 
 ## Schedule Intervals
 
-Schedules can be executed at the following intervals:
+In addition to be able to use a custom Cron-style expression string, Schedules can be executed at the following preset intervals:
 
 * 1 minute
 * 5 minutes
 * 10 minutes
 * 1 hour
-* 24 hours
-* Every week (monday)
-* Every month (1st day)
+* 24 hours (at 00:00)
+* Every week (mondays at 00:00)
+* Every month (1st day at 00:00)
+
+Schedule intervals are based on UTC time.
