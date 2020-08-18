@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 18 August 2020
+
+* The `to_date` and `date_format` WebhookScript functions have been improved with timezone handling capabilities.
+
 ## 15 August 2020
 
 * It's now possible to set a custom timeout for Schedules, up to 30 seconds.

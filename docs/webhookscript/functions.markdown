@@ -555,98 +555,17 @@ In WebhookScript, dates are not a specific type, and ar expressed in strings ins
 
 ### Date format characters
 
-WebhookScript uses the ISO format for converting and formatting dates, and the format is compatible with the [Moment.js format method](https://momentjs.com/docs/#/parsing/string-format/).
-
-The following examples are based on the date `2017-01-05 17:04:05.084512`.
-
-| Code      | Example       | Description                                                                                                                                       |
-|-----------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| OD        | 5             | Day number with alternative numbers such as 三 for 3 if locale is ja_JP                                                                           |
-| OM        | 1             | Month number with alternative numbers such as ၀၂ for 2 if locale is my_MM                                                                         |
-| OY        | 2017          | Year number with alternative numbers such as ۱۹۹۸ for 1998 if locale is fa                                                                        |
-| OH        | 17            | 24-hours number with alternative numbers such as ႑႓ for 13 if locale is shn_MM                                                                    |
-| Oh        | 5             | 12-hours number with alternative numbers such as 十一 for 11 if locale is lzh_TW                                                                  |
-| Om        | 4             | Minute number with alternative numbers such as ୫୭ for 57 if locale is or                                                                          |
-| Os        | 5             | Second number with alternative numbers such as 十五 for 15 if locale is ja_JP                                                                     |
-| D         | 5             | Day of month number (from 1 to 31)                                                                                                                |
-| DD        | 05            | Day of month number with trailing zero (from 01 to 31)                                                                                            |
-| Do        | 5th           | Day of month with ordinal suffix (from 1st to 31th), translatable                                                                                 |
-| d         | 4             | Day of week number (from 0 (Sunday) to 6 (Saturday))                                                                                              |
-| dd        | Th            | Minified day name (from Su to Sa), transatable                                                                                                    |
-| ddd       | Thu           | Short day name (from Sun to Sat), transatable                                                                                                     |
-| dddd      | Thursday      | Day name (from Sunday to Saturday), transatable                                                                                                   |
-| DDD       | 5             | Day of year number (from 1 to 366)                                                                                                                |
-| DDDD      | 005           | Day of year number with trailing zeros (3 digits, from 001 to 366)                                                                                |
-| DDDo      | 5th           | Day of year number with ordinal suffix (from 1st to 366th), translatable                                                                          |
-| e         | 4             | Day of week number (from 0 (Sunday) to 6 (Saturday)), similar to "d" but this one is translatable (takes first day of week of the current locale) |
-| E         | 4             | Day of week number (from 1 (Monday) to 7 (Sunday))                                                                                                |
-| H         | 17            | Hour from 0 to 23                                                                                                                                 |
-| HH        | 17            | Hour with trailing zero from 00 to 23                                                                                                             |
-| h         | 5             | Hour from 0 to 12                                                                                                                                 |
-| hh        | 05            | Hour with trailing zero from 00 to 12                                                                                                             |
-| k         | 17            | Hour from 1 to 24                                                                                                                                 |
-| kk        | 17            | Hour with trailing zero from 01 to 24                                                                                                             |
-| m         | 4             | Minute from 0 to 59                                                                                                                               |
-| mm        | 04            | Minute with trailing zero from 00 to 59                                                                                                           |
-| a         | pm            | Meridiem am/pm                                                                                                                                    |
-| A         | PM            | Meridiem AM/PM                                                                                                                                    |
-| s         | 5             | Second from 0 to 59                                                                                                                               |
-| ss        | 05            | Second with trailing zero from 00 to 59                                                                                                           |
-| S         | 0             | Second tenth                                                                                                                                      |
-| SS        | 08            | Second hundredth (on 2 digits with trailing zero)                                                                                                 |
-| SSS       | 084           | Millisecond (on 3 digits with trailing zeros)                                                                                                     |
-| SSSS      | 0845          | Second ten thousandth (on 4 digits with trailing zeros)                                                                                           |
-| SSSSS     | 08451         | Second hundred thousandth (on 5 digits with trailing zeros)                                                                                       |
-| SSSSSS    | 084512        | Microsecond (on 6 digits with trailing zeros)                                                                                                     |
-| SSSSSSS   | 0845120       | Second ten millionth (on 7 digits with trailing zeros)                                                                                            |
-| SSSSSSSS  | 08451200      | Second hundred millionth (on 8 digits with trailing zeros)                                                                                        |
-| SSSSSSSSS | 084512000     | Nanosecond (on 9 digits with trailing zeros)                                                                                                      |
-| M         | 1             | Month from 1 to 12                                                                                                                                |
-| MM        | 01            | Month with trailing zero from 01 to 12                                                                                                            |
-| MMM       | Jan           | Short month name, translatable                                                                                                                    |
-| MMMM      | January       | Month name, translatable                                                                                                                          |
-| Mo        | 1st           | Month with ordinal suffix from 1st to 12th, translatable                                                                                          |
-| Q         | 1             | Quarter from 1 to 4                                                                                                                               |
-| Qo        | 1st           | Quarter with ordinal suffix from 1st to 4th, translatable                                                                                         |
-| G         | 2017          | ISO week year (see ISO week date)                                                                                                                 |
-| GG        | 2017          | ISO week year (on 2 digits with trailing zero)                                                                                                    |
-| GGG       | 2017          | ISO week year (on 3 digits with trailing zeros)                                                                                                   |
-| GGGG      | 2017          | ISO week year (on 4 digits with trailing zeros)                                                                                                   |
-| GGGGG     | 02017         | ISO week year (on 5 digits with trailing zeros)                                                                                                   |
-| g         | 2017          | Week year according to locale settings, translatable                                                                                              |
-| gg        | 2017          | Week year according to locale settings (on 2 digits with trailing zero), translatable                                                             |
-| ggg       | 2017          | Week year according to locale settings (on 3 digits with trailing zeros), translatable                                                            |
-| gggg      | 2017          | Week year according to locale settings (on 4 digits with trailing zeros), translatable                                                            |
-| ggggg     | 02017         | Week year according to locale settings (on 5 digits with trailing zeros), translatable                                                            |
-| W         | 1             | ISO week number in the year (see ISO week date)                                                                                                   |
-| WW        | 01            | ISO week number in the year (on 2 digits with trailing zero)                                                                                      |
-| Wo        | 1st           | ISO week number in the year with ordinal suffix, translatable                                                                                     |
-| w         | 1             | Week number in the year according to locale settings, translatable                                                                                |
-| ww        | 01            | Week number in the year according to locale settings (on 2 digits with trailing zero)                                                             |
-| wo        | 1st           | Week number in the year according to locale settings with ordinal suffix, translatable                                                            |
-| x         | 1483635845085 | Millisecond-precision timestamp (same as date.getTime() in JavaScript)                                                                            |
-| X         | 1483635845    | Timestamp (number of seconds since 1970-01-01)                                                                                                    |
-| Y         | 2017          | Full year from -9999 to 9999                                                                                                                      |
-| YY        | 17            | Year on 2 digits from 00 to 99                                                                                                                    |
-| YYYY      | 2017          | Year on 4 digits from 0000 to 9999                                                                                                                |
-| YYYYY     | 02017         | Year on 5 digits from 00000 to 09999                                                                                                              |
-| YYYYYY    | +002017       | Year on 5 digits with sign from -09999 to +09999                                                                                                  |
-| z         | UTC           | Abbreviated time zone name                                                                                                                        |
-| zz        | UTC           | Time zone name                                                                                                                                    |
-| Z         | +00:00        | Time zone offset HH:mm                                                                                                                            |
-| ZZ        | +0000         | Time zone offset HHmm                                                                                                                             |
-
-Source: [Carbon Docs](https://carbon.nesbot.com/docs/#api-localization)
+[Click here for a list of possible date format characters](/webhookscript/date-format.html) for the `to_date` and `date_format` functions.
 
 ### Date locales available
 
 [Click here for a list of possible locales/translations available for date display functions.](/webhookscript/date-locales.html)
 
-### to_date(***string*** date, ***?string*** format): ***string***
+### to_date(***string*** date, ***?string*** format, ***?locale*** locale, ***?string*** timezone, ***bool*** keep_timezone = false): ***string***
 
-Will attempt to parse a string to a ISO-8601 formatted date string. 
+Will attempt to parse a string to a ISO-8601 formatted date string in UTC time. If the `keep_timezone` parameter is set to true, the resulting date string will keep the timezone. The `locale` parameter will attempt to parse the date using the specified locale.
 
-If specified, `format` is used to parse the date without having to guess the format (see the [Date Format Characters](#date-format-characters) above.)
+If specified, `format` is used to parse the date without having to guess the format (see the [Date Format Characters](/webhookscript/date-format.html) specification.)
 
 Many formats are supported, like relative dates and various specified date formats.
 
@@ -654,11 +573,15 @@ If the date is invalid or could not be guessed, `null` is returned.
 
 ```javascript
 // Relative formats
-'last wednesday 4 am'.to_date()        // 2020-05-27T04:00:00.000000Z
+to_date('last wednesday 4 am')         // 2020-05-27T04:00:00.000000Z
 'first monday august 2019'.to_date()   // 2019-08-05T00:00:00.000000Z
 
 // Automatic format guessing
 '2020-01-01 23:02:01'.to_date()        // 2020-01-01T23:02:01.000000Z
+
+// Timezone handling
+'2020-01-01 23:02:01'.to_date(null, null, 'GMT-5') // "2020-01-02T04:02:01.000000Z", interpreted as GMT-5 and converted to UTC
+'2020-01-01 23:02:01'.to_date(null, null, 'GMT-5', true) // "2020-01-01T23:02:01.000000-05:00", date keeps timezone
 
 // Unix timestamp
 '@1215282385'.to_date()                // 2008-07-05T18:26:25.000000Z
@@ -670,14 +593,16 @@ If the date is invalid or could not be guessed, `null` is returned.
 '2020-01-05 12h30m15s'.to_date('YYYY-MM-DD HH\\hmm\\mss\\s') // 2020-01-05T12:30:15.000000Z
 ```
 
-### date_format(***string*** date, ***?string*** format, ***?string*** locale): ***string***
+### date_format(***string*** date, ***?string*** format, ***?string*** locale, ***?string*** timezone): ***string***
 
-Returns a date parsed to the format specified in `format`.
+Returns a date parsed to the format specified in `format`. For a full list of date format characters, see the [Date Format Characters](/webhookscript/date-format.html) specification.
 
 ```javascript
 date_format('2008-07-05T18:26:25.000000Z', 'YYYY-MM-DD') // 2008-07-05
 
 date_format('2008-07-05T18:26:25.000000Z', 'LLLL', 'da') // lørdag d. 5. juli 2008 kl. 18:26
+
+date_format('2020-01-01T23:02:01.000000-05:00', 'LLLL', null, 'GMT+2') // Thursday, January 2, 2020 6:02 AM
 
 // If no format is specified, a default human readable readable string is returned
 date_format('2008-07-05T18:26:25.000000Z') // Sat Jul 05 2008 18:26:25 GMT+0000
