@@ -35,6 +35,12 @@ The following examples are based on the date `2017-01-05 17:04:05.084512`.
 | hh        | 05            | Hour with trailing zero from 00 to 12                                                                                                             |
 | k         | 17            | Hour from 1 to 24                                                                                                                                 |
 | kk        | 17            | Hour with trailing zero from 01 to 24                                                                                                             |
+|     L     | 04/09/1986                         | Date (in local format)                                                                                                       |
+|    LL     | September 4 1986                   | Month name, day of month, year                                                                                               |
+|   LLL     | September 4 1986 8:30 PM           | Month name, day of month, year, time                                                                                         |
+|  LLLL     | Thursday, September 4 1986 8:30 PM | Day of week, month name, day of month, year, time                                                                            |
+|    LT     | 8:30 PM                            | Time (without seconds)                                                                                                       |
+|   LTS     | 8:30:00 PM                         | Time (with seconds)                                                                                                          |
 | m         | 4             | Minute from 0 to 59                                                                                                                               |
 | mm        | 04            | Minute with trailing zero from 00 to 59                                                                                                           |
 | a         | pm            | Meridiem am/pm                                                                                                                                    |

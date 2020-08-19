@@ -41,7 +41,17 @@ nav:
   - Custom Actions: custom-actions.markdown
   - WebhookScript:
     - About WebhookScript: webhookscript/index.markdown
-    - Reference: webhookscript/reference.markdown
     - Examples: webhookscript/examples.markdown
-    - Functions: webhookscript/functions.markdown
+    - Reference: webhookscript/reference.markdown
+    - Built-in Functions:
+      - General: webhookscript/functions/general.md
+      - Arrays: webhookscript/functions/array.md
+      - Booleans: webhookscript/functions/bool.md
+      - Dates: webhookscript/functions/date.md
+      - File handling: webhookscript/functions/files.md
+      - Flow Control and Responses: webhookscript/functions/flow.md
+      - Math and Numbers: webhookscript/functions/math.md
+      - Network and HTTP: webhookscript/functions/network.md
+      - Strings: webhookscript/functions/string.md
+      - Custom Action Variables: webhookscript/functions/variables.md
   - ← Back to Webhook.site: https://webhook.site  
