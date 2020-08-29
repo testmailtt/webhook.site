@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 August 2020
+
+* A bug in the Extract JSONPath action has been fixed so that it is now also possible to filter for keys containing punctuation, e.g. `.data[?(@.Employee.FirstName)]`.
+
 ## 18 August 2020
 
 * The `to_date` and `date_format` WebhookScript functions have been improved with timezone handling capabilities.
