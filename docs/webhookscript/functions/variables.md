@@ -1,10 +1,10 @@
 These functions lets you interface with other Custom Actions by getting and setting variables from them. These functions are also how you retrieve Global Variables defined in the Control Panel.
 
-### var(***string*** variable_name) : mixed
+### var(***string*** variable_name, ***?string/number*** default) : mixed
 
 Retrieves the value of a Variable or Global Variable (defined in the Control Panel). The surrounding dollar signs are not mandatory.
 
-Returns `null` if the variable does not exist.
+Returns `null` (or `default`) if the variable does not exist.
 
 ```javascript
 var('request.header.x-request-verification') // returns value of the `x-request-verification` header
