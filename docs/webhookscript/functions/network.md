@@ -9,7 +9,7 @@ query(['country': 'Curaçao', 'population': 158665])
 // country=Cura%C3%A7ao&population=158665
 ```
 
-### request(***string*** url, ***string*** body, ***string*** method = 'GET', ***array*** headers) : array
+### request(***string*** url, ***string*** body, ***string*** method = 'GET', ***array*** headers, ***bool*** override = false) : array
 
 Sends a HTTP request and returns an array with the following keys containing response data:
 
@@ -37,6 +37,8 @@ if (decoded) {
   value = decoded['value']
 }
 ```
+
+If `override` is set to true, none of the content from the original request is included (e.g. query strings, headers, content.)
 
 ### url_decode(***string*** value) : string
 

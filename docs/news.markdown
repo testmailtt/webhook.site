@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 13 September 2020
+
+* WebhookScript: Added `override` parameter to request(), which prevents content from the source request from being included.
+
 ## 3 September 2020
 
 * WebhookScript: It is now possible to set a default for the `var()` function.
