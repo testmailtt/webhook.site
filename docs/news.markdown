@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 15 September 2020
+
+* We've seen spurious instances of downtime in the last 24 hours, the longest one lasting from approx. 14:00 to 14:50 UTC. We apologize for the inconvenience.
+
 ## 13 September 2020
 
 * WebhookScript: Added `override` parameter to request(), which prevents content from the source request from being included.
