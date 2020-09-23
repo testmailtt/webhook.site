@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 23 September 2020
+
+* Regrettably, we saw a long period of downtime again from approx 20:00 to 05.40 UTC. The cause of the downtime was a user flooding their Webhook.site URLs with many gigabytes of data, causing the system to be overloaded. The same user was responsible for the downtime at 15 September 2020 and we've now terminated their license to use Webhook.site. We are also going prioritize changes that will automatically limit this kind of abuse, as well as move to another database system that will be more resilient.
+
 ## 15 September 2020
 
 * We've seen spurious instances of downtime in the last 24 hours, the longest one lasting from approx. 14:00 to 14:50 UTC. We apologize for the inconvenience.
