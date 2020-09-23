@@ -20,6 +20,10 @@ What are people using it for?
 * Building contact forms that send emails
 * Instantly build APIs without needing infrastructure
 
+## Company information
+
+Webhook.site is operated by Webhook ApS (VAT ID: DK41561718.) Address: M.P. Bruuns Gade 52-4, 8000 Aarhus, Denmark.
+
 Built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
 
 ## Open Source
