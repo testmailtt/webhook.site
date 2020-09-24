@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 24 September 2020
+
+* New feature: Customize Auto-Cleanup threshold. This lets you specify how many requests or emails to keep for your URLs, if you want to keep fewer than the default amount of 10.000 for e.g. data protection reasons. Available from the brand new Settings page in Control Panel. The setting applies to all URLs that have the Auto Cleanup feature enabled - click Edit on a URL to enable it.
+* New feature: URL groups, which lets you categorize your URLs into groups. Available from the URLs page in Control Panel. Click Edit on a URL to change its group.
+* The URLs page in Control Panel has a new design which is less cluttered and allows you to more quickly change certain settings, URL aliases, and the description of a URL.
+
 ## 23 September 2020
 
 * Regrettably, we saw a long period of downtime again from approx 20:00 to 05.40 UTC. The cause of the downtime was a user flooding their Webhook.site URLs with many gigabytes of data, causing the system to be overloaded. The same user was responsible for the downtime at 15 September 2020 and we've now terminated their license to use Webhook.site. We are also going prioritize changes that will automatically limit this kind of abuse, as well as move to another database system that will be more resilient.
