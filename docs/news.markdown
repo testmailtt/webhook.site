@@ -22,6 +22,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 October 2020
+
+* Added documentation for managing Custom Actions via the API. For more information, [see here](/api/custom-actions.html).
+* Fixed a bug causing the Operator of an action to be reset to "is equal to" when testing.
+
+## 6 October 2020
+
+* Action output is no longer displayed twice when testing Condition actions.
+
 ## 24 September 2020
 
 * New feature: Customize Auto-Cleanup threshold. This lets you specify how many requests or emails to keep for your URLs, if you want to keep fewer than the default amount of 10.000 for e.g. data protection reasons. Available from the brand new Settings page in Control Panel. The setting applies to all URLs that have the Auto Cleanup feature enabled - click Edit on a URL to enable it.

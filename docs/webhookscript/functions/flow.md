@@ -4,24 +4,7 @@ Runs Custom Actions in WebhookScript. Can be used to loop over items in a way th
 
 The function returns an array of runtime variables which can be used to fetch the result of an action that sets a variable, like `google_sheets_get_values`.
 
-The `action_type` can be one of the following:
-
-* google_sheets_add_row
-* google_sheets_update_row
-* google_sheets_get_values
-* aws_s3_create_bucket
-* aws_s3_put_object
-* aws_s3_delete_object
-* aws_s3_get_object
-* aws_cf_invalidate
-* discord_send_message
-* slack_send_message
-* dropbox_create_folder
-* dropbox_delete
-* dropbox_download_file
-* dropbox_get_link
-* dropbox_upload_file
-* image_resize
+The `action_type`s and their parameters [can be seen here](/api/action-types.html).
 
 The following action extracts a list of files from an array of objects in a JSON array and uploads each file to Dropbox using the `dropbox_upload_file` action.
 

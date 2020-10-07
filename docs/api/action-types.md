@@ -1,5 +1,4 @@
-!!! note
-    The following is a list of the API names for Action Types, along with a list of parameters
+The following is a list of the API names for Action Types, along with a list of parameters, and their validation requirements.
 
 #### `extract_jsonpath`
 
