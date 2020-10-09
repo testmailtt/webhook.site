@@ -210,7 +210,7 @@ You can enter both width and height to contrain the image in both dimensions, or
 
 Check "Keep Aspect Ratio" so that the image keeps the aspect ratio, but doesn't exceed the height and width constraints.
 
-## Google Sheets (Beta)
+## Google Sheets
 
 Google Sheets Custom Actions lets you manipulate and retrieve values from a Google Sheet.
 
@@ -258,7 +258,7 @@ Additionally, the data is available in JSON, with the `variable_name.json` varia
 ]
 ```
 
-## Amazon Web Services (AWS) (Beta)
+## Amazon Web Services (AWS)
 
 ### S3
 
@@ -275,14 +275,14 @@ In addition to the "official" Amazon endpoints, Webhook.site also supports S3-co
 
 The "Create Invalidation" action allows you to dynamically create a CloudFront cache invalidation as a Custom Action. Both the Distribution ID and the paths to be invalidated are replaced with Webhook.site Variables.
 
-## Discord (Beta)
+## Discord
 
 With the Discord Custom Action, you can send messages to a specified channel (Each bot account uses a specific channel, so you can connect more accounts to send to different channels or servers.) In addition, you can choose a custom username and avatar image for the bot user.
 
 !["Discord" Custom Action screenshot](/images/discord.png)
 
 
-## Slack (Beta)
+## Slack
 
 With the Slack Custom Action, you can easily use Slack's Webhook URLs to send messages to a channel.
 
