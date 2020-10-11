@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 11 October 2020
+
+* It's now possible to export and import Custom Actions to a file using the new Import/Export buttons in the Custom Actions builder.
+
 ## 7 October 2020
 
 * Added documentation for managing Custom Actions via the API. For more information, [see here](/api/custom-actions.html).
