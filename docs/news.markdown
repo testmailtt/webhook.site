@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 19 October 2020
+
+* It's now possible to set a timeout for the Send Request action. A new `timeout` parameter can also be given to the `request()` function in WebhookScript. Both places accept a value in seconds, with decimals.
+* When exporting Custom Actions, if the URL has an alias, this is now used for the resulting filename.
+
 ## 11 October 2020
 
 * It's now possible to export and import Custom Actions to a file using the new Import/Export buttons in the Custom Actions builder.

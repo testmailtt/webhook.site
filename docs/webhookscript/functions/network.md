@@ -9,12 +9,12 @@ query(['country': 'Curaçao', 'population': 158665])
 // country=Cura%C3%A7ao&population=158665
 ```
 
-### request(***string*** url, ***string*** body, ***string*** method = 'GET', ***array*** headers, ***bool*** override = false) : array
+### request(***string*** url, ***string*** body, ***string*** method = 'GET', ***array*** headers, ***bool*** override = false, timeout = 10) : array
 
 Sends a HTTP request and returns an array with the following keys containing response data:
 
-* `content`
-* `status`
+* `content` (contains a cURL error message in case of an error)
+* `status` (`null` in case of an error)
 * `headers`
 * `url`
 

@@ -215,11 +215,11 @@ Things to note:
 
 Simply copy this script into a WebhookScript Custom Action (remember to change the token!), and click Save Action.
 
-!["WebhookScript" Telegram Bot screenshot](/webhookscript/example-telegram-bot-script.png)
+!["WebhookScript" Telegram Bot screenshot](/images/example-telegram-bot-script.png)
 
 Then, you can interact with the bot using the Telegram app:
 
-!["WebhookScript" Telegram Bot screenshot](/webhookscript/example-telegram-bot.png)
+!["WebhookScript" Telegram Bot screenshot](/images/example-telegram-bot.png)
 
 And that's it! Congratulations on your bot. It's not very smart, but from here, the possibilities are endless!
 
