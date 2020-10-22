@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 22 October 2020
+
+* WebhookScript: Added `array_keys` and `array_values` functions. For more information, [see here](/webhookscript/functions/array.html).
+
 ## 19 October 2020
 
 * It's now possible to set a timeout for the Send Request action. A new `timeout` parameter can also be given to the `request()` function in WebhookScript. Both places accept a value in seconds, with decimals.

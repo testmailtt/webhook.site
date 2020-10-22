@@ -20,6 +20,10 @@ Returns true if `array` contains `key`, and false if it does not.
 
 To check whether a value exists, use the `array_contains` function.
 
+### array_keys(***array*** array) : array
+
+Returns the keys of an array.
+
 ### array_length(***array*** array) : number
 
 ### array_map(***array*** array, ***func*** function)
@@ -49,6 +53,10 @@ Returns ***array*** in reverse order
 ### array_shuffle(***array*** array) : array
 
 Returns shuffled version of ***array***
+
+### array_values(***array*** array) : array
+
+Returns the values of an array.
 
 ### to_array(***array*** array) : array
 
