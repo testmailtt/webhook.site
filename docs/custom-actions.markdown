@@ -169,6 +169,14 @@ The response of the request is stored in a series of variable names prefixed wit
 
 This will send a email with variable contents from the Webhook.site cloud. Variables extracted previously can be used.
 
+### Run SSH Command
+
+Allows you to run one or more SSH command on a server. Webhook.site captures the output (stdout), stderr and the command exit code as Variables that can be used in downstream actions:
+
+* `$ssh.stdout$`
+* `$ssh.stderr$`
+* `$ssh.exit$`
+
 ## Logic
 
 ### Modify Response

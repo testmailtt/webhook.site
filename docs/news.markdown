@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 October 2020
+
+* Added new Custom Action: Run SSH Command, which allows you to run SSH commands on your server.
+
 ## 22 October 2020
 
 * WebhookScript: Added `array_keys` and `array_values` functions. For more information, [see here](/webhookscript/functions/array.html).
