@@ -1,14 +1,14 @@
-# Date Manipulation
+# Date and Time Manipulation
 
 In WebhookScript, dates are not a specific type, but rather expressed as strings that WebhookScript will attempt to parse using a very powerful date parsing engine.
 
 However, if possible, we recommend using either a specific date format like **ISO-8601**, or specifying the date format precisely using the `to_date` function, which removes the risk of misparsing.
 
-### Supported date formats
+### Supported date and time formats
 
 WebhookScript supports a variety of date formats, and functions taking a date will attempt to guess the format of the input string in order to parse the date into a ISO-8601 format. If possible, it's recommended to use the ISO-8601 format, for example `2020-05-27T04:00:00.000000Z`.
 
-#### Supported special format examples
+#### Special format examples
 
 In addition to date strings, these special formats can also be used to generate dates.
 
