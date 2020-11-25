@@ -1,7 +1,7 @@
 The following is a list of the API names for Action Types, along with a list of parameters, and their validation requirements.
 
-#### `extract_jsonpath`
 
+#### `extract_jsonpath`
 - `jsonpath`: **required**, string
 - `variable_name`: **required**, string
 - `source`: string
@@ -26,6 +26,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `headers`: nullable, string
 - `skip_ssl_verification`: nullable, bool
 - `variable_name`: string
+- `timeout`: nullable, numeric, max:10000
 
 #### `send_email`
 - `sender`: string
@@ -41,6 +42,10 @@ The following is a list of the API names for Action Types, along with a list of 
 
 #### `script`
 - `script`: **required**, string
+
+#### `rate_limit`
+- `period`: **required**, int
+- `count`: **required**, int
 
 #### `condition`
 - `input`: string
@@ -148,3 +153,11 @@ The following is a list of the API names for Action Types, along with a list of 
 - `height`: string
 - `aspect_ratio`: bool, **required**
 - `variable_name`: string, **required**
+
+#### `ssh_run_command`
+- `provider_id`: string, **required**
+- `host`: **required**, string
+- `port`: number, min:1, max:65535
+- `username`: **required**, string
+- `command`: **required**, string
+- `variable_name`: string

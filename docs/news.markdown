@@ -22,6 +22,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 25 November 2020
+
+* WebhookScript: It's now possible to store non-string values in set(). If the value is an array, however, it is JSON encoded first.
+
+## 1 November 2020
+
+* Added new Custom Action: Rate Limit, which lets you specify the maximum amount of requests in a given duration per IP to allow to request the Webhook.URL.
+* Dates shown in the application now include seconds.
+
 ## 29 October 2020
 
 * Added new Custom Action: Run SSH Command, which allows you to run SSH commands on your server.

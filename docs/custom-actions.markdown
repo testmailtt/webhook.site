@@ -177,11 +177,19 @@ Allows you to run one or more SSH command on a server. Webhook.site captures the
 * `$ssh.stderr$`
 * `$ssh.exit$`
 
-## Logic
+## Behavior
 
 ### Modify Response
 
 This action can be used to modify the response of the Webhook.site URL based on the input.
+
+### Rate Limit
+
+This action can be used to allow a specific amount of requests in a specific amount of time per a given IP.
+
+If the IP is rate limited, the URL will respond with a `HTTP 429`, action execution is stopped, and the request is not saved in Webhook.site.
+
+## Logic
 
 ### Condition
 
