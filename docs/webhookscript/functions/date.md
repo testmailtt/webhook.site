@@ -4,6 +4,23 @@ In WebhookScript, dates are not a specific type, but rather expressed as strings
 
 However, if possible, we recommend using either a specific date format like **ISO-8601**, or specifying the date format precisely using the `to_date` function, which removes the risk of misparsing.
 
+### Supported date formats
+
+WebhookScript supports a variety of date formats, and functions taking a date will attempt to guess the format of the input string in order to parse the date into a ISO-8601 format. It's therefore always recommended to use the ISO-8601 format if possible, for example `2020-05-27T04:00:00.000000Z`.
+
+#### Supported special format examples
+
+In addition to date strings, these special formats can also be used to generate dates.
+
+* `now` - current date and time
+* `+1 day` - adds 1 day to the current date and time
+* `+1 week`
+* `next Thursday` - next Thursday from now
+* `last Monday` - last Monday from now
+* `first day of January 2008`
+* `first Saturday of July 2008`
+* `Monday next week`
+
 ### Date format characters
 
 [Click here for a list of possible date format characters](/webhookscript/date-format.html) for the `to_date` and `date_format` functions.
@@ -14,15 +31,14 @@ However, if possible, we recommend using either a specific date format like **IS
 
 ### to_date(***string*** date, ***?string*** format, ***?locale*** locale, ***?string*** timezone, ***bool*** keep_timezone = false): ***string***
 
-Will attempt to parse a string to a ISO-8601 formatted date string in UTC time. If the `keep_timezone` parameter is set to true, the resulting date string will keep the timezone. The `locale` parameter will attempt to parse the date using the specified locale.
-
-If specified, `format` is used to parse the date without having to guess the format (see the [Date Format Characters](/webhookscript/date-format.html) specification.)
-
-Many formats are supported, like relative dates and various specified date formats.
+Returns a ISO-8601 formatted date string in UTC time from the provided `date` string. For more information about the accepted dates, see [Supported date formats](#supported-date-formats). If specified, `format` is used to parse the date without having to guess the format (see the [Date Format Characters](/webhookscript/date-format.html) specification.) If the `keep_timezone` parameter is set to true, the resulting date string will keep the timezone. The `locale` parameter will attempt to parse the date using the specified locale.
 
 If the date is invalid or could not be guessed, `null` is returned.
 
 ```javascript
+// Current date and time
+'now'.to_date()                        // 2020-11-25T00:00:00.000000Z
+
 // Relative formats
 to_date('last wednesday 4 am')         // 2020-05-27T04:00:00.000000Z
 'first monday august 2019'.to_date()   // 2019-08-05T00:00:00.000000Z
@@ -46,9 +62,11 @@ to_date('last wednesday 4 am')         // 2020-05-27T04:00:00.000000Z
 
 ### date_format(***string*** date, ***?string*** format, ***?string*** locale, ***?string*** timezone): ***string***
 
-Returns a date parsed to the format specified in `format`. For a full list of date format characters, see the [Date Format Characters](/webhookscript/date-format.html) specification.
+Returns a date parsed to the format specified in `format`. For more information about the accepted dates, see [Supported date formats](#supported-date-formats). For a full list of date format characters, see the [Date Format Characters](/webhookscript/date-format.html) specification.
 
 ```javascript
+'now'.date_format('x') // 1606329669220 (current date in UNIX timestamp with microseconds)
+
 date_format('2008-07-05T18:26:25.000000Z', 'YYYY-MM-DD') // 2008-07-05
 
 date_format('2008-07-05T18:26:25.000000Z', 'LLLL', 'da') // lørdag d. 5. juli 2008 kl. 18:26

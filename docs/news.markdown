@@ -25,6 +25,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 ## 25 November 2020
 
 * WebhookScript: It's now possible to store non-string values in set(). If the value is an array, however, it is JSON encoded first.
+* WebhookScript: Added more examples for the date functions.
 
 ## 1 November 2020
 
