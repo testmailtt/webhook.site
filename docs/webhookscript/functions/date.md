@@ -6,7 +6,7 @@ However, if possible, we recommend using either a specific date format like **IS
 
 ### Supported date formats
 
-WebhookScript supports a variety of date formats, and functions taking a date will attempt to guess the format of the input string in order to parse the date into a ISO-8601 format. It's therefore always recommended to use the ISO-8601 format if possible, for example `2020-05-27T04:00:00.000000Z`.
+WebhookScript supports a variety of date formats, and functions taking a date will attempt to guess the format of the input string in order to parse the date into a ISO-8601 format. If possible, it's recommended to use the ISO-8601 format, for example `2020-05-27T04:00:00.000000Z`.
 
 #### Supported special format examples
 
