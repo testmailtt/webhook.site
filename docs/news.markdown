@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 26 November 2020
+
+* Webhook.site had downtime during the night. The problem has been fixed.
+
 ## 25 November 2020
 
 * WebhookScript: It's now possible to store non-string values in set(). If the value is an array, however, it is JSON encoded first.
