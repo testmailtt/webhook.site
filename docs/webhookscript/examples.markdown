@@ -99,7 +99,7 @@ response = request('https://example.com', content, 'POST', headers);
 In the following, an incoming request is JSON decoded to an array, transformed and sent to "Web Service 1". Then the output is saved and passed on to "Web Service 2" in XML format. Basic error handling and validation is demonstrated.
 
 ```javascript
-// Configuration, fetched from the users' Global Variables
+// Configuration, fetched from the users' Global Variables in Control Panel
 ws1_api_key = var('WS1_KEY')
 ws2_user_token = var('WS1_USER_TOKEN')
 
@@ -118,9 +118,10 @@ if (!orig_req) {
 }
 
 // Send request to Web Service 1, using format() for string placeholders
+// with JSON decoded values from the incoming request body
 ws1_url = 'https://ws1.example.com/3.0/lists/{}/interest-categories/{}/interests'.format(
-  list_id,
-  group_id
+  orig_req['listId'],
+  orig_req['groupId']
 )
 
 ws1_content = [
