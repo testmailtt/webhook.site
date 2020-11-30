@@ -8,22 +8,79 @@ parent: WebhookScript
 
 !!! info 
     Do you have a nice example to share with other users? Or looking for even more examples? Take a look at the WebhookScript example repository, and make a pull request if you want to contribute: [https://github.com/fredsted/webhookscripts](https://github.com/fredsted/webhookscripts)
+    
+## Loop through and compare items
+
+In this example, we loop through a series of items and pick the item that's contained in a string. 
+
+```javascript
+location = 'test ABC example';
+
+compares = [
+  '123': 'token1',
+  'ABC': 'token2',
+  'DEF': 'token3',
+]
+
+token = ''; // Default value
+
+for (compare in array_keys(compares)) {
+    if (location.contains(compare)) {
+        token = compares[compare]
+    }
+}
+
+dump(token) // token2
+```
+
+## Submit request with escaped JSON
+
+If you're building a JSON object, we recommend doing it in WebhookScript instead of typing JSON in the Send Request action type. In this example, one of the JSON values contain HTML generated using the string_format function.
+
+```
+html_message = string_format(
+    '<b><u>New {} lead</u></b><br>
+<br>
+Location: {}<br>
+Message from customer:<br>
+<div style="background:#CCC">{}</div>',
+    var('lead_type'),
+    var('location'),
+    var('message')
+)
+
+payload = json_encode([
+    'lead': [
+        'firstname': var('firstname'),
+        'lastname': var('lastname'),
+        'html': html_message
+    ]
+])
+
+
+request(
+  'https://example.com/leads',
+   payload,
+   'POST',
+   ['Content-Type: application/json']
+)
+```
 
 ## Validate request
 
-In this example, we use a common method of verifying webhooks by taking a hash of its contents concatenated to a secret. It demonstrates the way WebhookScript can get various information about the request by using the `get_variable()` function, as well as string concatenation, hashing, if statements and returning responses with content, status codes and headers using `respond()`, which halts execution.
+In this example, we use a common method of verifying webhooks by taking a hash of its contents concatenated to a secret. It demonstrates the way WebhookScript can get various information about the request by using the `get_variable()` function, as well as string concatenation, [hashing](/webhookscript/functions/string.html#hashstringnumber-value-string-algo-string), if statements and returning responses with content, status codes and headers using `respond()`, which halts execution.
 
 ```javascript
-verification_secret = "JHRlc3RTY3JpcHRTZWNyZXQ";
-verification_challenge = var("request.header.x-request-verification");
-verification_result = hash_sha256(var('request.content') + verification_secret);
+verification_secret = "JHRlc3RTY3JpcHRTZWNyZXQ"
+verification_challenge = var("request.header.x-request-verification")
+verification_result = hash(var("request.content") + verification_secret, "sha256")
 
 if (!verification_challenge or verification_challenge != verification_result) {
-    respond("Invalid request", 500);
+    respond("Invalid request", 500)
 }
 
-headers = ["X-Success: Yes", "X-Verification: "+verification_challenge];
-respond("Successful request", 200, headers);
+headers = ['X-Success: Yes']
+respond("Successful request", 200, headers)
 ```
 
 ## Send a x-www-form-urlencoded request
