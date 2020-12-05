@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 5 December 2020
+
+* Added new Custom Action: Store Global Variable, which does what it says in the tin.
+* Bug fix: In Control Panel, the update date for each Global Variable now actually updates when a Global Variable is updated.
+
 ## 26 November 2020
 
 * Webhook.site had downtime during the night. The problem has been fixed.
