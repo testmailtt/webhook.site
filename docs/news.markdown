@@ -22,6 +22,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 19 January 2021
+
+* Happy new year!
+* New Action Type: Conditions 2.0. Now supports adding multiple conditions in a single action.
+* New Action Type: Set Variable. Working similarly to the Store Global Variable action, this action sets a runtime variable that is not persisted.
+* Actions can now individually be executed depending on a previous set of conditions.
+* The Debug Output section in the Custom Actions builder now shows the action number and type from where it came.
+* The Modify Response action now supports returning the response immediately.
+
 ## 5 December 2020
 
 * Added new Custom Action: Store Global Variable, which does what it says on the tin.
