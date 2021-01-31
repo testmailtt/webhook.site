@@ -24,7 +24,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 31 January 2021
 
-* We have discontinued support for subscriptions via Patreon, who will need to create a new subscription. For more information please contact [support](https://support,webhook.site).
+* We have discontinued support for subscriptions via Patreon, who will need to create a new subscription. For more information please contact [support](https://support.webhook.site).
 
 ## 19 January 2021
 
