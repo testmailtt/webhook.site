@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 1 Feburary 2021
+
+* Webhook.site has had intermittent downtime today due abuse from a user. We've identified them and blocked them from our systems. We're very sorry for the inconvenience.
+
 ## 31 January 2021
 
 * We have discontinued support for subscriptions via Patreon, who will need to create a new subscription. For more information please contact [support](https://support.webhook.site).
