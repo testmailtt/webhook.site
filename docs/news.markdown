@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 5 Feburary 2021
+
+* New WebhookScript functions: html_strip_tags, html_decode, html_encode, markdown_to_html. For more information, [see here](/webhookscript/functions/string.html).
+
 ## 1 Feburary 2021
 
 * Webhook.site has had intermittent downtime today due abuse from a user. We've identified them and blocked them from our systems. We're very sorry for the inconvenience.
