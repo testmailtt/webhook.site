@@ -186,10 +186,64 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../api.html" title="API" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/about.html" title="About the API" class="md-nav__link">
+      About the API
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tokens.html" title="Tokens (URLs/Email addresses)" class="md-nav__link">
+      Tokens (URLs/Email addresses)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/custom-actions.html" title="Custom Actions" class="md-nav__link">
+      Custom Actions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -272,18 +326,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="reference.html" title="Reference" class="md-nav__link">
-      Reference
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -319,6 +361,20 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loop-through-and-compare-items" class="md-nav__link">
+    Loop through and compare items
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-request-with-escaped-json" class="md-nav__link">
+    Submit request with escaped JSON
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#validate-request" class="md-nav__link">
@@ -382,6 +438,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adding-rows-to-an-airtable-base" class="md-nav__link">
+    Adding rows to an Airtable Base
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -395,9 +458,159 @@
 
 
   <li class="md-nav__item">
-    <a href="functions.html" title="Functions" class="md-nav__link">
-      Functions
+    <a href="reference.html" title="Reference" class="md-nav__link">
+      Reference
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4">
+    
+    <label class="md-nav__link" for="nav-8-4">
+      Built-in Functions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Built-in Functions" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Built-in Functions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/general.html" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/array.html" title="Arrays" class="md-nav__link">
+      Arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/bool.html" title="Booleans" class="md-nav__link">
+      Booleans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/date.html" title="Dates" class="md-nav__link">
+      Dates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/files.html" title="File handling" class="md-nav__link">
+      File handling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/flow.html" title="Flow Control and Responses" class="md-nav__link">
+      Flow Control and Responses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/math.html" title="Math and Numbers" class="md-nav__link">
+      Math and Numbers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/network.html" title="Network and HTTP" class="md-nav__link">
+      Network and HTTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/string.html" title="Strings" class="md-nav__link">
+      Strings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="functions/variables.html" title="Custom Action Variables" class="md-nav__link">
+      Custom Action Variables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -444,6 +657,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#loop-through-and-compare-items" class="md-nav__link">
+    Loop through and compare items
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-request-with-escaped-json" class="md-nav__link">
+    Submit request with escaped JSON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#validate-request" class="md-nav__link">
     Validate request
   </a>
@@ -505,6 +732,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adding-rows-to-an-airtable-base" class="md-nav__link">
+    Adding rows to an Airtable Base
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -526,18 +760,71 @@
 <p class="admonition-title">Info</p>
 <p>Do you have a nice example to share with other users? Or looking for even more examples? Take a look at the WebhookScript example repository, and make a pull request if you want to contribute: <a href="https://github.com/fredsted/webhookscripts">https://github.com/fredsted/webhookscripts</a></p>
 </div>
-<h2 id="validate-request">Validate request<a class="headerlink" href="#validate-request" title="Permanent link">&para;</a></h2>
-<p>In this example, we use a common method of verifying webhooks by taking a hash of its contents concatenated to a secret. It demonstrates the way WebhookScript can get various information about the request by using the <code>get_variable()</code> function, as well as string concatenation, hashing, if statements and returning responses with content, status codes and headers using <code>respond()</code>, which halts execution.</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">verification_secret</span> <span class="o">=</span> <span class="s2">&quot;JHRlc3RTY3JpcHRTZWNyZXQ&quot;</span><span class="p">;</span>
-<span class="nx">verification_challenge</span> <span class="o">=</span> <span class="kd">var</span><span class="p">(</span><span class="s2">&quot;request.header.x-request-verification&quot;</span><span class="p">);</span>
-<span class="nx">verification_result</span> <span class="o">=</span> <span class="nx">hash_sha256</span><span class="p">(</span><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.content&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">verification_secret</span><span class="p">);</span>
+<h2 id="loop-through-and-compare-items">Loop through and compare items<a class="headerlink" href="#loop-through-and-compare-items" title="Permanent link">&para;</a></h2>
+<p>In this example, we loop through a series of items and pick the item that's contained in a string. </p>
+<div class="codehilite"><pre><span></span><code><span class="nx">location</span> <span class="o">=</span> <span class="s1">&#39;test ABC example&#39;</span><span class="p">;</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">verification_challenge</span> <span class="nx">or</span> <span class="nx">verification_challenge</span> <span class="o">!=</span> <span class="nx">verification_result</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">respond</span><span class="p">(</span><span class="s2">&quot;Invalid request&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+<span class="nx">compares</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;123&#39;</span><span class="o">:</span> <span class="s1">&#39;token1&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;ABC&#39;</span><span class="o">:</span> <span class="s1">&#39;token2&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;DEF&#39;</span><span class="o">:</span> <span class="s1">&#39;token3&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="nx">token</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="c1">// Default value</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="nx">compare</span> <span class="k">in</span> <span class="nx">array_keys</span><span class="p">(</span><span class="nx">compares</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">compare</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">token</span> <span class="o">=</span> <span class="nx">compares</span><span class="p">[</span><span class="nx">compare</span><span class="p">]</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X-Success: Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;X-Verification: &quot;</span><span class="o">+</span><span class="nx">verification_challenge</span><span class="p">];</span>
-<span class="nx">respond</span><span class="p">(</span><span class="s2">&quot;Successful request&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">headers</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nx">token</span><span class="p">)</span> <span class="c1">// token2</span>
+</code></pre></div>
+
+
+<h2 id="submit-request-with-escaped-json">Submit request with escaped JSON<a class="headerlink" href="#submit-request-with-escaped-json" title="Permanent link">&para;</a></h2>
+<p>If you're building a JSON object, we recommend doing it in WebhookScript instead of typing JSON in the Send Request action type. In this example, one of the JSON values contain HTML generated using the string_format function.</p>
+<div class="codehilite"><pre><span></span><code>html_message = string_format(
+    &#39;<span class="nt">&lt;b&gt;&lt;u&gt;</span>New {} lead<span class="nt">&lt;/u&gt;&lt;/b&gt;&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+Location: {}<span class="nt">&lt;br&gt;</span>
+Message from customer:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;background:#CCC&quot;</span><span class="nt">&gt;</span>{}<span class="nt">&lt;/div&gt;</span>&#39;,
+    var(&#39;lead_type&#39;),
+    var(&#39;location&#39;),
+    var(&#39;message&#39;)
+)
+
+payload = json_encode([
+    &#39;lead&#39;: [
+        &#39;firstname&#39;: var(&#39;firstname&#39;),
+        &#39;lastname&#39;: var(&#39;lastname&#39;),
+        &#39;html&#39;: html_message
+    ]
+])
+
+
+request(
+  &#39;https://example.com/leads&#39;,
+   payload,
+   &#39;POST&#39;,
+   [&#39;Content-Type: application/json&#39;]
+)
+</code></pre></div>
+
+
+<h2 id="validate-request">Validate request<a class="headerlink" href="#validate-request" title="Permanent link">&para;</a></h2>
+<p>In this example, we use a common method of verifying webhooks by taking a hash of its contents concatenated to a secret. It demonstrates the way WebhookScript can get various information about the request by using the <code>get_variable()</code> function, as well as string concatenation, <a href="/webhookscript/functions/string.html#hashstringnumber-value-string-algo-string">hashing</a>, if statements and returning responses with content, status codes and headers using <code>respond()</code>, which halts execution.</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">verification_secret</span> <span class="o">=</span> <span class="s2">&quot;JHRlc3RTY3JpcHRTZWNyZXQ&quot;</span>
+<span class="nx">verification_challenge</span> <span class="o">=</span> <span class="kd">var</span><span class="p">(</span><span class="s2">&quot;request.header.x-request-verification&quot;</span><span class="p">)</span>
+<span class="nx">verification_result</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">(</span><span class="kd">var</span><span class="p">(</span><span class="s2">&quot;request.content&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">verification_secret</span><span class="p">,</span> <span class="s2">&quot;sha256&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">verification_challenge</span> <span class="nx">or</span> <span class="nx">verification_challenge</span> <span class="o">!=</span> <span class="nx">verification_result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">respond</span><span class="p">(</span><span class="s2">&quot;Invalid request&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;X-Success: Yes&#39;</span><span class="p">]</span>
+<span class="nx">respond</span><span class="p">(</span><span class="s2">&quot;Successful request&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">headers</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -553,7 +840,7 @@
 
 <h2 id="transform-and-resend">Transform and resend<a class="headerlink" href="#transform-and-resend" title="Permanent link">&para;</a></h2>
 <p>In the following, an incoming request is JSON decoded to an array, transformed and sent to "Web Service 1". Then the output is saved and passed on to "Web Service 2" in XML format. Basic error handling and validation is demonstrated.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// Configuration, fetched from the users&#39; Global Variables</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Configuration, fetched from the users&#39; Global Variables in Control Panel</span>
 <span class="nx">ws1_api_key</span> <span class="o">=</span> <span class="kd">var</span><span class="p">(</span><span class="s1">&#39;WS1_KEY&#39;</span><span class="p">)</span>
 <span class="nx">ws2_user_token</span> <span class="o">=</span> <span class="kd">var</span><span class="p">(</span><span class="s1">&#39;WS1_USER_TOKEN&#39;</span><span class="p">)</span>
 
@@ -572,9 +859,10 @@
 <span class="p">}</span>
 
 <span class="c1">// Send request to Web Service 1, using format() for string placeholders</span>
+<span class="c1">// with JSON decoded values from the incoming request body</span>
 <span class="nx">ws1_url</span> <span class="o">=</span> <span class="s1">&#39;https://ws1.example.com/3.0/lists/{}/interest-categories/{}/interests&#39;</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span>
-  <span class="nx">list_id</span><span class="p">,</span>
-  <span class="nx">group_id</span>
+  <span class="nx">orig_req</span><span class="p">[</span><span class="s1">&#39;listId&#39;</span><span class="p">],</span>
+  <span class="nx">orig_req</span><span class="p">[</span><span class="s1">&#39;groupId&#39;</span><span class="p">]</span>
 <span class="p">)</span>
 
 <span class="nx">ws1_content</span> <span class="o">=</span> <span class="p">[</span>
@@ -716,9 +1004,9 @@
 <li>Finally, we JSON encode a WebhookScript array and send it using the <code>request()</code> function.</li>
 </ul>
 <p>Simply copy this script into a WebhookScript Custom Action (remember to change the token!), and click Save Action.</p>
-<p><img alt="&quot;WebhookScript&quot; Telegram Bot screenshot" src="/webhookscript/example-telegram-bot-script.png" /></p>
+<p><img alt="&quot;WebhookScript&quot; Telegram Bot screenshot" src="/images/example-telegram-bot-script.png" /></p>
 <p>Then, you can interact with the bot using the Telegram app:</p>
-<p><img alt="&quot;WebhookScript&quot; Telegram Bot screenshot" src="/webhookscript/example-telegram-bot.png" /></p>
+<p><img alt="&quot;WebhookScript&quot; Telegram Bot screenshot" src="/images/example-telegram-bot.png" /></p>
 <p>And that's it! Congratulations on your bot. It's not very smart, but from here, the possibilities are endless!</p>
 <h2 id="building-html-content">Building HTML content<a class="headerlink" href="#building-html-content" title="Permanent link">&para;</a></h2>
 <p>The following script builds a piece of HTML content using the string_format function, based on previously defined variables, and shows how to use a function to return different content based on input.</p>
@@ -811,6 +1099,20 @@
 <span class="s1">    &lt;/p&gt;</span>
 <span class="s1">&#39;</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">json_encode</span><span class="p">(</span><span class="nx">array</span><span class="p">),</span> <span class="nx">url</span><span class="p">))</span>
 </code></pre></div>
+
+
+<h2 id="adding-rows-to-an-airtable-base">Adding rows to an Airtable Base<a class="headerlink" href="#adding-rows-to-an-airtable-base" title="Permanent link">&para;</a></h2>
+<p>While Webhook.site doesn't have a native integration with Airtable, due to the simple API, it's exceedingly easy to add rows in Airtable.</p>
+<p>First, create an API key on your Account page: https://airtable.com/account. There's no need to copy it.</p>
+<p>Next, go to Airtable's API documentation and select the Base you want to interact with: https://airtable.com/api. In the upper right corner, make sure <strong>show API key</strong> is checked.</p>
+<p>If you then scroll down to the <strong>Create records</strong> section, you can essentially copy everything over to a Send Request action, like this:</p>
+<p><img alt="Creating an Airtable row using the API documentation" src="/images/airtable-example.png" /></p>
+<p>Things to note:</p>
+<ul>
+<li>The Request Method should be <code>POST</code></li>
+<li>Make sure you copy everything <em>between</em> <code>--data '</code> and the final <code>'</code> (quote) character</li>
+<li>Also make sure that quotes aren't included in the two header lines</li>
+</ul>
                 
                   
                 
@@ -831,7 +1133,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="reference.html" title="Reference" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="index.html" title="About WebhookScript" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -840,19 +1142,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Reference
+                About WebhookScript
               </div>
             </div>
           </a>
         
         
-          <a href="functions.html" title="Functions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="reference.html" title="Reference" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Functions
+                Reference
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
