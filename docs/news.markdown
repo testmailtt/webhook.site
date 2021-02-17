@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 17 Feburary 2021
+
+* New Action: FTP(S) Upload - allows easy file upload to FTP servers.
+
 ## 5 Feburary 2021
 
 * New WebhookScript functions: html_strip_tags, html_decode, html_encode, markdown_to_html. For more information, [see here](/webhookscript/functions/string.html).
