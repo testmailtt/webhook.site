@@ -39,7 +39,7 @@ nav:
     - About the API: api/about.md
     - Tokens (URLs/Email addresses): api/tokens.md
     - Custom Actions: api/custom-actions.md
-  - Premium: premium.markdown
+  - Webhook.site Pro: pro.markdown
   - Schedules: schedules.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
