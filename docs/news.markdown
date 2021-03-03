@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 3 March 2021
+
+* Webhook.site Premium has changed name to Webhook.site Pro. Functionality, pricing and everything else remains the same; it's a cosmetic change.
+* More currencies are now supported for Webhook.site Pro subscriptions: GBP and EUR. To change the currency of an existing subscription, please contact [Webhook.site Support](https://support.webhook.site).
+* Custom Action output is now included in CSV Exports.
+
 ## 17 Feburary 2021
 
 * New Action: FTP(S) Upload - allows easy file upload to FTP servers.

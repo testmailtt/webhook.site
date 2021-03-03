@@ -20,7 +20,7 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
 
 * `default_*` parameters sets the response of the URL.
 * `timeout` waits an amount of seconds before returning the response (intended for testing timeouts)
-* `expiry` set to true will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Premium user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
+* `expiry` set to true will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Pro user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
 * `cors` set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
 
 #### Request
@@ -74,10 +74,10 @@ Note about expiry: If there's no incoming requests for about a week, and the tok
 
 [*See **POST** `/token`*](#11-create-token)
 
-### Set password (Premium)
+### Set password (Pro)
 
 * Can require authentication.
-* Requires user with Premium upgrade.
+* Requires user with Pro upgrade.
 
 **PUT** `/token/:token_id/password`
 
@@ -93,10 +93,10 @@ Sets a password to view the requests of a token.
 
 [*See **POST** `/token`*](#11-create-token)
 
-### Set alias (Premium)
+### Set alias (Pro)
 
 * Can require authentication.
-* Requires user with Premium upgrade.
+* Requires user with Pro upgrade.
 
 **PUT** `/token/:token_id/alias`
 
