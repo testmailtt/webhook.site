@@ -187,6 +187,15 @@ We recommend storing the password as a Global Variable.
 
 Allows running a database query, with support for fetching out data in a series of variables. We recommend storing the password as a Global Variable.
 
+#### Supported Database Servers
+
+Currently supported are:
+
+* PostgreSQL
+* MySQL
+
+If your database server is not on the list, please [contact support](https://support.webhook.site).
+
 #### Using Parameters
 
 When using e.g. INSERT or UPDATE statements, we strongly recommend using *parameters* for each column value. Doing this, you avoid SQL injection attacks and other issues when using user-submitted data (e.g. via Variables), or even just data containing special characters like quotes, that could otherwise break a query.
