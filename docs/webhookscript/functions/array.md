@@ -4,6 +4,13 @@ Returns true or false depending on whether ***array*** contains a value equal to
 
 To check whether a key exists, use the `array_has` function.
 
+```javascript
+employees = [6547: 'Simon', 235345: 'Jack', 4657: 'Jim']
+
+dd(array_contains(employees, 'Simon'))
+// -> true
+```
+
 ### array_copy(***array*** array) : array
 
 Returns a copy of ***array***
@@ -20,6 +27,13 @@ Returns true if `array` contains `key`, and false if it does not.
 
 To check whether a value exists, use the `array_contains` function.
 
+```javascript
+employees = [6547: 'Simon', 235345: 'Jack', 4657: 'Jim']
+
+dd(array_has(employees, 235345))
+// -> true
+```
+
 ### array_keys(***array*** array) : array
 
 Returns the keys of an array.
@@ -28,7 +42,19 @@ Returns the keys of an array.
 
 ### array_map(***array*** array, ***func*** function)
 
-Runs function with each array value, and returns array with key as result
+Runs function with each array value, and returns array with key as result.
+
+```javascript
+employees = ['Simon', 'Jack', 'Jim']
+
+result = array_map(employees, function (employee) {
+    return 'Hello, '+employee+'!'
+})
+
+dd(result)
+
+// -> [0: "Hello, Simon!", 1: "Hello, Jack!", 2: "Hello, Jim!"]
+```
 
 ### array_number_of(***array***, ***string/number*** value) : number
 
@@ -50,6 +76,13 @@ Returns random value of ***array***
 
 Returns ***array*** in reverse order
 
+```javascript
+employees = [6547: 'Simon', 235345: 'Jack', 4657: 'Jim']
+
+dd(array_reverse(employees))
+// -> [0: "Jim", 1: "Jack", 2: "Simon"]
+```
+
 ### array_shuffle(***array*** array) : array
 
 Returns shuffled version of ***array***
@@ -57,6 +90,14 @@ Returns shuffled version of ***array***
 ### array_values(***array*** array) : array
 
 Returns the values of an array.
+
+```javascript
+employees = [6547: 'Simon', 235345: 'Jack', 4657: 'Jim']
+
+dd(array_values(employees))
+
+// -> [0: "Simon", 1: "Jack", 2: "Jim"]
+```
 
 ### to_array(***array*** array) : array
 

@@ -1,25 +1,26 @@
 # Date and Time Manipulation
 
-In WebhookScript, dates are not a specific type, but rather expressed as strings that WebhookScript will attempt to parse using a very powerful date parsing engine.
-
-However, if possible, we recommend using either a specific date format like **ISO-8601**, or specifying the date format precisely using the `to_date` function, which removes the risk of misparsing.
-
 ### Supported date and time formats
 
-WebhookScript supports a variety of date formats, and functions taking a date will attempt to guess the format of the input string in order to parse the date into a ISO-8601 format. If possible, it's recommended to use the ISO-8601 format, for example `2020-05-27T04:00:00.000000Z`.
+In WebhookScript, dates are not a specific type, but rather expressed as strings that WebhookScript will attempt to parse using a very powerful date parsing engine.
+
+WebhookScript supports a variety of date formats, and functions taking a date will attempt to guess the format of the input string in order to parse the date into a ISO-8601 format
+
+If possible, it's recommended to use the ISO-8601 format, for example `2020-05-27T04:00:00.000000Z`.
 
 #### Special format examples
 
 In addition to date strings, these special formats can also be used to generate dates.
 
-* `now` - current date and time
+* `now`
 * `+1 day` - adds 1 day to the current date and time
 * `+1 week`
-* `next Thursday` - next Thursday from now
-* `last Monday` - last Monday from now
+* `next Thursday`
+* `last Monday`
 * `first day of January 2008`
 * `first Saturday of July 2008`
 * `Monday next week`
+* `@1215282385` - UNIX timestamp
 
 ### Date format characters
 
@@ -37,27 +38,32 @@ If the date is invalid or could not be guessed, `null` is returned.
 
 ```javascript
 // Current date and time
-'now'.to_date()                        // 2020-11-25T00:00:00.000000Z
+'now'.to_date()
+// -> 2020-11-25T00:00:00.000000Z
 
 // Relative formats
-to_date('last wednesday 4 am')         // 2020-05-27T04:00:00.000000Z
-'first monday august 2019'.to_date()   // 2019-08-05T00:00:00.000000Z
+'first monday august 2019'.to_date()
 
 // Automatic format guessing
-'2020-01-01 23:02:01'.to_date()        // 2020-01-01T23:02:01.000000Z
+'2020-01-01 23:02:01'.to_date()
 
 // Timezone handling
-'2020-01-01 23:02:01'.to_date(null, null, 'GMT-5') // "2020-01-02T04:02:01.000000Z", interpreted as GMT-5 and converted to UTC
-'2020-01-01 23:02:01'.to_date(null, null, 'GMT-5', true) // "2020-01-01T23:02:01.000000-05:00", date keeps timezone
+'2020-01-01 23:02:01'.to_date(null, null, 'GMT-5')
+// -> "2020-01-02T04:02:01.000000Z", interpreted as GMT-5 and converted to UTC
+
+'2020-01-01 23:02:01'.to_date(null, null, 'GMT-5', true)
+// -> "2020-01-01T23:02:01.000000-05:00", date keeps timezone
 
 // Unix timestamp
-'@1215282385'.to_date()                // 2008-07-05T18:26:25.000000Z
+'@1215282385'.to_date()
 
 // Custom date format
-'2/4/12 06:03'.to_date('M/D/YY HH:mm') // 2012-02-04T06:03:00.000000Z
+'2/4/12 06:03'.to_date('M/D/YY HH:mm')
+// -> 2012-02-04T06:03:00.000000Z
 
 // To escape characters in the format string, backslashes can be used
-'2020-01-05 12h30m15s'.to_date('YYYY-MM-DD HH\\hmm\\mss\\s') // 2020-01-05T12:30:15.000000Z
+'2020-01-05 12h30m15s'.to_date('YYYY-MM-DD HH\\hmm\\mss\\s')
+// -> 2020-01-05T12:30:15.000000Z
 ```
 
 ### date_format(***string*** date, ***?string*** format, ***?string*** locale, ***?string*** timezone): ***string***
@@ -65,16 +71,21 @@ to_date('last wednesday 4 am')         // 2020-05-27T04:00:00.000000Z
 Returns a date parsed to the format specified in `format`. For more information about the accepted dates, see [Supported date formats](#supported-date-formats). For a full list of date format characters, see the [Date Format Characters](/webhookscript/date-format.html) specification.
 
 ```javascript
-'now'.date_format('x') // 1606329669220 (current date in UNIX timestamp with microseconds)
+date_format('2008-07-05T18:26:25.000000Z', 'YYYY-MM-DD') 
+// -> 2008-07-05
 
-date_format('2008-07-05T18:26:25.000000Z', 'YYYY-MM-DD') // 2008-07-05
+date_format('2008-07-05T18:26:25.000000Z', 'LLLL', 'da') 
+// -> lørdag d. 5. juli 2008 kl. 18:26
 
-date_format('2008-07-05T18:26:25.000000Z', 'LLLL', 'da') // lørdag d. 5. juli 2008 kl. 18:26
-
-date_format('2020-01-01T23:02:01.000000-05:00', 'LLLL', null, 'GMT+2') // Thursday, January 2, 2020 6:02 AM
+date_format('2020-01-01T23:02:01.000000-05:00', 'LLLL', null, 'GMT+2') 
+// -> Thursday, January 2, 2020 6:02 AM
 
 // If no format is specified, a default human readable readable string is returned
-date_format('2008-07-05T18:26:25.000000Z') // Sat Jul 05 2008 18:26:25 GMT+0000
+date_format('2008-07-05T18:26:25.000000Z') 
+// -> Sat Jul 05 2008 18:26:25 GMT+0000
+
+'now'.date_format('x') 
+// -> 1606329669220 (current date in UNIX timestamp with microseconds)
 ```
 
 ### date_to_array(***string***): ***array***
@@ -109,14 +120,15 @@ If no format string is specified, the interval is returned as the number of seco
 Note that for the format string, this function does not use the ISO format, but rather the uses the [PHP `DateInterval` format specification](https://www.php.net/manual/en/dateinterval.format.php).
 
 ```javascript
-date_interval('2008-07-16T23:13:26.234212Z', '2008-07-05T18:26:25.324542Z') // -967620
+date_interval('2008-07-16T23:13:26.234212Z', '2008-07-05T18:26:25.324542Z') 
+// -> -967620
 
 date_interval(
     '2008-07-16T23:13:26.234212Z',
     '2008-07-05T18:26:25.324542Z',
     '%d days, %h hours, %i minutes'
 )
-// 11 days, 4 hours, 47 minutes
+// -> 11 days, 4 hours, 47 minutes
 ```
 
 ### date_interval_human(***string*** date1, ***string*** date2, ***?string*** locale): ***string/int***
@@ -130,12 +142,12 @@ date_interval_human(
     '2008-07-16T23:13:26.234212Z',
     '2008-07-05T18:26:25.324542Z'
 )
-// 1 week after
+// -> 1 week after
 
 date_interval_human(
     '2008-07-16T23:13:26.234212Z',
     '2008-07-05T18:26:25.324542Z',
     'es'
 )
-// 1 semana después
+// -> 1 semana después
 ```
