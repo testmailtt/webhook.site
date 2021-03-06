@@ -177,6 +177,70 @@ Allows you to run one or more SSH command on a server. Webhook.site captures the
 * `$ssh.stderr$`
 * `$ssh.exit$`
 
+### FTP(S) Upload
+
+Allows uploading a file to a FTP or FTPS (FTP with TLS/SSL) server, specifying a hostname, port, username, password, relative path to the file, whether to use SSL and whether to use passive mode. Finally, the file content can be specified, in which Variables are replaced.
+
+We recommend storing the password as a Global Variable.
+
+### Database Query
+
+Allows running a database query, with support for fetching out data in a series of variables. We recommend storing the password as a Global Variable.
+
+#### Using Parameters
+
+When using e.g. INSERT or UPDATE statements, we strongly recommend using *parameters* for each column value. Doing this, you avoid SQL injection attacks and other issues when using user-submitted data (e.g. via Variables), or even just data containing special characters like quotes, that could otherwise break a query.
+
+Each parameter name should start with a colon (:) and be a single word. You can then reference these parameters inside the query, like in the following example:
+
+![](/images/database.png)
+
+#### Fetching data
+
+When fetching data using e.g. SELECT statements, Webhook.site automatically inserts data in a series of Custom Action Variables, which are then available to downstream actions.
+
+For example, when fetching rows from the following table:
+
+![](/images/database-example-table.png)
+
+Using the following statement:
+
+```SQL
+select * from employees
+```
+
+If the variable name prefix would be set to `output`, the following variables would be created containing specific values:
+
+| Variable Name       | Value                          |
+|---------------------|--------------------------------|
+| $output.0.id$       | 1                              |
+| $output.0.fname$    | Simon                          |
+| $output.0.lname$    | Fredsted                       |
+| $output.0.title$    | Founder                        |
+| $output.1.id$       | 2                              |
+| $output.1.fname$    | Jack                           |
+| $output.1.lname$    | Daniels                        |
+| $output.1.title$    | Assistant                      |
+
+Additionally, a variable would be created with the name `$output.json$` containing the data in JSON format:
+
+```json
+[                              
+  {
+    "id": 1,
+    "fname": "Simon",
+    "lname": "Fredsted",
+    "title": "Founder"
+  },
+  {
+    "id": 2,
+    "fname": "Jack",
+    "lname": "Daniels",
+    "title": "Assistant"
+  }
+]
+```
+
 ## Behavior
 
 ### Modify Response

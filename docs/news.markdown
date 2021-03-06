@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 6 March 2021
+
+* New Action: Database Query - allows running database queries on PostgreSQL and MySQL servers, inserting, changing and fetching data in specific variables or JSON format. [More info here](/custom-actions.html#database-query)
+
 ## 3 March 2021
 
 * Webhook.site Premium has changed name to Webhook.site Pro. Functionality, pricing and everything else remains the same; it's a cosmetic change.
