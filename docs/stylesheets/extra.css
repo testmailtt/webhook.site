@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .md-header-nav__topic {
@@ -49,7 +49,11 @@ body {
 }
 
 .md-typeset h4 {
-  color: #888;
+  color: #454545;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin-top: 1.2rem;
 }
 
 .md-nav--primary > .md-nav__list > .md-nav__item:last-of-type {
