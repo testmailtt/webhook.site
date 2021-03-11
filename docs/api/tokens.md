@@ -22,6 +22,7 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
 * `timeout` waits an amount of seconds before returning the response (intended for testing timeouts)
 * `expiry` set to true will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Pro user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
 * `cors` set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
+* `alias` allows setting the alias of the token.
 
 #### Request
 
@@ -32,7 +33,8 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
   "default_content_type": "text/html",
   "timeout": 0,
   "cors": false,
-  "expiry": true
+  "expiry": true,
+  "alias": "my-webhook"
 }
 ```
 
@@ -100,7 +102,9 @@ Sets a password to view the requests of a token.
 
 **PUT** `/token/:token_id/alias`
 
-Sets the alias for the token. (Can be used when creating requests.)
+Sets the alias for the token, which makes the token available at `https://webhook.site/<alias>` or `<alias>@email.webhook.site` in addition to its 36 character UUID.
+
+Rules for alias format: Length between 3-32 characters. Allowed characters: A-Z, a-z and - (dash.)
 
 #### Request
 

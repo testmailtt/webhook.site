@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 11 March 2021
+
+* API: It's now possible to specify an alias when creating a URL via the API. [More info here](/api/tokens.html)
+
 ## 6 March 2021
 
 * New Action: Database Query - allows running database queries on PostgreSQL and MySQL servers, inserting, changing and fetching data in specific variables or JSON format. [More info here](/custom-actions.html#database-query)
