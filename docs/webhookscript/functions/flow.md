@@ -1,3 +1,5 @@
+## Script Execution
+
 ### action(***string*** action_type, ***array*** parameters) : ***array***
 
 Runs Custom Actions in WebhookScript. Can be used to loop over items in a way that not possible using the visual Custom Actions editor.
@@ -93,13 +95,15 @@ result = import('https://raw.githubusercontent.com/fredsted/webhookscripts/ec229
 echo(result) // value
 ```
 
-### respond(***string*** content, ***int*** status, ***array*** headers)
-
-Stops Custom Action execution and returns a response.
-
 ### stop()
 
 Stops Custom Action execution.
+
+## Responses
+
+### respond(***string*** content, ***int*** status, ***array*** headers)
+
+Stops Custom Action execution and return a response immediately.
 
 ### set_content(***string*** content)
 
