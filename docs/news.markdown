@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 13 March 2021
+
+* Control Panel: It's now possible to set a password for a Webhook.site URL in the Control Panel. Additionally, it's now possible to easily select and delete multiple URLs at once.
+
 ## 11 March 2021
 
 * API: It's now possible to specify an alias when creating a URL via the API. [More info here](/api/tokens.html)
