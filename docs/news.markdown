@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+
+## 24 March 2021
+
+* WebhookScript: Added `array_sort`, `array_join` and `json_escape` functions.
+* Added *modifiers* for variables. [More info here](/custom-actions.html#variable-modifiers)
+
 ## 23 March 2021
 
 * Control Panel: It's now possible to clone URLs, including their Custom Actions and other configuration.

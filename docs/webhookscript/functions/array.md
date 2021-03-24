@@ -34,6 +34,15 @@ dd(array_has(employees, 235345))
 // -> true
 ```
 
+### array_join(***array*** array, ***string*** joiner) : string
+
+Returns a string where all the values are joined by `joiner`.
+
+```javascript
+['hello', 'world'].join(',')
+-> "hello,world"
+```
+
 ### array_keys(***array*** array) : array
 
 Returns the keys of an array.
@@ -86,6 +95,10 @@ dd(array_reverse(employees))
 ### array_shuffle(***array*** array) : array
 
 Returns shuffled version of ***array***
+
+### array_sort(***array*** array) : array
+
+Sorts ***array*** by its values. Keys are kept as-is.
 
 ### array_values(***array*** array) : array
 

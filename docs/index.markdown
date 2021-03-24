@@ -22,9 +22,11 @@ What are people using it for?
 
 ## Company information
 
-Webhook.site is operated by Webhook ApS (VAT ID: DK41561718.) Address: M.P. Bruuns Gade 52-4, 8000 Aarhus, Denmark.
+Webhook.site is operated by Webhook ApS (VAT ID: DK41561718.)
 
-Built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
+Address: M.P. Bruuns Gade 52-4, 8000 Aarhus, Denmark.
+
+Founded and built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
 
 ## Open Source
 

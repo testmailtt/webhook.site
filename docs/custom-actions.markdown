@@ -29,7 +29,17 @@ Many of the the available Custom Actions can register a variable during the runt
 
 This works since Custom Actions are executed synchronously in a chain, sharing data as they're being executed.
 
-The format of variables are dollar signs surrounded by a word, for example: `$example$`. 
+The format of variables are dollar signs surrounded by a word, for example: `$example$`.
+
+### Variable Modifiers
+
+Adding specific suffixes to variable names will let you process the value in the following ways:
+
+| Variable             | Output                     | Description |
+|----------------------|----------------------------|-------------|
+| $example$            | `{"json": "<b>value</b>"}`        | *no modifier*
+| $example.json$      | `{\"json\": \"<b>value</b>\"}`     | Allows using the value in a JSON string as-is |
+| $example.html$      | `{&quot;json&quot;: &quot;&lt;b&gt;value&lt;/b&gt;&quot;}`     | Escapes all special HTML characters |
 
 ### Base Variables
 

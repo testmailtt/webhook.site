@@ -113,6 +113,10 @@ dump(json_path('{"v": ["item1", "item2"]}', 'v[*]'))
 // [0: "item1", 1: "item2"]
 ```
 
+### json_escape(***string*** json) : string
+
+JSON-escapes all special JSON characters like double quotes, newlines, etc.
+
 ## Regex
 
 ### regex_extract(***regex*** regex, ***string*** subject) : array/false
