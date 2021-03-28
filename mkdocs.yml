@@ -35,6 +35,7 @@ nav:
   - About: index.markdown
   - News & Changelog: news.markdown
   - Install: install.markdown
+  - CLI: cli.md
   - API:
     - About the API: api/about.md
     - Tokens (URLs/Email addresses): api/tokens.md

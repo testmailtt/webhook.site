@@ -22,6 +22,9 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 28 March 2021
+
+* Today we've released the first version of the Webhook.site Command-line Interface (CLI), which allows you to forward requests from your Webhook.site URL to your local machine. [More info here](/cli.html)
 
 ## 24 March 2021
 
