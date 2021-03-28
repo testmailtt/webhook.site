@@ -17,7 +17,7 @@ For installation information, please see the [Github Page](https://github.com/we
 
 ### `forward`: Forward requests
 
-The `forward` command listens for new incoming requests sent to your Webhook.site URL and immediately relays them to a URL you specify. This URL can be any URL that the machine running Webhook.site CLI can access.
+The `forward` command listens for new incoming requests sent to your Webhook.site URL and immediately relays them to any URL you specify, or simply `localhost`. This URL can be any URL that the machine running Webhook.site CLI can access.
 
 ```shell
 docker run webhooksite/cli -- index.js forward \
