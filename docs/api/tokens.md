@@ -23,6 +23,7 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
 * `expiry` set to true will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Pro user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
 * `cors` set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
 * `alias` allows setting the alias of the token.
+* `actions` specifies if Custom Actions are enabled and executed on every request/email (true), or disabled (false.)
 
 #### Request
 
@@ -34,7 +35,8 @@ After creating your token, the URL at `https://webhook.site/{token.uuid}` become
   "timeout": 0,
   "cors": false,
   "expiry": true,
-  "alias": "my-webhook"
+  "alias": "my-webhook",
+  "actions": true
 }
 ```
 

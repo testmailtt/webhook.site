@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 2 April 2021
+
+* It is now possible to enable or disable Custom Actions on a specific Token with the API. [More info here](/api/custom-actions.html#toggle-custom-actions) or [here](/api/tokens.html#create-token).
+
 ## 28 March 2021
 
 * Today we've released the first version of the Webhook.site Command-line Interface (CLI), which allows you to forward requests from your Webhook.site URL to your local machine. [More info here](/cli.html)

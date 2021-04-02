@@ -114,3 +114,20 @@
 
 **DELETE** `/token/:token_id/actions/:action_id`
 
+### Toggle Custom Actions
+
+* Can require authentication.
+
+***PUT*** `/token/:token_id/actions/toggle`
+
+This endpoint toggles whether actions are enabled on a specific token.
+
+#### Response
+
+`200 OK`
+
+```json
+{
+    "enabled": true
+}
+```
