@@ -25,6 +25,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 ## 2 April 2021
 
 * It is now possible to enable or disable Custom Actions on a specific Token with the API. [More info here](/api/custom-actions.html#toggle-custom-actions) or [here](/api/tokens.html#create-token).
+* When exporting CSVs, the sorting selected in the application is now used automatically.
 
 ## 28 March 2021
 
