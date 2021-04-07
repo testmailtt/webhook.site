@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 April 2021
+
+* New powerful feature: Repeating actions. Currently supported by the Extract JSONPath action, it is now possible to "loop over" items in a JSON array. [More info here](/api/custom-actions.html#repeating-actions)
+
 ## 2 April 2021
 
 * It is now possible to enable or disable Custom Actions on a specific Token with the API. [More info here](/api/custom-actions.html#toggle-custom-actions) or [here](/api/tokens.html#create-token).
