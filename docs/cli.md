@@ -5,11 +5,19 @@ nav_order: 400
 
 # Webhook.site CLI
 
-The Webhook.site CLI allows you to interact with your Webhook.site URLs using the command-line interface on your computer or a server.
+The Webhook.site Command Line Interface allows you to interact with your Webhook.site URLs using a terminal on your computer or a server, or programmatically in scripts.
 
 The CLI is still in its infancy, and currently it's main functionality is to redirect traffic from your Webhook.site URL to the machine where the CLI is being run. You then specify a URL for where the requests should be sent, allowing you to redirect traffic to machines that are not able receive connections directly from the Internet.
 
 ## Installation
+
+### Docker
+
+If you have installed Docker, you can simply run Webhook.site CLI via `docker run`, like this:
+
+`docker run webhooksite/cli -- index.js help`
+
+### Node.js
 
 For installation information, please see the [Github Page](https://github.com/webhooksite/cli/tree/master#how-to-use).
 
