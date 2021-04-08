@@ -27,6 +27,8 @@ For installation information, please see the [Github Page](https://github.com/we
 
 The `forward` command listens for new incoming requests sent to your Webhook.site URL and immediately relays them to any URL you specify, or simply `localhost`. This URL can be any URL that the machine running Webhook.site CLI can access.
 
+The request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is `https://example.com`, sending a POST request to `https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value`, the target URL will also receive a POST request on `https://example.com/example?query=value`.
+
 ```shell
 docker run webhooksite/cli -- index.js forward \
   --token=1e25c1cb-e4d4-4399-a267-cd2cf1a6c864 \
@@ -34,12 +36,6 @@ docker run webhooksite/cli -- index.js forward \
   --target=https://example.com
 ```
 
-The `forward` command takes 3 parameters: token ID, API key and a target.
-
-The token ID (`--token`) parameter must specify the token ID. The token ID is the long 36-character ID at the end of your Webhook.site URL.
-
-An API key (`--api-key`) must also be specified, and can be generated from the Webhook.site [Control Panel](https://webhook.site/control-panel).
-
-Finally, the target (`--target`) specifies where traffic should be redirected. 
-
-Things to note: the request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is `https://example.com`, sending a POST request to `https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value`, the target URL will also receive a POST request on `https://example.com/example?query=value`.
+* The token ID (`--token`) parameter must specify the token ID. The token ID is the long 36-character ID at the end of your Webhook.site URL.
+* An API key (`--api-key`) must also be specified, and can be generated from the Webhook.site [Control Panel](https://webhook.site/control-panel).
+* Finally, the target (`--target`) specifies where traffic should be redirected. 
