@@ -199,6 +199,14 @@ This action can be used to allow a specific amount of requests in a specific amo
 
 If the IP is rate limited, the URL will respond with a `HTTP 429`, action execution is stopped, and the request is not saved in Webhook.site.
 
+### Don't Save
+
+Marks the request so it is not saved in Webhook.site, which is useful when receiving a large amount of requests.
+
+### Stop
+
+Immediately stops Custom Action execution and returns the default response.
+
 ## Logic
 
 ### Condition

@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 11 April 2021
+
+* New Custom Action and WebhookScript function: Don't Save, which marks the request so it is not saved in Webhook.site. The request can still be seen when it comes in, but will not be available through through the app later, or through the API. 
+* New Custom Action: Stop, which immediately stops Custom Action execution and returns the default response.
+
 ## 7 April 2021
 
 * New powerful feature: Repeating actions. Currently supported by the Extract JSONPath action, it is now possible to "loop over" items in a JSON array. [More info here](/custom-actions.html#repeating-actions-beta)
