@@ -22,10 +22,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 20 April 2021
+
+* Added base64 encoding and decoding *variable modifiers*. [More info here](/custom-actions.html#variable-modifiers)
+
 ## 11 April 2021
 
 * New Custom Action and WebhookScript function: Don't Save, which marks the request so it is not saved in Webhook.site. The request can still be seen when it comes in, but will not be available through through the app later, or through the API. 
 * New Custom Action: Stop, which immediately stops Custom Action execution and returns the default response.
+* The Extract Regex now supports the Repeat function. [More info here](/custom-actions.html#repeating-actions-beta).
 
 ## 7 April 2021
 

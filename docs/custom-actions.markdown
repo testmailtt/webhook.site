@@ -40,6 +40,8 @@ Adding specific suffixes to variable names will let you process the value in the
 | $example$            | `{"json": "<b>value</b>"}`        | *no modifier*
 | $example.json$      | `{\"json\": \"<b>value</b>\"}`     | Allows using the value in a JSON string as-is |
 | $example.html$      | `{&quot;json&quot;: &quot;&lt;b&gt;value&lt;/b&gt;&quot;}`     | Escapes all special HTML characters |
+| $example.base64_encode$ | eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg== | |
+| $example.base64_decode$ | n/a | |
 
 ### Base Variables
 
