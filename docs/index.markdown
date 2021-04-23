@@ -28,18 +28,10 @@ Address: M.P. Bruuns Gade 52-4, 8000 Aarhus, Denmark.
 
 Founded and built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
 
-## Open Source
-
-There are two versions of Webhook.site: 
-
-* The completely open-source, MIT-licensed version is available on [Github](https://github.com/fredsted/webhook.site), which can be self-hosted using e.g. Docker, is great for testing Webhooks, but doesn't include features like Custom Actions.
-
-* The cloud version at https://webhook.site which has more features, some of them requiring a paid subscription.
-
 ## Acknowledgements
 
 * The app was built with [Laravel](https://laravel.com) for the API and Angular.js for the frontend SPA. 
 * WebhookScript based on [Primi](https://github.com/smuuf/primi) Copyright (c) Přemysl Karbula. 
-* The WebhookScript editor is using the [Ace](https://ace.c9.io). 
+* The WebhookScript editor is using the [Ace](https://ace.c9.io) editor plugin. 
 * JSONPath extraction provided by [FlowCommunications](https://github.com/FlowCommunications/JSONPath). 
 * This documentation site uses MkDocs with the [Material](https://squidfunk.github.io/mkdocs-material/) theme.

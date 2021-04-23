@@ -34,7 +34,7 @@ extra_css:
 nav:
   - About: index.markdown
   - News & Changelog: news.markdown
-  - Install: install.markdown
+  - Open Source version: open-source.markdown
   - CLI: cli.md
   - API:
     - About the API: api/about.md
