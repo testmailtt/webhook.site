@@ -10,9 +10,9 @@ nav_order: 300
 
 There are two separate editions of Webhook.site: 
 
-* The code for the completely open-source, MIT-licensed version described on this page is available on https://github.com/fredsted/webhook.site, and can be self-hosted using e.g. Docker, is great for testing Webhooks, but doesn't include Webhook.site Pro features like Custom Actions.
+* The code for the completely open-source, MIT-licensed version described on this page is available on [https://github.com/fredsted/webhook.site](https://github.com/fredsted/webhook.site), and can be self-hosted using e.g. Docker, is great for testing Webhooks, but doesn't include Webhook.site Pro features like Custom Actions.
 
-* The cloud version of Webhook.site at https://webhook.site which has more features, some of them requiring a paid subscription.
+* The cloud version of Webhook.site at [https://webhook.site](https://webhook.site) which has more features, some of them requiring a paid subscription.
 
 You can choose to run the Open Source version of Webhook.site either via Docker, or install it on any Web server with PHP7 support. 
 
