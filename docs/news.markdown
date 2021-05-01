@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 1 May 2021
+
+* Webhook.site Schedules now has an API. [More info here](/api/schedules.html)
+
 ## 20 April 2021
 
 * Added base64 encoding and decoding *variable modifiers*. [More info here](/custom-actions.html#variable-modifiers)
