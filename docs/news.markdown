@@ -25,6 +25,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 ## 1 May 2021
 
 * Webhook.site Schedules now has an API. [More info here](/api/schedules.html)
+* Fixed a bug where URLs could be in two groups at the same time.
 
 ## 20 April 2021
 
