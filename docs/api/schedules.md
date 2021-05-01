@@ -17,6 +17,8 @@
 * `request_headers` HTTP headers, separated by `\n`
 * `timeout` Timeout in seconds (min 1, max 30)
 
+Variables will be replaced in the fields `request_url`, `request_method`, `request_headers` and `request_body`. [More info here](/custom-actions.html#variables).
+
 ```json
 {
   "name": "My schedule",

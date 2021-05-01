@@ -53,6 +53,7 @@ These variables are automatically available for each request or email. Different
 | request.token_id                  | All           | The Token UUID (URL ID) of the request                                                                 |
 | request.content                   | All           | The body content of the request                                                                        |
 | request.date                      | All           | Creation date in Y-m-d H:m:s format                                                                    |
+| request.date                      | All           | Creation date in UNIX timestamp format                                                                 |
 | request.hostname                  | All           | Hostname of the request (usually `webhook.site`)                                                       |
 | request.header.[name]             | All           | Created for each HTTP header                                                                           |
 | request.size                      | All           | Request body size in bytes                                                                             |
