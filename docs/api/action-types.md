@@ -1,85 +1,97 @@
 The following is a list of the API names for Action Types, along with a list of parameters, and their validation requirements.
 
 
-#### `extract_jsonpath`
+
+
+
+
+### `extract_jsonpath`
 - `jsonpath`: **required**, string
 - `variable_name`: **required**, string
 - `source`: string
 - `default`: string
+- `repeat`: boolean
 
-#### `extract_regex`
+### `extract_regex`
 - `regex`: **required**, string
 - `variable_name`: **required**, string
 - `source`: string
 - `default`: string
+- `repeat`: boolean
 
-#### `extract_xpath`
+### `extract_xpath`
 - `xpath`: **required**, string
 - `variable_name`: **required**, string
 - `source`: string
 - `default`: string
 
-#### `send_request`
+### `send_request`
 - `url`: **required**, string
 - `content`: nullable, string
 - `method`: nullable, in:POST,GET,OPTIONS,PUT,DELETE
 - `headers`: nullable, string
 - `skip_ssl_verification`: nullable, bool
 - `variable_name`: string
-- `timeout`: nullable, numeric, max:10000
+- `timeout`: nullable, numeric, max:30
 
-#### `send_email`
+### `send_email`
 - `sender`: string
 - `recipient`: **required**, string
 - `content`: string
 - `is_html`: boolean
 - `subject`: **required**, string
 
-#### `modify_response`
+### `modify_response`
 - `content`: string
 - `status`: string
 - `headers`: string
+- `stop`: bool
 
-#### `script`
+### `script`
 - `script`: **required**, string
 
-#### `rate_limit`
+### `rate_limit`
 - `period`: **required**, int
 - `count`: **required**, int
 
-#### `condition`
+### `condition`
 - `input`: string
 - `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte
 - `value`: string
-- `action`: **required**, string, in:stop,continue
+- `action`: **required**, string, in:stop,continue,noop
 
-#### `google_sheets_add_row`
+### `conditions`
+- `conditions`: **required**, array
+- `mode`: **required**, string, in:one,all,none
+- `action`: **required**, string, in:stop,continue,noop
+
+### `google_sheets_add_row`
 - `provider_id`: string, **required**
 - `spreadsheet_id`: string, **required**
 - `range`: string, **required**
 - `values`: string, **required**
 - `formula_mode`: bool
 
-#### `google_sheets_update_row`
+### `google_sheets_update_row`
 - `provider_id`: string, **required**
 - `spreadsheet_id`: string, **required**
 - `range`: string, **required**
 - `values`: string, **required**
 - `formula_mode`: bool
 
-#### `google_sheets_get_values`
+### `google_sheets_get_values`
 - `provider_id`: string, **required**
 - `spreadsheet_id`: string, **required**
 - `range`: string, **required**
 - `variable_name`: **required**, string
 
-#### `aws_s3_create_bucket`
+### `aws_s3_create_bucket`
 - `provider_id`: string, **required**
 - `region`: string, **required**
 - `bucket_name`: string, **required**
 - `canned_acl`: string, in:private,public-read,public-read-write,authenticated-read
 
-#### `aws_s3_put_object`
+### `aws_s3_put_object`
 - `provider_id`: string, **required**
 - `region`: string, **required**
 - `bucket_name`: string
@@ -87,77 +99,112 @@ The following is a list of the API names for Action Types, along with a list of 
 - `body`: string, **required**
 - `canned_acl`: string, in:private,public-read,public-read-write,authenticated-read
 
-#### `aws_s3_delete_object`
+### `aws_s3_delete_object`
 - `provider_id`: string, **required**
 - `region`: string
 - `bucket_name`: string, **required**
 - `object_key`: string, **required**
 
-#### `aws_s3_get_object`
-- `provider_id`: string, **required**
-- `region`: string
-- `bucket_name`: string, **required**
-- `object_key`: string, **required**
-- `variable_name`: string, **required**, min:1
-
-#### `aws_s3_get_object`
+### `aws_s3_get_object`
 - `provider_id`: string, **required**
 - `region`: string
 - `bucket_name`: string, **required**
 - `object_key`: string, **required**
 - `variable_name`: string, **required**, min:1
 
-#### `aws_cf_invalidate`
+### `aws_s3_get_object`
+- `provider_id`: string, **required**
+- `region`: string
+- `bucket_name`: string, **required**
+- `object_key`: string, **required**
+- `variable_name`: string, **required**, min:1
+
+### `aws_cf_invalidate`
 - `provider_id`: **required**, int
 - `distribution_id`: **required**, string
 - `paths`: **required**, string
 
-#### `discord_send_message`
+### `discord_send_message`
 - `provider_id`: **required**, string
 - `content`: **required**, string
 - `username`: string
 - `avatar_url`: url
 
-#### `slack_send_message`
+### `slack_send_message`
 - `webhook_url`: **required**, url
 - `raw`: bool
 - `content`: **required**, string
 
-#### `dropbox_create_folder`
+### `dropbox_create_folder`
 - `provider_id`: string, **required**
 - `path`: string, **required**
 
-#### `dropbox_delete`
+### `dropbox_delete`
 - `provider_id`: string, **required**
 - `path`: string, **required**
 
-#### `dropbox_download_file`
+### `dropbox_download_file`
 - `provider_id`: string, **required**
 - `path`: string, **required**
 - `variable_name`: string, **required**
 
-#### `dropbox_upload_file`
+### `dropbox_upload_file`
 - `provider_id`: string, **required**
 - `path`: string, **required**
 - `body`: string, **required**
 - `mode`: string, **required**, in:add,overwrite,update
 
-#### `dropbox_get_link`
+### `dropbox_get_link`
 - `provider_id`: string, **required**
 - `path`: string, **required**
 - `variable_name`: string, **required**
 
-#### `image_resize`
+### `image_resize`
 - `source`: string, **required**
-- `width`: string
-- `height`: string
+- `width`: string, **required**_without:height
+- `height`: string, **required**_without:width
 - `aspect_ratio`: bool, **required**
 - `variable_name`: string, **required**
 
-#### `ssh_run_command`
+### `ssh_run_command`
 - `provider_id`: string, **required**
 - `host`: **required**, string
 - `port`: number, min:1, max:65535
 - `username`: **required**, string
 - `command`: **required**, string
 - `variable_name`: string
+
+### `store_global_variable`
+- `name`: **required**, string
+- `value`: nullable, string
+
+### `set_variable`
+- `name`: **required**, string
+- `value`: nullable, string
+
+### `ftp_upload`
+- `host`: **required**, string
+- `port`: number, min:1, max:65535
+- `password`: **required**, string
+- `username`: **required**, string
+- `path`: **required**, string
+- `content`: **required**, string
+- `ssl`: bool
+- `passive`: bool
+
+### `database`
+- `type`: **required**, in:mysql,pgsql
+- `host`: **required**, string
+- `port`: number, min:1, max:65535
+- `database`: **required**, string
+- `password`: string
+- `username`: **required**, string
+- `statement`: **required**, string
+- `params`: array
+- `variable_name`: string
+
+### `dont_save`
+*No parameters for `dont_save`.*
+
+### `stop`
+*No parameters for `stop`.*
