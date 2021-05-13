@@ -16,14 +16,15 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 **POST** `/token`
 
-After creating your token, the URL at `https://webhook.site/{token.uuid}` becomes accessible, and emails can be sent to `{token.uuid}@email.webhook.site`.
+After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes accessible, and emails can be sent to `{token.uuid}@email.webhook.site`.
 
 * `default_*` parameters sets the response of the URL.
 * `timeout` waits an amount of seconds before returning the response (intended for testing timeouts)
-* `expiry` set to true will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Pro user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
+* `expiry` set to `true` will cause the token to automatically be deleted within 7 days of no activity, even if creating the token as a Pro user. If you're using tokens for automated testing, for example, you can enable this to avoid filling up your user profile.
 * `cors` set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
 * `alias` allows setting the alias of the token.
 * `actions` specifies if Custom Actions are enabled and executed on every request/email (true), or disabled (false.)
+* `clone_from` specifies a token UUID (or alias) that will act as a template for the new token. When specified, settingssuch as default content, timeout, password as well as Custom Actions are copied to the new token.
 
 #### Request
 
