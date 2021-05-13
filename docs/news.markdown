@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 13 May 2021
+
+* Documented `clone_from` option when using the API to create Tokens (URLs)
+* WebhookScript: `json_decode` / `json_encode` now output error messages if they fail due to e.g. bad data.
+
 ## 1 May 2021
 
 * Webhook.site Schedules now has an API. [More info here](/api/schedules.html)
