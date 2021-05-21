@@ -25,7 +25,7 @@ For installation information, please see the [Github Page](https://github.com/we
 
 ### `forward`: Forward requests
 
-The `forward` command listens for new incoming requests sent to your Webhook.site URL and immediately relays them to any URL you specify, or simply `localhost`. This URL can be any URL that the machine running Webhook.site CLI can access.
+The `forward` command listens for new incoming requests sent to your Webhook.site URL and immediately relays them to any URL you specify, or simply `localhost` (so it can be used as an ngrok alternative). This URL can be any URL that the machine running Webhook.site CLI can access.
 
 The request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is `https://example.com`, sending a POST request to `https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value`, the target URL will also receive a POST request on `https://example.com/example?query=value`.
 
