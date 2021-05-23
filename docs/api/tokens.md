@@ -184,6 +184,7 @@ Lists all request sent to a token.
 * `sorting` - either `newest` or `oldest` (default)
 * `per_page` - amount of requests returned, defaults to 50 (max 100)
 * `page` -  page number to retrieve (default 1)
+* `date_from`, `date_to` - filter requests by date, format `yyyy-MM-dd HH:mm:ss`
 
 #### Response
 

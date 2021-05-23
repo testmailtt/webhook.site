@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 23 May 2021
+
+* API: It's now possible to filter requests by date. [More info here](/api/tokens.html#query-string-parameters)
+
 ## 13 May 2021
 
 * Documented `clone_from` option when using the API to create Tokens (URLs)
