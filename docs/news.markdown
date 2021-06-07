@@ -26,6 +26,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 * Raised the limit for the amount of items processed by repeating actions to 100.
 * Fixed a bug that would cause an error when updating notification settings in Control Panel.
+* Fixed a bug where emails containing attachments would be stored.
 
 ## 23 May 2021
 
