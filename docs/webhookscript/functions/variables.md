@@ -4,7 +4,7 @@ These functions lets you interface with other Custom Actions by getting and sett
 
 Retrieves the value of a Variable or Global Variable (defined in the Control Panel). The surrounding dollar signs are not mandatory.
 
-Returns `null` (or `default`) if the variable does not exist.
+Returns `null` (or the value of `default`) if the variable does not exist.
 
 ```javascript
 var('request.header.x-request-verification') // returns value of the `x-request-verification` header
@@ -12,7 +12,15 @@ var('request.header.x-request-verification') // returns value of the `x-request-
 
 ### set(***string*** variable_name, ***string*** variable_value)
 
-Sets a Variable for usage in current action execution. The Variable is available to downstream actions, but not stored permanently.
+Exports a Variable for use in downstream actions, like the *Set Runtime Variable* action.
+
+For example, the following code:
+
+```javascript
+set('myvar', 'Hello world')
+```
+
+Would cause the string `$myvar$` to be replaced with `Hello world` in all subsequent actions.
 
 ### store(***string*** global_variable_name, ***any*** value): ***any***
 
