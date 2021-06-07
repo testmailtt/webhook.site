@@ -74,7 +74,7 @@ These variables are automatically available for each request or email. Different
 | request.destinations              | Email         | Comma separated list of recipients.                                                                    |
 | request.checks.[name]             | Email         | True or false for email checks (DKIM, SPF, etc.)                                                       |
 
-## Repeating Actions (Beta)
+## Repeating Actions
 
 Webhook.site allows some action types to be repeating, which makes Webhook.site "loop over" one or more values without needing to use scripts.
 
@@ -82,7 +82,6 @@ Webhook.site allows some action types to be repeating, which makes Webhook.site 
 
 Currently, repetition is only supported by the Extract JSONPath and Extract Regex action types.
 
-Currently, the maximum amount of items that are supported is 10 to prevent abuse. This limit may be raised in the future. Items above that are ignored.
+Currently, the maximum amount of items that are supported is **100** to prevent abuse. This limit may be raised in the future. Items above that are ignored.
 
 The repeating action should be ordered *before* the actions that are to be repeated. The actions that are repeated will run for each item that is extracted, using the same variable name.
-

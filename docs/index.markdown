@@ -30,8 +30,9 @@ Founded and built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
 
 ## Acknowledgements
 
-* The app was built with [Laravel](https://laravel.com) for the API and Angular.js for the frontend SPA. 
-* WebhookScript based on [Primi](https://github.com/smuuf/primi) Copyright (c) Přemysl Karbula. 
+* The app was built with [Laravel](https://laravel.com) for the API.
+* Angular.js is used for the frontend SPA.
+* WebhookScript is based on [Primi](https://github.com/smuuf/primi) Copyright (c) Přemysl Karbula. 
 * The WebhookScript editor is using the [Ace](https://ace.c9.io) editor plugin. 
 * JSONPath extraction provided by [FlowCommunications](https://github.com/FlowCommunications/JSONPath). 
 * This documentation site uses MkDocs with the [Material](https://squidfunk.github.io/mkdocs-material/) theme.
