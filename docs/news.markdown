@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 June 2021
+
+* Raised the limit for the amount of items processed by repeating actions to 100.
+* Fixed a bug that would cause an error when updating notification settings in Control Panel.
+
 ## 23 May 2021
 
 * API: It's now possible to filter requests by date. [More info here](/api/tokens.html#query-string-parameters)
