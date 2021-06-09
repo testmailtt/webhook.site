@@ -16,11 +16,11 @@ Note that this may change in the future, so sign up for the [newsletter](news.ma
 
 ## How do I export the data stored on Webhook.site?
 
-A: With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality, simply click the button in the menu. Additionally, data can be saved using the [Webhook.site API](api/about.md) and Command-Line Utility.
+A: With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality, simply click the button in the menu. Additionally, data can be saved using the [Webhook.site API](api/tokens.md#get-requests) and Command-Line Utility.
 
 ## How do I send data to my computer/localhost?
 
-A: You can either periodically fetch the data using the API or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+A: You can either periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests) or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
 
 ## Is my data private?
 
