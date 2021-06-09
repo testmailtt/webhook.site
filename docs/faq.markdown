@@ -14,13 +14,13 @@ Both inbound and outbound originate and destinate at this IP address.
 Note that this may change in the future, so sign up for the newsletter at <https://docs.webhook.site/news.html> to be notified of changes.
 
 
-## Q: How do I export the data stored on Webhook.site?
+## Q: How do I export the data stored on Webhook.site?
 
-A: Yes. With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality, simply click the button in the menu. Additionally, data can be saved using the [Webhook.site API](api/about.md) and Command-Line Utility.
+A: With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality, simply click the button in the menu. Additionally, data can be saved using the [Webhook.site API](api/about.md) and Command-Line Utility.
 
 ## Q: How do I send data to my computer/localhost?
 
-A: You can either periodically fetch the data using the API or stream requests to a local URL using the [Webhook.site API](cli.md), in a similar fashion to e.g. ngrok.
+A: You can either periodically fetch the data using the API or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
 
 ## Q: Is my data private?
 
