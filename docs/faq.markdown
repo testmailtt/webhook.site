@@ -11,7 +11,7 @@ A: You'll need to whitelist the IP `46.4.105.116`.
 
 Both inbound and outbound originate and destinate at this IP address.
 
-Note that this may change in the future, so sign up for the newsletter at <https://docs.webhook.site/news.html> to be notified of changes.
+Note that this may change in the future, so sign up for the [newsletter](news.markdown) to be notified of changes.
 
 
 ## Q: How do I export the data stored on Webhook.site?

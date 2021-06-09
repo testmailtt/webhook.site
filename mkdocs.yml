@@ -13,7 +13,7 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/fredsted/webhook.site
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/fredsted
+      link: https://twitter.com/webhooksite
   
 use_directory_urls: false
 
