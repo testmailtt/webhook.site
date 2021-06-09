@@ -1,4 +1,5 @@
 site_name: Webhook.site Docs
+site_url: https://docs.webhook.site
 
 theme:
   name: material
@@ -42,6 +43,7 @@ nav:
     - Custom Actions: api/custom-actions.md
     - Schedules: api/schedules.md
   - Webhook.site Pro: pro.markdown
+  - FAQ: faq.markdown
   - Schedules: schedules.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
