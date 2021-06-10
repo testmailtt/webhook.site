@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 10 June 2021
+
+* Individual Custom Actions can now be set as *queued*, which causes them to be run in the background, or asynchronously. [More info here](/custom-actions.html#queued)
+
 ## 7 June 2021
 
 * Raised the limit for the amount of items processed by repeating actions to 100.
