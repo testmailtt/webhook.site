@@ -13,7 +13,6 @@ Both inbound and outbound originate and destinate at this IP address.
 
 Note that this may change in the future, so sign up for the [newsletter](news.markdown) to be notified of changes.
 
-
 ## How do I export the data stored on Webhook.site?
 
 A: With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality, simply click the button in the menu. Additionally, data can be saved using the [Webhook.site API](api/tokens.md#get-requests) and Command-Line Utility.
@@ -21,6 +20,14 @@ A: With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality,
 ## How do I send data to my computer/localhost?
 
 A: You can either periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests) or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+
+## I'm getting a 405 Method Not Allowed, what's wrong?
+
+A: You might be copying the URL for the Webhook.site application, and not the actual URL.
+
+Webhook.site app (wrong): `https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
+
+Webhook.site url (correct): `https://webhook.site/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
 ## Is my data private?
 
