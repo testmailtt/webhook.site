@@ -237,6 +237,10 @@ Joins items with string ***subject***
 
 Returns length of string (multibyte-aware)
 
+### string_lower(***string*** string) : string
+
+Converts `string` to lowercase (multibyte-aware)
+
 ### string_number_of(***string*** string) : number
 
 Returns number value of ***string***
@@ -256,6 +260,10 @@ Returns string where the individual characters has been shuffled.
 ### string_split(***string*** subject, ***string/regex*** delimiter) : array
 
 Returns array of split string ***subject*** with ***delimiter*** 
+
+### string_upper(***string*** string) : string
+
+Converts `string` to UPPERCASE (multibyte-aware).
 
 ### to_regex(***string*** regex) : regex
 
