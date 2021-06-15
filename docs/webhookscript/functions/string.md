@@ -205,14 +205,6 @@ Given a request with the following content:
 
 ## General string functions
 
-### substr(***string*** subject, ***number*** from, ***number*** to = null) : string
-
-Is used to get part of a string. Multibyte-aware.
-
-`substr('hello world', 0, 5)` returns `hello`.
-
-`substr('hello world', 6)` returns `world`.
-
 ### string_contains(***string*** subject, ***number/string/regex*** value) : bool
 
 Returns boolean if ***subject*** contains ***value***
@@ -252,6 +244,14 @@ Replaces string ***search*** with ***replace*** found in ***subject***.
 ### string_reverse(***string*** subject) : string
 
 Reverses string ***subject*** 
+
+### string_slice(***string*** subject, ***number*** from, ***number*** to = null) : string
+
+Extracts a segment of a string. Multibyte-aware.
+
+`string_slice('hello world', 0, 5)` returns `hello`.
+
+`string_slice('hello world', 6)` returns `world`.
 
 ### string_shuffle(***string*** string) : string
 
