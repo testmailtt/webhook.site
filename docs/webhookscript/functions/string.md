@@ -205,6 +205,14 @@ Given a request with the following content:
 
 ## General string functions
 
+### substr(***string*** subject, ***number*** from, ***number*** to = null) : string
+
+Is used to get part of a string. Multibyte-aware.
+
+`substr('hello world', 0, 5)` returns `hello`.
+
+`substr('hello world', 6)` returns `world`.
+
 ### string_contains(***string*** subject, ***number/string/regex*** value) : bool
 
 Returns boolean if ***subject*** contains ***value***
@@ -260,3 +268,9 @@ Returns ***value*** as string
 ### trim(***string*** string): string
 
 Returns `string` with space, tab and newline characters removed from the beginning and end of the string.
+
+## Special string functions
+
+### convert_kana(***string***, ***mode***) : string
+
+Performs a "han-kaku" - "zen-kaku" conversion for string string. This function is only useful for Japanese. [See here](https://www.php.net/manual/en/function.mb-convert-kana.php) for more info.

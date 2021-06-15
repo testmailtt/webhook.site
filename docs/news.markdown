@@ -25,6 +25,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 ## 15 June 2021
 
 * New Custom Action: Twitter, so you can easily send tweets using Webhook.site.
+* New WebhookScript functions: convert_kana() and substr()
 
 ## 10 June 2021
 
