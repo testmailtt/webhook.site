@@ -5,7 +5,7 @@ nav_order: 50
 
 # News
 
-Subscribe below to receive updates about improvements and new features on Webhook.site. Expect a newsletter every month at the most.
+Subscribe below to receive updates about improvements and new features on Webhook.site as well as infrastructure changes like new IP addresses for e.g. firewall whitelisting. Expect a newsletter a few times a year at most.
 
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
