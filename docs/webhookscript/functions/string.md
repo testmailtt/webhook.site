@@ -1,3 +1,77 @@
+## General string functions
+
+### string_contains(***string*** subject, ***number/string/regex*** value) : bool
+
+Returns boolean if ***subject*** contains ***value***
+
+### string_find_first(***string*** subject, ***number/string*** value) : number
+
+Returns position of ***value*** in ***subject***, or false if not found
+
+### string_find_last(***string*** subject, ***number/string*** value) : number
+
+Returns position of ***value*** in ***subject***, or false if not found
+
+### string_format(***string*** formatString, ...***any*** items) : string
+
+Sprintf-like formatting of formatString with ***items***, see PHP sprintf docs.
+
+### string_join(***string*** subject, ***array*** items (number/string/bool/array)) : string
+
+Joins items with string ***subject***
+
+### string_length(***string*** string) : number
+
+Returns length of string (multibyte-aware)
+
+### string_lower(***string*** string) : string
+
+Converts `string` to lowercase (multibyte-aware)
+
+### string_number_of(***string*** string) : number
+
+Returns number value of ***string***
+
+### string_replace(***string*** subject, ***string*** search, ***string*** replace) : string
+
+Replaces string ***search*** with ***replace*** found in ***subject***.
+
+### string_reverse(***string*** subject) : string
+
+Reverses string ***subject*** 
+
+### string_slice(***string*** subject, ***number*** from, ***number*** to = null) : string
+
+Extracts a segment of a string. Multibyte-aware.
+
+`string_slice('hello world', 0, 5)` returns `hello`.
+
+`string_slice('hello world', 6)` returns `world`.
+
+### string_shuffle(***string*** string) : string
+
+Returns string where the individual characters has been shuffled.
+
+### string_split(***string*** subject, ***string/regex*** delimiter) : array
+
+Returns array of split string ***subject*** with ***delimiter*** 
+
+### string_upper(***string*** string) : string
+
+Converts `string` to UPPERCASE (multibyte-aware).
+
+### to_regex(***string*** regex) : regex
+
+Converts a regex string to a regex type
+
+### to_string(***string/number/bool*** value) : string
+
+Returns ***value*** as string 
+
+### trim(***string*** string): string
+
+Returns `string` with space, tab and newline characters removed from the beginning and end of the string.
+
 ## CSV
 
 ### csv_to_array(***string*** content, ***string*** delimiter, ***?int*** header_offset, ***string*** enclosure, ***string*** escape) : array
@@ -202,80 +276,6 @@ Given a request with the following content:
 * `var('$request.content$').xpath('//employee') // returns [0: "Jack", 1: "Ann"]`
 
 [More information and examples regarding XPath](/custom-actions.html#extract-xpath).
-
-## General string functions
-
-### string_contains(***string*** subject, ***number/string/regex*** value) : bool
-
-Returns boolean if ***subject*** contains ***value***
-
-### string_find_first(***string*** subject, ***number/string*** value) : number
-
-Returns position of ***value*** in ***subject***, or false if not found
-
-### string_find_last(***string*** subject, ***number/string*** value) : number
-
-Returns position of ***value*** in ***subject***, or false if not found
-
-### string_format(***string*** formatString, ...***any*** items) : string
-
-Sprintf-like formatting of formatString with ***items***, see PHP sprintf docs.
-
-### string_join(***string*** subject, ***array*** items (number/string/bool/array)) : string
-
-Joins items with string ***subject***
-
-### string_length(***string*** string) : number
-
-Returns length of string (multibyte-aware)
-
-### string_lower(***string*** string) : string
-
-Converts `string` to lowercase (multibyte-aware)
-
-### string_number_of(***string*** string) : number
-
-Returns number value of ***string***
-
-### string_replace(***string*** subject, ***string*** search, ***string*** replace) : string
-
-Replaces string ***search*** with ***replace*** found in ***subject***.
-
-### string_reverse(***string*** subject) : string
-
-Reverses string ***subject*** 
-
-### string_slice(***string*** subject, ***number*** from, ***number*** to = null) : string
-
-Extracts a segment of a string. Multibyte-aware.
-
-`string_slice('hello world', 0, 5)` returns `hello`.
-
-`string_slice('hello world', 6)` returns `world`.
-
-### string_shuffle(***string*** string) : string
-
-Returns string where the individual characters has been shuffled.
-
-### string_split(***string*** subject, ***string/regex*** delimiter) : array
-
-Returns array of split string ***subject*** with ***delimiter*** 
-
-### string_upper(***string*** string) : string
-
-Converts `string` to UPPERCASE (multibyte-aware).
-
-### to_regex(***string*** regex) : regex
-
-Converts a regex string to a regex type
-
-### to_string(***string/number/bool*** value) : string
-
-Returns ***value*** as string 
-
-### trim(***string*** string): string
-
-Returns `string` with space, tab and newline characters removed from the beginning and end of the string.
 
 ## Special string functions
 
