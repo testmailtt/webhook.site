@@ -208,3 +208,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `stop`
 *No parameters for `stop`.*
+
+### `twitter_tweet`
+- `provider_id`: **required**, string
+- `tweet`: **required**, string

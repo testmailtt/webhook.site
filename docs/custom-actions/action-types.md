@@ -330,3 +330,9 @@ The Dropbox integration has access to the entire contents of your dropbox, and c
 * Delete File
 * Delete Folder
 * Get Link - creates a temporary download link for any file in your Dropbox, and saves it in a variable.
+
+## Twitter
+
+The Twitter Integration supports the following actions using Twitter's API:
+
+* Post Tweet
