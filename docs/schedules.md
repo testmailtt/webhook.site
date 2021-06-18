@@ -19,7 +19,7 @@ Schedules can also be managed using the [Schedules API](/api/schedules.html).
 
 ## Schedule Intervals
 
-In addition to be able to use a custom Cron-style expression string, Schedules can be executed at the following preset intervals:
+In addition to be able to use a custom `cron`-style expression string, Schedules can be executed at the following preset intervals:
 
 * 1 minute
 * 5 minutes

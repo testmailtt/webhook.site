@@ -5,6 +5,8 @@ theme:
   name: material
   logo: images/icon.png
   favicon: images/favicon.ico
+  features:
+    - navigation.expand
   
 extra:
   social:
