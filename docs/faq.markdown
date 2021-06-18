@@ -15,7 +15,15 @@ Note that this may change in the future, so sign up for the [newsletter](news.ma
 
 ## How do I export the data stored on Webhook.site?
 
-A: With [Webhook.site Pro](pro.markdown), we provide a CSV Export functionality, simply click the button in the menu. Additionally, data can be saved using the [Webhook.site API](api/tokens.md#get-requests) and Command-Line Utility.
+A: With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to your URL or email address.
+
+1. We provide a CSV Export functionality, simply click the button in the menu. 
+
+    ![CSV Export](/images/csv-export.png)
+
+2. Data can be saved using the [Webhook.site API](api/tokens.md#get-requests) using any programming language.
+
+3. The Webhook.site CLI (Command-Line Interface) can be used to forward requests from Webhook.site to a workstation or server. [More info here](cli.md) 
 
 ## How do I send data to my computer/localhost?
 
@@ -29,6 +37,12 @@ Webhook.site app (wrong): `https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6
 
 Webhook.site url (correct): `https://webhook.site/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
+## I'm getting a 429 Too Many Requests, what's wrong?
+
+A: The URL was automatically blocked due to a large amount of requests, as per our Terms of Service. This is done to prevent a decrease in service level for our other customers. 
+
+For Webhook.site Pro customers, it is possible to have a URL whitelisted so it will not be automatically blocked. To request a whitelisting, please contact [Support](https://support.webhook.site).
+
 ## Is my data private?
 
 A: Yes. Per default, all URLs associated with a Webhook.site Pro account are only visible for the user. Additionally, users can set passwords on individual URLs to view the data.
@@ -41,7 +55,7 @@ A: Yes. Thousands of our customers use Webhook.site to build workflows that help
 
 ## How much data does Webhook.site store?
 
-A: For each URL, Webhook.site makes the latest 10.000 requests or emails available. Old requests are periodically rotated/purged. 
+A: For each URL associated with a Webhook.site Pro account, Webhook.site makes the latest 10.000 requests or emails available. Old requests are automatically rotated/purged periodically.
 
 In Control Panel, it is also possible to configure a lower number of requests to store automatically before they are deleted.
 
