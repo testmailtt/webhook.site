@@ -19,6 +19,9 @@
 
 #### Request
 
+
+*Example 1: Condition action*
+
 ```json
 {
   "type": "condition",
@@ -31,6 +34,46 @@
     "action": "stop"
   }
 }
+```
+
+*Example 2: WebhookScript action*
+
+```json
+{
+    "type": "script",
+    "order": 1,
+    "parameters": {
+        "script": "expiry = '2021-08-01T00:00:00.000000Z'\nnow = to_date('now')\n\nif (date_interval(now, expiry) < 0) {\n    // Respond with 410 Gone\n    respond('This content is no longer available.', 410)\n}\n"
+    }
+}
+```
+
+*Example 3: Creating WebhookScript action with Python 3*
+
+Same script as Example 2. Requires `requests` package; to install, `pip3 install requests`.
+
+```python
+import requests
+
+script = """
+expiry = '2021-08-01T00:00:00.000000Z'
+now = to_date('now')
+
+if (date_interval(now, expiry) < 0) {
+    // Respond with 410 Gone
+    respond('This content is no longer available.', 410)
+}
+"""
+
+data = {
+    "type": "script",
+    "order": 1,
+    "parameters": {
+        "script": script
+    }
+}
+
+r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a4615722825e/actions', json=data)
 ```
 
 #### Response
