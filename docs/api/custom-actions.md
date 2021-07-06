@@ -50,7 +50,7 @@
 
 ##### Example 3: Creating WebhookScript action with Python 3
 
-Same script as Example 2. Requires `requests` package; to install, `pip3 install requests`.
+Same script as Example 2. Requires the `requests` module, which can be installed using `pip install requests`.
 
 ```python
 import requests
