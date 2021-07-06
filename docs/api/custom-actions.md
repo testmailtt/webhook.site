@@ -20,7 +20,7 @@
 #### Request
 
 
-*Example 1: Condition action*
+##### Example 1: Condition action
 
 ```json
 {
@@ -36,7 +36,7 @@
 }
 ```
 
-*Example 2: WebhookScript action*
+##### Example 2: WebhookScript action
 
 ```json
 {
@@ -48,7 +48,7 @@
 }
 ```
 
-*Example 3: Creating WebhookScript action with Python 3*
+##### Example 3: Creating WebhookScript action with Python 3
 
 Same script as Example 2. Requires `requests` package; to install, `pip3 install requests`.
 
