@@ -3,12 +3,24 @@
   --md-primary-fg-color: black;
 }
 
-body {
+body, input {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: auto;
 }
 
 .md-header-nav__topic {
   font-weight: bold;
+}
+
+.md-header__title, .md-header-nav__title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #9d9d9d;
+  margin-left: 0;
+}
+
+.md-header[data-md-state=shadow] {
+  box-shadow: none;
 }
 
 /* NAV */
@@ -35,6 +47,16 @@ body {
 
 .md-typeset pre > code {
   color: black;
+}
+
+.md-typeset h1 {
+ font-size: 30px; 
+ font-weight: 500;
+ color: black;
+ letter-spacing: normal;
+ border-bottom: 1px solid #eee;
+ padding-bottom: 10px;
+ line-height: 1.1;
 }
 
 .md-typeset h2 {

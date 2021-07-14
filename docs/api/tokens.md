@@ -28,6 +28,8 @@ After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes a
 
 #### Request
 
+##### Example 1: JSON
+
 ```json
 {
   "default_status": 200,
@@ -39,6 +41,28 @@ After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes a
   "alias": "my-webhook",
   "actions": true
 }
+```
+
+##### Example 2: Creating with Python 3
+
+Requires the `requests` module, which can be installed using `pip install requests`.
+
+```python
+import requests
+
+json = {
+  "default_status": 200,
+  "default_content": "Hello world!",
+  "default_content_type": "text/html",
+}
+
+headers = {
+    "api-key": "00000000-0000-0000-0000-000000000000"
+}
+
+r = requests.post('https://webhook.site/token', json=json, headers=headers)
+
+print('URL Created: https://webhook.site/' + r.json()['uuid'])
 ```
 
 #### Response

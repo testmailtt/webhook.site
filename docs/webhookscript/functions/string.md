@@ -56,6 +56,12 @@ Returns string where the individual characters has been shuffled.
 
 Returns array of split string ***subject*** with ***delimiter*** 
 
+### string_title(***string*** string) : string
+
+Returns `string` converted to *title case*.
+
+`string_title('hello world')` returns `Hello World`.
+
 ### string_upper(***string*** string) : string
 
 Converts `string` to UPPERCASE (multibyte-aware).
