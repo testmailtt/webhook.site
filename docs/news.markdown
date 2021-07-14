@@ -22,6 +22,14 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 14 July 2021
+
+* New Custom Action: Replace Text, which allows easily making text replacements from variable input, and either overwrites an existing variable or creates a new one with the replaced content.
+
+## 4 July 2021
+
+* Fixed bug causing the "Use Request Content" checkbox in the Send Email action to not work.
+
 ## 15 June 2021
 
 * New Custom Action: Twitter, so you can easily send tweets using Webhook.site.
