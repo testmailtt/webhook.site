@@ -4,7 +4,7 @@
 
 Executes custom scripts using a scripting language that's very similar to JavaScript and PHP. [More information here](/webhookscript.html)
 
-## Text Extraction
+## Text
 
 ### Extract JSONPath
 
@@ -86,6 +86,10 @@ Example XPath                                     | Notes                       
 `//employee[contains(@id, "2")]`                  | Employee within any parent element where id contains "2"    | Ann
 
 For more examples, see [W3CSchools](https://www.w3schools.com/xml/xml_xpath.asp) or [XPath Cheatsheet](https://devhints.io/xpath)
+
+### Replace Text
+
+An action that allows replacing multiple inputs to a string with specified replacements. Additionally, Webhook.site will replace all variables in the source text as well as the text being replaced, and the replacement.
 
 ## Network
 
