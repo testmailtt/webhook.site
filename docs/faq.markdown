@@ -13,6 +13,18 @@ Both inbound and outbound originate and destinate at this IP address.
 
 Note that this may change in the future, so sign up for the [newsletter](news.markdown) to be notified of changes.
 
+## The JSON data is in a weird format/can't be parsed by Extract JSONPath
+
+The JSON data might have been attached to the request as form data rather than as request body data, which is usually how JSON is sent.
+
+The data might look like this on Webhook.site:
+
+![JSON Form Data](/images/json-form-data.png)
+
+To remediate this in Extract JSONPath, you'll need to set the source field to the form field variable, which is automatically set by Webhook.site. In the screenshot above, the variable name would be `$request.form.my_json_data$`, which works with Extract JSONPath:
+
+![JSON Form Data in JSONPath](/images/json-form-data-jsonpath.png)
+
 ## How do I export the data stored on Webhook.site?
 
 A: With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to your URL or email address.
