@@ -9,6 +9,20 @@ parent: WebhookScript
 !!! info 
     Do you have a nice example to share with other users? Or looking for even more examples? Take a look at the WebhookScript example repository, and make a pull request if you want to contribute: [https://github.com/fredsted/webhookscripts](https://github.com/fredsted/webhookscripts)
     
+## Convert a date
+
+In this example, if we assume the variable `$mydate$` is set to `2021-07-26T16:23:50+03:00`, the variable will be overwritten to `2021.07.26 16:23` for actions running after the WebhookScript action.
+
+```javascript
+input = var('$mydate$')
+
+output = date_format(input, 'YYYY.MM.DD HH:mm')
+
+set('$mydate$', output)
+```
+
+For more information about available date format characters, see here: https://docs.webhook.site/webhookscript/date-format.html
+
 ## Loop through and compare items
 
 In this example, we loop through a series of items and pick the item that's contained in a string. 
