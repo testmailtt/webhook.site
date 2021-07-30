@@ -24,7 +24,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 30 July 2021
 
-* New WebhookScript function: hmac(), which allows easily verifying strings using the HMAC method. 
+* New WebhookScript function: hmac(), which allows easily verifying strings using the HMAC method.  [More info here](/webhookscript/functions/string.html#hmacstring-value-string-algo-string-secret-stringfalse)
 
 ## 14 July 2021
 
