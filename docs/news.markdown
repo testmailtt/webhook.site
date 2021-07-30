@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 July 2021
+
+* New WebhookScript function: hmac(), which allows easily verifying strings using the HMAC method. 
+
 ## 14 July 2021
 
 * New Custom Action: Replace Text, which allows easily making text replacements from variable input, and either overwrites an existing variable or creates a new one with the replaced content.
