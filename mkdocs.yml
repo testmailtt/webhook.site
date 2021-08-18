@@ -38,7 +38,7 @@ nav:
   - Open Source version: open-source.markdown
   - CLI: cli.md
   - API:
-    - About the API: api/about.md
+    - Usage & Authentication: api/about.md
     - Tokens (URLs/Email addresses): api/tokens.md
     - Custom Actions: api/custom-actions.md
     - Schedules: api/schedules.md
