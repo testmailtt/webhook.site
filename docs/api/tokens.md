@@ -89,6 +89,68 @@ print('URL Created: https://webhook.site/' + r.json()['uuid'])
 
 Note about expiry: If there's no incoming requests for about a week, and the token is not upgraded to premium, the token is automatically deleted along with any other data.
 
+
+### Get tokens
+
+* Requires authentication.
+
+#### Request
+
+**GET** `/token`
+
+Returns a list of all Tokens associated with an account.
+
+##### Query string parameters
+
+* `per_page` - amount of requests returned, defaults to 50 (max 100)
+* `page` -  page number to retrieve (default 1)
+
+#### Response
+
+```json
+{
+  "current_page": 1,
+  "data": [
+    {
+      "uuid": "44fb1548-cd1f-4928-880c-cce094e5e179",
+      "redirect": false,
+      "alias": null,
+      "actions": true,
+      "cors": false,
+      "expiry": false,
+      "timeout": 0,
+      "premium": true,
+      "user_id": null,
+      "password": true,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/14.0.3 Safari\/605.1.15",
+      "default_content": "",
+      "default_status": 200,
+      "default_content_type": "text\/plain",
+      "premium_expires_at": null,
+      "created_at": "2021-08-11 18:34:44",
+      "updated_at": "2021-08-11 18:34:44",
+      "require_auth": true,
+      "latest_request_id": "ea5f5920-0398-465c-8f9c-8074f0d805a4",
+      "latest_request_at": "2021-08-12 19:56:50",
+      "category_id": null,
+      "requests": 1
+    },
+    ...
+  ],
+  "first_page_url": "https:\/\/webhook.site\/token?page=1",
+  "from": 1,
+  "last_page": 1,
+  "last_page_url": "https:\/\/webhook.site\/token?page=1",
+  "next_page_url": null,
+  "path": "https:\/\/webhook.site\/token",
+  "per_page": 50,
+  "prev_page_url": null,
+  "to": 2,
+  "total": 2
+}
+```
+
 ### Update token
 
 * Can require authentication.

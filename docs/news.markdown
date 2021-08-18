@@ -22,6 +22,16 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 18 August 2021
+
+* New API Endpoint: Get tokens, which returns a list of all tokens belonging to the account. [More info here](/api/tokens.html#get-tokens)
+* Fixed a bug that caused logins to be slow on especially older accounts.
+* Fixed a bug that caused the FTP Upload action to error when the Port field was missing.
+
+# 12 August 2021
+
+* Google Sheet actions that consistently cause errors are now disabled automatically. Users are sent an email when this occurs.
+
 ## 30 July 2021
 
 * New WebhookScript function: hmac(), which allows easily verifying strings using the HMAC method.  [More info here](/webhookscript/functions/string.html#hmacstring-value-string-algo-string-secret-stringfalse)
