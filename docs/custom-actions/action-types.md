@@ -262,6 +262,16 @@ To start, you need to make sure that you have connected a Google account in the 
 
 After that, you can select the account in the dropdown when creating the Custom Action.
 
+### Usage Limits
+
+It is important to note that Google will block Write requests (i.e. adding or updating rows) at **60 requests per minute**. After that, the action will temporarily fail with the following error message:
+
+```
+Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer
+```
+
+Therefore, for importing mass amounts of data in a short timespan, Google Sheets is not recommended. Instead, we recommend using the Database Query action.
+
 ### Specifying the spreadsheet
 
 When specifying the spreadsheet, you can either just copy/paste the spreadsheet URL or enter the spreadsheet ID. Variables can be used to specify the spreadsheet.
