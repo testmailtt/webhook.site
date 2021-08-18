@@ -28,7 +28,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 * Fixed a bug that caused logins to be slow on especially older accounts.
 * Fixed a bug that caused the FTP Upload action to error when the Port field was missing.
 
-# 12 August 2021
+## 12 August 2021
 
 * Google Sheet actions that consistently cause errors are now disabled automatically. Users are sent an email when this occurs.
 
