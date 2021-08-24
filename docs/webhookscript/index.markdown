@@ -48,11 +48,11 @@ respond(
 
 [Custom Action Variables](/custom-actions.html#about-variables) in WebhookScript behave a little differently than other action types: in the code, they will *not* be replaced automatically like in other action types.
 
-Instead, to interface with Custom Action Variables (created in previous actions, or default variables provided for each request or email), the function [var()](/webhookscript/functions.html#varstring-variable_name-mixed) can be used.
+Instead, to interface with Custom Action Variables (created in previous actions, or default variables provided for each request or email), the function [var()](/webhookscript/functions/variables.html#varstring-variable_name-stringnumber-default-mixed) can be used.
 
 The dollar-sign syntax (e.g. `$request.content$`) is optional when using the `var()` function, and the following two statements are equivalent: `var('$request.content$')` / `var('request.content')`.
 
-In addition, [set()](/webhookscript/functions.html#setstring-variable_name-string-variable_value) can be used to export a variable from your script to further downstream actions.  [store()](/webhookscript/functions.html#storestring-global_variable_name-any-value-any) is used to permanently set a Global Variable.
+In addition, [set()](/webhookscript/functions/variables.html#setstring-variable_name-string-variable_value) can be used to export a variable from your script to further downstream actions.  [store()](/webhookscript/functions/variables.html#storestring-global_variable_name-any-value-any) is used to permanently set a Global Variable.
 
 ## About the Editor
 
@@ -79,4 +79,4 @@ Below the editor is the "debug panel" containing data relating to the current an
 
 ### Fullscreen Mode
 
-To enable fullscreen mode, click the little button in the upper right corner to make the editor take up more screen space. Click again to disengage.
+To enable fullscreen mode, click the Expand button in the upper right corner to make the editor take up more screen space. Click again to disengage fullscreen mode.
