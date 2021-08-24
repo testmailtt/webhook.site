@@ -50,6 +50,8 @@ respond(
 
 Instead, to interface with Custom Action Variables (created in previous actions, or default variables provided for each request or email), the function [var()](/webhookscript/functions.html#varstring-variable_name-mixed) can be used.
 
+The dollar-sign syntax (e.g. `$request.content$`) is optional when using the `var()` function, and the following two statements are equivalent: `var('$request.content$')` / `var('request.content')`.
+
 In addition, [set()](/webhookscript/functions.html#setstring-variable_name-string-variable_value) can be used to export a variable from your script to further downstream actions.  [store()](/webhookscript/functions.html#storestring-global_variable_name-any-value-any) is used to permanently set a Global Variable.
 
 ## About the Editor
