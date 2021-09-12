@@ -22,6 +22,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 12 September 2021
+
+* Functions dd(), dump() and echo() can now take a variable amount of arguments.
+* New date function: now(), which returns the current date in ISO format.
+* The date_interval() and date_interval_human() functions now defaults to "now" if the second parameter isn't specified.
+* Script editor now has more space for outputs in full screen mode.
+
 ## 18 August 2021
 
 * New API Endpoint: Get tokens, which returns a list of all tokens belonging to the account. [More info here](/api/tokens.html#get-tokens)

@@ -46,15 +46,15 @@ Read more about functions in the [reference](/webhookscript/reference.html#funct
 
 ## Debugging and output
 
-### echo(***string*** string)
+### echo(...***string*** string)
 
 Adds `string` to script debug output.
 
-### dd(***any*** value)
+### dd(...***any*** value)
 
 Stops Custom Action execution and adds `value` to script debug output.
 
-### dump(***any*** value)
+### dump(...***any*** value)
 
 Adds `value` as a decoded string to script debug output.
 

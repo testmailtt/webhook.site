@@ -264,7 +264,7 @@ After that, you can select the account in the dropdown when creating the Custom 
 
 ### Usage Limits
 
-It is important to note that Google will block Write requests (i.e. adding or updating rows) at **60 requests per minute**. After that, the action will temporarily fail with the following error message:
+It is important to note that Google will block Write requests (i.e. adding or updating rows) at **60 requests per minute**. After that, the action will temporarilyfail with the following error message:
 
 ```
 Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer
