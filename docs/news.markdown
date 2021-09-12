@@ -24,10 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 12 September 2021
 
-* New WebhookScript function: array_merge(), that merges two arrays into one.
-* New WebhookScript function: array_chunk(), that splits an array into chunks.
-* Functions dd(), dump() and echo() can now take a variable amount of arguments.
-* New WebhookScript date function: now(), which returns the current date in ISO format.
+* New WebhookScript function: array_merge(), that merges two arrays into one. [More info here](/webhookscript/functions/array.html)
+* New WebhookScript function: array_chunk(), that splits an array into chunks. [More info here](/webhookscript/functions/array.html)
+* Functions dd(), dump() and echo() can now take a variable amount of arguments. [More info here](/webhookscript/functions/general.html)
+* New WebhookScript date function: now(), which returns the current date in ISO format. [More info here](/webhookscript/functions/date.html)
 * The date_interval() and date_interval_human() functions now defaults to "now" if the second parameter isn't specified.
 * Script editor now has more space for outputs in full screen mode.
 
