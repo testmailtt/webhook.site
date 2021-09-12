@@ -11,6 +11,26 @@ dd(array_contains(employees, 'Simon'))
 // -> true
 ```
 
+### array_chunk(***array*** array, ***number*** count, ***bool*** preserve_keys = false) : array
+
+Splits a single array into chunks of `count`. When `preserve_keys` is set to `true`, the array keys are preserved.
+
+```javascript
+test_arr = [
+    'a': 123,
+    'b': 234,
+    'c': 345,
+    'd': 345, 
+    'e': 456
+]
+
+dump(array_chunk(test_arr, 2, true))
+// -> [0: ["a": 123, "b": 234], 1: ["c": 345, "d": 345], 2: ["e": 456]]
+
+dump(array_chunk(test_arr, 2, false))
+// -> [0: [0: 123, 1: 234], 1: [0: 345, 1: 345], 2: [0: 456]]
+```
+
 ### array_copy(***array*** array) : array
 
 Returns a copy of ***array***
@@ -63,6 +83,19 @@ result = array_map(employees, function (employee) {
 dd(result)
 
 // -> [0: "Hello, Simon!", 1: "Hello, Jack!", 2: "Hello, Jim!"]
+```
+
+### array_merge(***array*** array1, ***array*** array2): array
+
+Merges 2 arrays into a single array.
+
+```javascript
+test1 = [123, 234, 345]
+test2 = [345, 456]
+
+dump(array_merge(test1, test2))
+
+// -> [0: 123, 1: 234, 2: 345, 3: 345, 4: 456]
 ```
 
 ### array_number_of(***array***, ***string/number*** value) : number

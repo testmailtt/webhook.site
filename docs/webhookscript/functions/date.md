@@ -30,6 +30,10 @@ In addition to date strings, these special formats can also be used to generate 
 
 [Click here for a list of possible locales/translations available for date display functions.](/webhookscript/date-locales.html)
 
+### now(***?string*** timezone) : string
+
+Returns the current date in ISO-8601 format, using `timezone`, if specified.
+
 ### to_date(***string*** date, ***?string*** format, ***?locale*** locale, ***?string*** timezone, ***bool*** keep_timezone = false): ***string***
 
 Returns a ISO-8601 formatted date string in UTC time from the provided `date` string. For more information about the accepted dates, see [Supported date formats](#supported-date-formats). If specified, `format` is used to parse the date without having to guess the format (see the [Date Format Characters](/webhookscript/date-format.html) specification.) If the `keep_timezone` parameter is set to true, the resulting date string will keep the timezone. The `locale` parameter will attempt to parse the date using the specified locale.
@@ -111,9 +115,9 @@ dump(date_to_array('2008-07-05T18:26:25.324542Z'))
 // ]
 ```
 
-### date_interval(***string*** date1, ***string*** date2, ***?string*** format): ***string/int***
+### date_interval(***string*** date1, ***?string*** date2, ***?string*** format): ***string/int***
 
-Calculates the interval between `date1` and `date2`.
+Calculates the interval between `date1` and `date2`. When `date2` is unspecified/null, `now` is used.
 
 If no format string is specified, the interval is returned as the number of seconds between the dates, with the number being negative if `date2` is before `date1`.
 
@@ -131,11 +135,11 @@ date_interval(
 // -> 11 days, 4 hours, 47 minutes
 ```
 
-### date_interval_human(***string*** date1, ***string*** date2, ***?string*** locale): ***string/int***
+### date_interval_human(***string*** date1, ***?string*** date2, ***?string*** locale): ***string/int***
 
 Formats the difference between 2 dates in a way that's easy to read for humans.
 
-If no locale is specified, English is used.
+If no locale is specified, English is used.  When `date2` is unspecified/null, `now` is used.
 
 ```javascript
 date_interval_human(
