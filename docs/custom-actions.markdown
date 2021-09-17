@@ -35,13 +35,16 @@ The format of variables are dollar signs surrounded by a word, for example: `$ex
 
 Adding specific suffixes to variable names will let you process the value in the following ways:
 
-| Variable             | Output                     | Description |
-|----------------------|----------------------------|-------------|
-| $example$            | `{"json": "<b>value</b>"}`        | *no modifier*
-| $example.json$      | `{\"json\": \"<b>value</b>\"}`     | Allows using the value in a JSON string as-is |
-| $example.html$      | `{&quot;json&quot;: &quot;&lt;b&gt;value&lt;/b&gt;&quot;}`     | Escapes all special HTML characters |
-| $example.base64_encode$ | eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg== | |
-| $example.base64_decode$ | | |
+| Variable                | Example Output                                             | Description                                                                                                                           |
+|-------------------------|------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| $example$               | `{"json": "value"}`                                        | *no modifier*                                                                                                                         |
+| $example.json$          | `{\"json\": \"value\"}`                                    | Escapes all special JSON characters, allowing to use any string in a JSON object. Escaped characters include \b, \f, \n, \r, \t, ", \ |
+| $example.html_encode$   | `{&quot;json&quot;: &quot;&lt;b&gt;value&lt;/b&gt;&quot;}` | Escapes all special HTML characters                                                                                                   |
+| $example.html_decode$   |                                                            | Replaces all escaped HTML escapes with normal characters                                                                              |
+| $example.base64_encode$ | eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg==                       | Encodes the variable to base64                                                                                                        |
+| $example.base64_decode$ |                                                            | Decodes a base64 encoded string                                                                                                       |
+| $example.url_encode$    | `%7B%22json%22%3A+%22value%22%7D`                          | Escapes all special HTTP URL characters                                                                                               |
+| $example.url_decode$    |                                                            | Replaces all special HTTP URL escapes with normal characters                                                                          |
 
 ### Base Variables
 

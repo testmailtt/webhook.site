@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 17 September 2021
+
+* New Custom Action Variable Modifiers: `.html_decode`, `.url_encode`, and `.url_decode`. [More info here](/custom-actions.html#variable-modifiers)
+
 ## 12 September 2021
 
 * New WebhookScript function: array_merge(), that merges two arrays into one. [More info here](/webhookscript/functions/array.html)
