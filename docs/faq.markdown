@@ -51,9 +51,9 @@ With the paid version, Webhook.site Pro, URLs never expire automatically.
 
 A: You might be copying the URL for the Webhook.site application, and not the actual URL.
 
-Webhook.site app (wrong): `https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
+Webhook.site app (wrong):<br>`https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
-Webhook.site url (correct): `https://webhook.site/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
+Webhook.site url (correct):<br>`https://webhook.site/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
 ## I'm getting a 429 Too Many Requests, what's wrong?
 
