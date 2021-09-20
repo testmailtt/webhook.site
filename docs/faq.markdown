@@ -27,7 +27,7 @@ To remediate this in Extract JSONPath, you'll need to set the source field to th
 
 ## How do I export the data stored on Webhook.site?
 
-A: With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to your URL or email address.
+With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to your URL or email address.
 
 1. We provide a CSV Export functionality, simply click the button in the menu. 
 
@@ -39,7 +39,7 @@ A: With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to 
 
 ## How do I send data to my computer/localhost?
 
-A: You can either periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests) or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+You can either periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests) or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
 
 ## I'm getting a 404 Not Found, what's wrong? / When does Webhook.site URLs expire?
 
@@ -49,7 +49,7 @@ With the paid version, Webhook.site Pro, URLs never expire automatically.
 
 ## I'm getting a 405 Method Not Allowed, what's wrong?
 
-A: You might be copying the URL for the Webhook.site application, and not the actual URL.
+You might be copying the URL for the Webhook.site application, and not the actual URL.
 
 Webhook.site app (wrong):<br>`https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
@@ -57,23 +57,25 @@ Webhook.site url (correct):<br>`https://webhook.site/6dbb3859-4ad5-4e85-acae-e44
 
 ## I'm getting a 429 Too Many Requests, what's wrong?
 
-A: The URL was automatically blocked due to a large amount of requests, as per our Terms of Service. This is done to prevent a decrease in service level for our other customers. 
+The URL was automatically blocked due to a large amount of requests, as per our Terms of Service. This is done to prevent a decrease in service level for our other customers. 
 
-For Webhook.site Pro customers, it is possible to have a URL whitelisted so it will not be automatically blocked. To request a whitelisting, please contact [Support](https://support.webhook.site).
+For Webhook.site Pro customers, it is possible to have a URL whitelisted so it will not be automatically blocked. To request a whitelisting, please contact [Support](https://support.webhook.site). 
+
+Additionally, the limit for automatically blocking the URL is many times higher than for the free version. 
 
 ## Is my data private?
 
-A: Yes. Per default, all URLs associated with a Webhook.site Pro account are only visible for the user. Additionally, users can set passwords on individual URLs to view the data.
+Yes. Per default, all URLs associated with a Webhook.site Pro account are only visible for the user. Additionally, users can set passwords on individual URLs to view the data.
 
 For free users, data is accessible to anyone who knows the ID of the URL.
 
 ## Can I use Webhook.site for production workloads?
 
-A: Yes. Thousands of our customers use Webhook.site to build workflows that help their business, without needing to hire a programmer or pay for and setup servers. We take care of the infrastructure so you can build what you need.
+Yes. Thousands of our customers use Webhook.site to build workflows that help their business, without needing to hire a programmer or pay for and setup servers. We take care of the infrastructure so you can build what you need.
 
 ## How much data does Webhook.site store?
 
-A: For each URL associated with a Webhook.site Pro account, Webhook.site makes the latest 10.000 requests or emails available. Old requests are automatically rotated/purged periodically.
+For each URL associated with a Webhook.site Pro account, Webhook.site makes the latest 10.000 requests or emails available. Old requests are automatically rotated/purged periodically.
 
 In Control Panel, it is also possible to configure a lower number of requests to store automatically before they are deleted.
 
