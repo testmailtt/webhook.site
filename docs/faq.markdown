@@ -7,7 +7,7 @@ nav_order: 50
 
 ## I want to whitelist Webhook.site in our firewall, which IP do you use?
 
-A: You'll need to whitelist the IP `46.4.105.116`. 
+You'll need to whitelist the IP `46.4.105.116`. 
 
 Both inbound and outbound originate and destinate at this IP address.
 
@@ -40,6 +40,12 @@ A: With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to 
 ## How do I send data to my computer/localhost?
 
 A: You can either periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests) or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+
+## I'm getting a 404 Not Found, what's wrong? / When does Webhook.site URLs expire?
+
+Using the free version of Webhook.site, URLs automatically expire in 7 days. After that, the URL is no longer available and data is deleted.
+
+With the paid version, Webhook.site Pro, URLs never expire automatically.
 
 ## I'm getting a 405 Method Not Allowed, what's wrong?
 
