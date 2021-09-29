@@ -29,6 +29,14 @@ The `forward` command listens for new incoming requests sent to your Webhook.sit
 
 The request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is `https://example.com`, sending a POST request to `https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value`, the target URL will also receive a POST request on `https://example.com/example?query=value`.
 
+#### Accessing localhost/127.0.0.1
+
+Note that per default, the host machine running the Docker command won't be available as `localhost` or `127.0.0.1` inside the Docker container, as the container has its own network space. This will cause errors like `FetchError: request to http://127.0.0.1:8080/ failed, reason: connect ECONNREFUSED 127.0.0.1:8080`.
+
+If you wish to forward requests to the host machine, you either use host-mode networking (with the `--network=host` option to the `docker run` command), or use your host machine's LAN IP (usually in the ranges 10.x.x.x, 192.168.x.x or 172.16.x.x.) For more information, please see this [Stackoverflow thread](https://stackoverflow.com/questions/30109037/how-can-i-forward-localhost-port-on-my-container-to-localhost-on-my-host).
+
+#### Example command
+
 ```shell
 docker run webhooksite/cli -- index.js forward \
   --token=1e25c1cb-e4d4-4399-a267-cd2cf1a6c864 \

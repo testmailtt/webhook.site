@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 September 2021
+
+* Webhook.site CLI: New minor version, fixes a bug causing `Invalid namespace` errors.
+
 ## 17 September 2021
 
 * New Custom Action Variable Modifiers: `.html_decode`, `.url_encode`, and `.url_decode`. [More info here](/custom-actions.html#variable-modifiers)
