@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 4 October 2021
+
+* Webhook.site now supports multiple sub-users on an account, with different access permissions, available to Webhook.site Enterprise users. For more information, please [contact us](https://support.webhook.site).
+
 ## 29 September 2021
 
 * Webhook.site CLI: New minor version, fixes a bug causing `Invalid namespace` errors.
