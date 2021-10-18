@@ -63,6 +63,17 @@ For Webhook.site Pro customers, it is possible to have a URL whitelisted so it w
 
 Additionally, the limit for automatically blocking the URL is many times higher than for the free version. 
 
+## I'm getting a "Certificate Expired" error
+
+Our SSL certificate is fully working; the issue lies with your system. In september 2021, our SSL provider, LetsEncrypt, [updated their root certificate](https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/). This can mean that if your locally installed trusted root certificates are of an old version, you'll be seeing a certificate error as Webhook.site now runs a certificate that is based on the new root certificate chain.
+
+To remediate this problem, you'll need to update your local certificate trust store:
+
+* Debian-based systems: Use `update-ca-certificates`; [more info here](https://manpages.debian.org/buster/ca-certificates/update-ca-certificates.8.en.html).
+* Red Hat based systems: `yum update ca-certificates`; [more info here](https://access.redhat.com/solutions/1549003)
+
+Some systems and packages also come with static certificates. We cannot support updating these.
+
 ## Is my data private?
 
 Yes. Per default, all URLs associated with a Webhook.site Pro account are only visible for the user. Additionally, users can set passwords on individual URLs to view the data.
