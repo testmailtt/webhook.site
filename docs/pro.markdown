@@ -3,42 +3,53 @@ title: Pro
 nav_order: 390
 ---
 
-# Webhook.site Pro
+# Webhook.site Pro and Enterprise
 
-With Webhook.site Pro, you get more features that allows you to do more with your URL, as well as keep it private.
+With Webhook.site Pro and Webhook.site Enterprise subscriptions, you get more features that allows you to do more with your URL, as well as keep the data contained private and secure.
 
 [Sign up now](https://webhook.site/register)
 
-## Feature List
+## Pro features
 
-### Custom Actions
-Run scripts, send emails, HTTP requests and more on each request, and use native integrations like Google Sheets, Dropbox, Slack and others. [Read more...](/custom-actions.html)
+### Create workflows with Custom Actions
+Extract data, send emails and HTTP requests, upload files, run scripts and more on each incoming request or email with the Webhook.site Custom Actions builder. 
+Native integrations for AWS, Google Sheets, Slack and others. [Read more](https://docs.webhook.site/custom-actions.html)
 
-### Schedules
-Request any URL or your Custom Actions automatically on an interval.
+### Schedules 
+Request any URL or run your Custom Actions automatically on an interval. [Read more](https://docs.webhook.site/schedules.html)
 
-### Private URLs 
-Either mark all URLs associated with your account as private, or just some, if you want to share the requests with others.
+### Custom URLs and Emails 
+Get an address that's easy to remember:
+webhook.site/my-alias 
+my-alias@email.webhook.site
 
-### Password Protection 
-Share request data without it being public, but lets you protect it with a password without giving away the login to your Webhook.site account.
+### Security 
+Your data is secured in your account, and can be accessed by API Key or login
 
-### Non-expiring URLs 
-Non-upgraded URLs automatically expire in 7 days if no requests have been received. Your Webhook.site URL will always be static.
+### Permanent URLs 
+7-day auto expiration is removed
 
-### Server-side Redirects 
-Redirect or send requests to other URLs.
-
-### Vanity URLs 
-With vanity URLs, create a rememberable URL of your own choosing.
-
-Example: *webhook.site/your-alias*
-
-### Unlimited Requests 
-Non-upgraded URLs can only receive a maximum of 500 requests. With Pro, there is no limit.
+### Store more than 500 requests or emails 
+Limit of max 500 requests or emails per URL is removed
 
 ### Unlimited URLs 
-You are not limited to any specific amount of URLs you can create - you can set up as many as you need.
+Create as many upgraded URLs or email addresses as you need at no extra cost
 
-### CSV Export
-Export all requests sent to a URL to a friendly CSV format that can be used elsewhere.
+### CSV Export 
+Export all requests and emails to a CSV file
+
+### Email Support 
+We’ll help you troubleshoot and set up your Custom Actions and workflows
+
+
+## Enterprise features
+
+In addition to all Pro features, Enterprise also contains the following features:
+
+
+### Custom Domain 
+Use a your own (sub)domain for URLs and emails: mydomain.com/my-alias
+my-alias@mydomain.com
+
+### Multi-User Support 
+Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure individual users' access with User Types.

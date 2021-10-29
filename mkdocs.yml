@@ -42,7 +42,7 @@ nav:
     - Tokens (URLs/Email addresses): api/tokens.md
     - Custom Actions: api/custom-actions.md
     - Schedules: api/schedules.md
-  - Webhook.site Pro: pro.markdown
+  - Webhook.site Pro and Enterprise: pro.markdown
   - FAQ: faq.markdown
   - Schedules: schedules.md
   - Custom Actions:
