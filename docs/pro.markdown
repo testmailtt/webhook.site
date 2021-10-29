@@ -36,7 +36,7 @@ With Webhook.site Pro and Webhook.site Enterprise subscriptions, you get more fe
 | Free Email Support      | ❌                | ✅              | ✅                     |
 | Custom Domain      | ❌                | ❌              | ✅                     |
 | Multi-User Support | ❌                | ❌              | ✅                     |
-| Pricing                   |                   | $14/month<br>$140/year (save 20%) | $49/month<br>$499/year (save 20%) |
+| Pricing (Excluding VAT)                  |                   | $14/month<br>$140/year (save 20%) | $49/month<br>$499/year (save 20%) |
 
 <div class="center">
 <a href="https://webhook.site/register" class="md-button md-button--default no-underline">Subscribe Now</a>
