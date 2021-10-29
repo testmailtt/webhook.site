@@ -1,5 +1,5 @@
 ---
-title: Pro
+title: Webhook.site Pro and Enterprise
 nav_order: 390
 ---
 
@@ -7,7 +7,7 @@ nav_order: 390
 
 With Webhook.site Pro and Webhook.site Enterprise subscriptions, you get more features that allows you to do more with your URL, as well as keep the data contained private and secure.
 
-[Sign up now](https://webhook.site/register)
+[Sign up now](https://webhook.site/register){ .md-button .md-button--primary }
 
 ## Pro features
 
