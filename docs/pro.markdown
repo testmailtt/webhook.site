@@ -7,21 +7,41 @@ nav_order: 390
 
 With Webhook.site Pro and Webhook.site Enterprise subscriptions, you get more features that allows you to do more with your URL, as well as keep the data contained private and secure.
 
-[Sign up now](https://webhook.site/register){ .md-button .md-button--primary }
 
-|                    | Webhook.site Free | Webhook.site Pro | Webhook.site Enterprise |
-|--------------------|-------------------|------------------|-------------------------|
-| Custom Actions     | No                | Yes              | Yes                     |
-| Schedules          | No                | Yes              | Yes                     |
-| Custom Addresses   | No                | Yes              | Yes                     |
-| Secure Data        | No                | Yes              | Yes                     |
-| Permanent URLs     | No                | Yes              | Yes                     |
-| Request Limit      | 500, non-rotating | 10000            | 10000                   |
-| CSV Export         | No                | Yes              | Yes                     |
-| Email Support      | No                | Yes              | Yes                     |
-| Custom Domain      | No                | No               | Yes                     |
-| Multi-User Support | No                | No               | Yes                     |
-{: .test }
+<style>
+  table {
+    width:100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+      display:table!important;}
+      
+      .center {
+        text-align: center;
+      }
+      
+      a.no-underline {
+        text-decoration: none;
+      }
+  </style>
+
+|                    | Free              | Pro             | Enterprise              |
+|--------------------|-------------------|-----------------|-------------------------|
+| [Custom Actions](https://docs.webhook.site/custom-actions.html)     | ❌                | ✅              | ✅                     |
+| [Schedules](https://docs.webhook.site/schedules.html)          | ❌                | ✅              | ✅                     |
+| Custom Addresses   | ❌                | ✅              | ✅                     |
+| Secure Data        | ❌                | ✅              | ✅                     |
+| Permanent URLs     | ❌                | ✅              | ✅                     |
+| Request Limit, per URL   | 500, non-rotating | 10.000           | 10.000                   |
+| CSV Export         | ❌                | ✅              | ✅                     |
+| Free Email Support      | ❌                | ✅              | ✅                     |
+| Custom Domain      | ❌                | ❌              | ✅                     |
+| Multi-User Support | ❌                | ❌              | ✅                     |
+| Pricing                   |                   | $14/month<br>$140/year (save 20%) | $49/month<br>$499/year (save 20%) |
+
+<div class="center">
+<a href="https://webhook.site/register" class="md-button md-button--default no-underline">Subscribe Now</a>
+</div>
+
 
 ## Pro features
 
