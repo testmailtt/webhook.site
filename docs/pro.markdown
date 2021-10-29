@@ -21,6 +21,7 @@ With Webhook.site Pro and Webhook.site Enterprise subscriptions, you get more fe
 | Email Support      | No                | Yes              | Yes                     |
 | Custom Domain      | No                | No               | Yes                     |
 | Multi-User Support | No                | No               | Yes                     |
+{: .test }
 
 ## Pro features
 
