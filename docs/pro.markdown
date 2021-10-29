@@ -9,6 +9,19 @@ With Webhook.site Pro and Webhook.site Enterprise subscriptions, you get more fe
 
 [Sign up now](https://webhook.site/register){ .md-button .md-button--primary }
 
+|                    | Webhook.site Free | Webhook.site Pro | Webhook.site Enterprise |
+|--------------------|-------------------|------------------|-------------------------|
+| Custom Actions     | No                | Yes              | Yes                     |
+| Schedules          | No                | Yes              | Yes                     |
+| Custom Addresses   | No                | Yes              | Yes                     |
+| Secure Data        | No                | Yes              | Yes                     |
+| Permanent URLs     | No                | Yes              | Yes                     |
+| Request Limit      | 500, non-rotating | 10000            | 10000                   |
+| CSV Export         | No                | Yes              | Yes                     |
+| Email Support      | No                | Yes              | Yes                     |
+| Custom Domain      | No                | No               | Yes                     |
+| Multi-User Support | No                | No               | Yes                     |
+
 ## Pro features
 
 ### Create workflows with Custom Actions
