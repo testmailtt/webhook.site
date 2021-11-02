@@ -22,6 +22,16 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 October 2021
+
+* Webhook.site's requests to itself, e.g. via Send Request action or Schedules by Webhook.site, now shows more clearly as coming from Webhook.site in the request list. Outgoing requests are now sent with a User-Agent header of `Webhook.site/1.0`, which can be overwrited if specifying a User-Agent header manually.
+* Error deleting Global Variables fixed.
+* It is now possible for Webhook.site Enterprise customers to manage their Custom Domains from the control panel.
+
+## 15 October 2021
+
+* Fix invalid charset configurations causing issues saving requests.
+
 ## 4 October 2021
 
 * Webhook.site now supports multiple sub-users on an account, with different access permissions, available to Webhook.site Enterprise users. For more information, please [contact us](https://support.webhook.site).
