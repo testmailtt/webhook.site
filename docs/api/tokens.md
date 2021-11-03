@@ -376,11 +376,13 @@ Files that are included in a request or as email attachments are available to do
 
 * Can require authentication.
 
-**DELETE** `/token/:token_id/request/(:request_id)`
+**DELETE** `/token/:token_id/request/:request_id`
+
+**DELETE** `/token/:token_id/request`
 
 Deletes a request. 
 
-If no ID, all requests related to the token will be deleted.
+If no `request_id`, all requests related to the token will be deleted.
 
 #### Response
 
