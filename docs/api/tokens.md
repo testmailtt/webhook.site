@@ -340,6 +340,14 @@ Lists all request sent to a token.
       "Paw\/3.1.8 (Macintosh; OS X\/10.14.6) GCDHTTPRequest"
     ]
   },
+  "files": {
+    "foo": {
+      "id": "65d6e0ce-a840-47bc-b6b6-ff1ff38c34ca",
+      "filename": "example.json",
+      "size": 5132873,
+      "content_type": "text/plain"
+    }
+  },
   "url": "https:\/\/webhook.site\/a94a7294-c4aa-4074-ab77-c4cf86fd53b1\/201?",
   "created_at": "2019-10-03 19:06:35",
   "updated_at": "2019-10-03 19:06:35"
@@ -355,6 +363,14 @@ Lists all request sent to a token.
 **GET** `/token/:token_id/request/latest/raw` - retrieves the latest request sent to the URL
 
 Returns the request as a response (body, content-type.)
+
+### Download request file
+
+* Can require authentication.
+
+**GET** `/token/:tokenId/request/:requestId/download/:fileId`
+
+Files that are included in a request or as email attachments are available to download using this endpoint.
 
 ### Delete request
 
