@@ -63,6 +63,10 @@ For Webhook.site Pro customers, it is possible to have a URL whitelisted so it w
 
 Additionally, the limit for automatically blocking the URL is many times higher than for the free version. 
 
+## I'm getting a 413 Payload Too Large, what's wrong? / What's the request size limit?
+
+The HTTP body data (e.g. files or JSON data) submitted to Webhook.site must be below 10 megabytes. More than that will cause a HTTP 413 response.
+
 ## I'm getting a "Certificate Expired" error
 
 Our SSL certificate is fully working; the issue lies with your system. In september 2021, our SSL provider, LetsEncrypt, [updated their root certificate](https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/). This can mean that if your locally installed trusted root certificates are of an old version, you'll be seeing a certificate error as Webhook.site now runs a certificate that is based on the new root certificate chain.
