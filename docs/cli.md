@@ -43,7 +43,7 @@ The request method, headers and any additional path or query string parameters a
 * An API key (`--api-key`) must also be specified, and can be generated from the Webhook.site [Control Panel](https://webhook.site/control-panel).
 * Finally, the target (`--target`) specifies where traffic should be redirected. 
 
-#### Accessing localhost/127.0.0.1
+#### Accessing localhost/127.0.0.1 when using Docker
 
 Note that per default, the host machine running the Docker command won't be available as `localhost` or `127.0.0.1` inside the Docker container, as the container has its own network space. This will cause errors like `FetchError: request to http://127.0.0.1:8080/ failed, reason: connect ECONNREFUSED 127.0.0.1:8080`.
 
