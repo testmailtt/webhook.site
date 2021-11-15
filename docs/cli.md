@@ -9,6 +9,8 @@ The Webhook.site Command Line Interface allows you to interact with your Webhook
 
 The CLI is still in its infancy, and currently it's main functionality is to redirect traffic from your Webhook.site URL to the machine where the CLI is being run. You then specify a URL for where the requests should be sent, allowing you to redirect traffic to machines that are not able receive connections directly from the Internet.
 
+For development information, please see the [Github Page](https://github.com/webhooksite/cli/tree/master#how-to-use).
+
 ## Installation
 
 ### Docker
@@ -19,9 +21,17 @@ If you have installed Docker, you can simply run Webhook.site CLI via `docker ru
 
 ### Node.js
 
-For installation information, please see the [Github Page](https://github.com/webhooksite/cli/tree/master#how-to-use).
+Node version 14 or greater required.
+
+To install: `npm install -g @webhooksite/cli`
+
+Then, `whcli help`
 
 ## Usage
+
+### `help`: List commands
+
+Lists commands available to the CLI.
 
 ### `forward`: Forward requests
 
@@ -29,21 +39,23 @@ The `forward` command listens for new incoming requests sent to your Webhook.sit
 
 The request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is `https://example.com`, sending a POST request to `https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value`, the target URL will also receive a POST request on `https://example.com/example?query=value`.
 
-#### Accessing localhost/127.0.0.1
+* The token ID (`--token`) parameter must specify the token ID. The token ID is the long 36-character ID at the end of your Webhook.site URL.
+* An API key (`--api-key`) must also be specified, and can be generated from the Webhook.site [Control Panel](https://webhook.site/control-panel).
+* Finally, the target (`--target`) specifies where traffic should be redirected. 
+
+#### Accessing localhost/127.0.0.1 when using Docker
 
 Note that per default, the host machine running the Docker command won't be available as `localhost` or `127.0.0.1` inside the Docker container, as the container has its own network space. This will cause errors like `FetchError: request to http://127.0.0.1:8080/ failed, reason: connect ECONNREFUSED 127.0.0.1:8080`.
 
 If you wish to forward requests to the host machine, you either use host-mode networking (with the `--network=host` option to the `docker run` command), or use your host machine's LAN IP (usually in the ranges 10.x.x.x, 192.168.x.x or 172.16.x.x.) For more information, please see this [Stackoverflow thread](https://stackoverflow.com/questions/30109037/how-can-i-forward-localhost-port-on-my-container-to-localhost-on-my-host).
 
-#### Example command
+#### Example
 
 ```shell
-docker run webhooksite/cli -- index.js forward \
+whcli forward \
   --token=1e25c1cb-e4d4-4399-a267-cd2cf1a6c864 \
   --api-key=ef6ef2f8-3e48-4f77-a54c-3891dc11c05c \ 
   --target=https://example.com
 ```
 
-* The token ID (`--token`) parameter must specify the token ID. The token ID is the long 36-character ID at the end of your Webhook.site URL.
-* An API key (`--api-key`) must also be specified, and can be generated from the Webhook.site [Control Panel](https://webhook.site/control-panel).
-* Finally, the target (`--target`) specifies where traffic should be redirected. 
+
