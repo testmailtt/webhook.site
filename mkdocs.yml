@@ -41,6 +41,7 @@ nav:
   - CLI: cli.md
   - API:
     - Usage & Authentication: api/about.md
+    - Script Examples: api/examples.md
     - Tokens (URLs/Email addresses): api/tokens.md
     - Custom Actions: api/custom-actions.md
     - Schedules: api/schedules.md
