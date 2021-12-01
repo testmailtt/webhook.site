@@ -13,8 +13,8 @@ If possible, it's recommended to use the ISO-8601 format, for example `2020-05-2
 In addition to date strings, these special formats can also be used to generate dates.
 
 * `now`
-* `+1 day` - adds 1 day to the current date and time
-* `+1 week`
+* `+4 day`, `-2 month` - adds or subtracts to the current date and time, can be suffixed to other dates
+  * Other units supported: `second`, `minute`, `hour`, `day`, `fortnight`, `week`, `month`, `year`
 * `next Thursday`
 * `last Monday`
 * `first day of January 2008`
@@ -90,6 +90,10 @@ date_format('2008-07-05T18:26:25.000000Z')
 
 'now'.date_format('x') 
 // -> 1606329669220 (current date in UNIX timestamp with microseconds)
+
+// Add 1 hour to an existing date (see Special format examples above)
+date_format('2021-10-28 11:28:55 +1 hour', 'YYYY-MM-DD HH:mm:ss')
+// -> 2021-10-28 12:28:55
 ```
 
 ### date_to_array(***string***): ***array***

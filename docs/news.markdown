@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 24 November 2021
+
+* WebhookScript: Fixed an issue that would cause strings to be interpreted as integers when encoding JSON.
+
 ## 30 October 2021
 
 * Webhook.site's requests to itself, e.g. via Send Request action or Schedules by Webhook.site, now shows more clearly as coming from Webhook.site in the request list. Outgoing requests are now sent with a User-Agent header of `Webhook.site/1.0`, which can be overwrited if specifying a User-Agent header manually.
