@@ -22,6 +22,7 @@ plugins:
   - redirects:
       redirect_maps:
         'webhookscript.md': webhookscript/index.markdown
+        'api.md': api/about.md
 
 markdown_extensions:
   - codehilite
