@@ -45,7 +45,7 @@ After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes a
 
 ##### Example 2: Creating with Python 3
 
-Requires the `requests` module, which can be installed using `pip install requests`.
+Requires the `requests` module, which can be installed using `pip install requests`. You'll also need to replace the API key. [Create an API key here](https://webhook.site/api-keys).
 
 ```python
 import requests
