@@ -288,6 +288,17 @@ Lists all request sent to a token.
       "query": {
         "action": "create"
       },
+      "request": {
+        "status": "example"
+      },
+      "files": {
+        "file": {
+           "id": "98bf4c25-58ab-4c5d-ba91-fb6f709ea78d",
+           "filename": "example.png",
+           "size": 420915,
+           "content_type": "image/png"
+        }
+      },
       "headers": {
         "content-length": [
           "271"
@@ -298,7 +309,8 @@ Lists all request sent to a token.
       },
       "url": "https:\/\/webhook.site\/a94a7294-c4aa-4074-ab77-c4cf86fd53b1\/201?",
       "created_at": "2019-10-03 19:06:35",
-      "updated_at": "2019-10-03 19:06:35"
+      "updated_at": "2019-10-03 19:06:35",
+      "custom_action_output": []
     }
   ],
   "total": 1,
