@@ -19,6 +19,10 @@ While most functions in the Webhook.site API work without any authentication wha
 
 An API Key can be generated in the Control Panel, and provides access to Tokens that are either a) password protected or b) require login.
 
+<div class="center">
+<a href="https://webhook.site/api-keys" class="md-button md-button--default no-underline">Create API Key</a>
+</div>
+
 To specify an API Key in a request, use the `Api-Key` HTTP header: `Api-Key: [your API Key]`
 
 ### Password
