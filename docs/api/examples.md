@@ -6,7 +6,7 @@ Before using the API, please first [create an API key here](https://webhook.site
 
 ### Quick upload file to Token
 
-Uploads the file `example.png`.
+Uploads the file `example.png` from the current directory.
 
 ```bash
 curl -F 'file=@example.png' https://webhook.site/00000000-0000-0000-0000-000000000000
