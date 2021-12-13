@@ -67,6 +67,12 @@ Additionally, the limit for automatically blocking the URL is many times higher 
 
 The HTTP body data (e.g. files or JSON data) submitted to Webhook.site must be below 10 megabytes. More than that will cause a HTTP 413 response.
 
+## I'm getting an "Access Control Check error"
+
+If you're requesting the Webhook.site endpoint from another domain via JavaScript, you'll need to enable CORS so the browser allows the request. Simply check this checkbox to add the necessary headers.
+
+![JSON Form Data](/images/corsenable.png)
+
 ## I'm getting a "Certificate Expired" error
 
 Our SSL certificate is fully working; the issue lies with your system. In september 2021, our SSL provider, LetsEncrypt, [updated their root certificate](https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/). This can mean that if your locally installed trusted root certificates are of an old version, you'll be seeing a certificate error as Webhook.site now runs a certificate that is based on the new root certificate chain.
