@@ -22,6 +22,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 21 December 2021
+
+* Improved handling of binary data received from Send Request actions. 
+* Added a `group_id` parameter when creating or updating Tokens.
+* Fixed an issue with the Twitter Custom Action.
+* Requests to `/token/:tokenId/requests` are now throttled at 60 requests/minute.
+
 ## 24 November 2021
 
 * WebhookScript: Fixed an issue that would cause strings to be interpreted as integers when encoding JSON.

@@ -25,6 +25,7 @@ After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes a
 * `alias` allows setting the alias of the token.
 * `actions` specifies if Custom Actions are enabled and executed on every request/email (true), or disabled (false.)
 * `clone_from` specifies a token UUID (or alias) that will act as a template for the new token. When specified, settingssuch as default content, timeout, password as well as Custom Actions are copied to the new token.
+* `group_id` specifies which group ID the token should be added to.
 
 #### Request
 
