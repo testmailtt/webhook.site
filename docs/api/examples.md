@@ -103,3 +103,22 @@ r = requests.post('https://webhook.site/token', json=json, headers=headers)
 
 print('URL Created: https://webhook.site/' + r.json()['uuid'])
 ```
+
+
+### Fetch latest data
+
+Requires the `requests` module, which can be installed using `pip install requests`. 
+
+Prints the 50 latest requests sent to a given URL to console.
+
+```python
+import requests
+
+token_id = "00000000-0000-0000-0000-000000000000"
+headers = {"api-key": "00000000-0000-0000-0000-000000000000"}
+
+r = requests.get('https://webhook.site/token/'+ token_id +'/requests?sorting=newest', headers=headers)
+
+for request in r.json()['data']:
+	print(request)
+```
