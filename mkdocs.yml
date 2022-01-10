@@ -50,6 +50,7 @@ nav:
   - Schedules: schedules.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
+    - Variables: custom-actions/variables.md
     - Action Types: custom-actions/action-types.md
     - Examples: custom-actions/examples.markdown
   - WebhookScript:
