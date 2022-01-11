@@ -21,7 +21,7 @@ output = date_format(input, 'YYYY.MM.DD HH:mm')
 set('$mydate$', output)
 ```
 
-For more information about available date format characters, see here: https://docs.webhook.site/webhookscript/date-format.html
+[More information about available date format characters.](/webhookscript/date-format.html)
 
 ## Parse and loop through JSON
 
