@@ -101,15 +101,19 @@ dump(token) // token2
 
 ## Submit request with escaped JSON
 
-If you're building a JSON object, we recommend doing it in WebhookScript instead of typing JSON in the Send Request action type. In this example, one of the JSON values contain HTML generated using the string_format function.
+If you're building a JSON object, we recommend doing it in WebhookScript instead of typing JSON in the Send Request action type (If you do anyway, we recommend using the `.json` Variable Modifier, [More info here](/custom-actions/variables.html#variable-modifiers)). 
 
-```
-html_message = string_format(
-    '<b><u>New {} lead</u></b><br>
+In this example, one of the JSON values contain HTML generated using the string_format function.
+
+```javascript
+html_template = '<b><u>New {} lead</u></b><br>
 <br>
 Location: {}<br>
 Message from customer:<br>
-<div style="background:#CCC">{}</div>',
+<div style="background:#CCC">{}</div>'
+
+html_message = string_format(
+    html_template,
     var('lead_type'),
     var('location'),
     var('message')
@@ -145,8 +149,7 @@ if (!verification_challenge or verification_challenge != verification_result) {
     respond("Invalid request", 500)
 }
 
-headers = ['X-Success: Yes']
-respond("Successful request", 200, headers)
+respond("Successful request", 200)
 ```
 
 ## Send a x-www-form-urlencoded request
@@ -169,7 +172,7 @@ In the following, an incoming request is JSON decoded to an array, transformed a
 ws1_api_key = var('WS1_KEY')
 ws2_user_token = var('WS1_USER_TOKEN')
 
-// Function for error handling
+// Function for error handling which stops processing further actions/code and returns an error message
 function error (message) {
     echo('Error: {}'.format(message))
     respond(json_encode(['error': message]), 500)
@@ -312,22 +315,23 @@ response = "Couldn't come up with anything witty.";
 if (msg == "How's it going?") {
     response = 'Pretty good.'
 }
-if (msg == "How's the weather?") {
-    response = 'Raining.'
-}
+
 if (msg == r"You're (.*)") {
     match = regex_extract_first(r"You're (.*)", msg)
     response = 'No, YOU are {}'.format(match);
 }
+
 if (msg == "/start") {
     response = "Hi! I'm WebhookBot."
 }
 
 url = 'https://api.telegram.org/bot{}/sendMessage'.format(token)
+
 json = [
     'chat_id': content['message']['chat']['id'],
     'text': response
-];
+]
+
 request(url, json_encode(json), 'POST');
 ```
 
