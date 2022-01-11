@@ -61,7 +61,13 @@ With [Webhook.site Pro](pro.markdown), there's 3 ways to export data sent to you
 
 ## How do I send data to my computer/localhost?
 
-You can either periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests) or stream requests to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+There's several ways to accomplish this depending on your needs.
+
+You can periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests)
+
+Requests can also be streamed to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+
+Webhook.site also supports the XHR Redirect feature, which uses your browser in order to forward the requests. Note that the endpoint will need CORS headers so that the browser will be able to send requests to it, and the forwarding will only work as long as the browser window is open.
 
 ## I'm getting a 404 Not Found, what's wrong? / When does Webhook.site URLs expire?
 
@@ -73,9 +79,9 @@ With the paid version, Webhook.site Pro, URLs never expire automatically.
 
 You might be copying the URL for the Webhook.site application, and not the actual URL.
 
-Webhook.site app (wrong):<br>`https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
+Webhook.site app (⛔️ wrong):<br>`https://webhook.site/#!/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
-Webhook.site url (correct):<br>`https://webhook.site/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
+Webhook.site url (✅ correct):<br>`https://webhook.site/6dbb3859-4ad5-4e85-acae-e44d6e37ea4a`
 
 ## I'm getting a 429 Too Many Requests, what's wrong?
 
@@ -83,7 +89,7 @@ The URL was automatically blocked due to a large amount of requests, as per our 
 
 For Webhook.site Pro customers, it is possible to have a URL whitelisted so it will not be automatically blocked. To request a whitelisting, please contact [Support](https://support.webhook.site). 
 
-Additionally, the limit for automatically blocking the URL is many times higher than for the free version. 
+Additionally, when an URL is associated with a Webhook.site Pro or Enterprise account, the limit for automatically blocking the URL is many times higher than for the free version. 
 
 ## I'm getting a 413 Payload Too Large, what's wrong? / What's the request size limit?
 
