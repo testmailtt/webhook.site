@@ -7,7 +7,7 @@ parent: WebhookScript
 # WebhookScript Examples
 
 !!! info 
-    Do you have a nice example to share with other users? Or looking for even more examples? Take a look at the WebhookScript example repository, and make a pull request if you want to contribute: [https://github.com/fredsted/webhookscripts](https://github.com/fredsted/webhookscripts)
+    Do you have a nice example to share with other users? Or looking for even more examples? Take a look at the WebhookScript example repository, and make a pull request if you want to contribute: [Webhook.site Script Repository](https://github.com/webhooksite/scripts)
     
 ## Convert a date
 
