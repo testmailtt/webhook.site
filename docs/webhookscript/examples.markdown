@@ -23,6 +23,58 @@ set('$mydate$', output)
 
 For more information about available date format characters, see here: https://docs.webhook.site/webhookscript/date-format.html
 
+## Parse and loop through JSON
+
+```javascript
+// Define input as a JSON string
+json = '{
+    "items": [
+        {
+            "first_name": "Jack",
+            "last_name": "Daniels",
+            "phone": "+1 100-555-999",
+            "group_ids": [346, 46456, 23423]
+        },
+        {
+            "first_name": "Jim",
+            "last_name": "Beam",
+            "phone": "+1 123-555-788",
+            "group_ids": [3456, 43546, 234234, 456456]
+        }
+    ]
+}'
+
+// Decode to array
+data = json_decode(json)
+
+// Define an array of valid groups
+valid_groups = [43546]
+
+// Loop over items
+for (item in data['items']) {
+    has_valid_group = false
+
+    for (group_id in item['group_ids']) {
+        if (valid_groups.contains(group_id)) {
+            has_valid_group = true
+        }
+    }
+    
+    if (has_valid_group) {
+        dump(item['first_name'] + ' did not have a valid group.') 
+    } else {
+        dump(item['first_name'] + ' has a valid group.') 
+    }
+}
+```
+
+Returns the following output:
+
+```
+"Jack has a valid group."
+"Jim did not have a valid group."
+```
+
 ## Loop through and compare items
 
 In this example, we loop through a series of items and pick the item that's contained in a string. 
