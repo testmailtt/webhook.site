@@ -25,9 +25,9 @@ To remediate this in Extract JSONPath, you'll need to set the source field to th
 
 ![JSON Form Data in JSONPath](/images/json-form-data-jsonpath.png)
 
-## I'm using the Send Request action to send JSON, but it's invalid
+## JSON data is invalid when using the Send Request action
 
-If you use any variables in the JSON that could contain e.g. new lines or quote characters, you'll need to escape the JSON properly so that it remains valid.
+If you use any variables in the JSON that could contain e.g. new lines or quote characters, these characters need to be "escaped" properly so that the JSON remains valid.
 
 Webhook.site provides an easy way to do this with the `.json` Variable Modifier, which will automatically escape any special JSON characters. [More info here](/custom-actions/variables.html#variable-modifiers).
 
