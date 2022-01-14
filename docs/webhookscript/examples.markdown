@@ -87,9 +87,12 @@ valid_groups = [43546, 999999]
 
 // Loop over items
 for (item in data['items']) {
+    // Per default, item does not have a valid group.
     has_valid_group = false
 
+    // Loop through each group ID in the data
     for (group_id in item['group_ids']) {
+        // Does the "valid_groups" array contain this group ID?
         if (valid_groups.contains(group_id)) {
             has_valid_group = true
         }
