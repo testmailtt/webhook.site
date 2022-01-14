@@ -25,6 +25,12 @@ set('$mydate$', output)
 
 ## Parse and loop through JSON
 
+This example shows various ways of iterating through JSON arrays, comparing data and rearranging it to another format.
+
+First, it loops through the `items` array, verifying that the `item` must have a group ID that a specific one from an array.
+
+Second, it changes the `fields` array from an array of objects to a key-value object using the `name` and `value` fields.
+
 ```javascript
 // Define input as a JSON string
 json = '{
@@ -33,13 +39,42 @@ json = '{
             "first_name": "Jack",
             "last_name": "Daniels",
             "phone": "+1 100-555-999",
-            "group_ids": [346, 46456, 23423]
+            "group_ids": [346, 46456, 23423],
+            "fields": [
+              {
+                "id": 45698,
+                "name": "birthday",
+                "value": "1990-01-01"
+              },
+              {
+                "id": 344,
+                "name": "car",
+                "value": "BMW M2"
+              }
+            ]
         },
         {
             "first_name": "Jim",
             "last_name": "Beam",
             "phone": "+1 123-555-788",
-            "group_ids": [3456, 43546, 234234, 456456]
+            "group_ids": [3456, 43546, 234234, 456456],
+            "fields": [
+              {
+                "id": 45698,
+                "name": "birthday",
+                "value": "1987-05-01"
+              },
+              {
+                "id": 344,
+                "name": "car",
+                "value": "Toyota Corolla"
+              },
+              {
+                "id": 248,
+                "name": "nickname",
+                "value": "Jimmie"
+              }
+            ]
         }
     ]
 }'
@@ -59,20 +94,37 @@ for (item in data['items']) {
             has_valid_group = true
         }
     }
-    
+
     if (has_valid_group) {
-        dump(item['first_name'] + ' did not have a valid group.') 
+        echo(item['first_name'] + ' did not have a valid group.') 
     } else {
-        dump(item['first_name'] + ' has a valid group.') 
+        echo(item['first_name'] + ' has a valid group.') 
     }
+    
+    // Extract "fields" into an array of key => value
+    fields = []
+    for (field in item['fields']) {
+      fields[field['name']] = field['value']
+    }
+    
+    echo(json_encode(fields))
 }
 ```
 
 Returns the following output:
 
 ```
-"Jack has a valid group."
-"Jim did not have a valid group."
+Jack has a valid group.
+{
+    "birthday": "1990-01-01",
+    "car": "BMW M2"
+}
+Jim did not have a valid group.
+{
+    "birthday": "1987-05-01",
+    "car": "Toyota Corolla",
+    "nickname": "Jimmie"
+}
 ```
 
 ## Loop through and compare items
