@@ -83,7 +83,7 @@ json = '{
 data = json_decode(json)
 
 // Define an array of valid groups
-valid_groups = [43546]
+valid_groups = [43546, 999999]
 
 // Loop over items
 for (item in data['items']) {
