@@ -212,3 +212,23 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `twitter_tweet`
 - `provider_id`: **required**, string
 - `tweet`: **required**, string
+
+### `rabbitmq_get`
+- `host`: string, **required**
+- `port`: int
+- `username`: string, **required**
+- `password`: string, **required**
+- `vhost`: string
+- `queue`: string, **required**
+- `ssl`: boolean
+- `variable_name`: string
+
+### `rabbitmq_publish`
+- `host`: string, **required**
+- `port`: int
+- `username`: string, **required**
+- `password`: string, **required**
+- `vhost`: string
+- `queue`: string, **required**
+- `ssl`: boolean
+- `message`: string, **required**

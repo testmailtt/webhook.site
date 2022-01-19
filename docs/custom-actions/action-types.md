@@ -350,3 +350,7 @@ The Dropbox integration has access to the entire contents of your dropbox, and c
 The Twitter Integration supports the following actions using Twitter's API:
 
 * Post Tweet
+
+## RabbitMQ
+
+The RabbitMQ Integration allows you to publish and consume messages from a RabbitMQ queue by specifying the server connection details.

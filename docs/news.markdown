@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 19 January 2022
+
+* New Custom Actions: RabbitMQ Get & Publish, allows consuming and publishing to RabbitMQ Queues via Webhook.site Custom Actions.
+
 ## 21 December 2021
 
 * Improved handling of binary data received from Send Request actions. 
